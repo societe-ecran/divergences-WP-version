@@ -49,7 +49,6 @@ module.exports = {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
           // version: '3.0.15',
-          // publicApiKey: 'ZDY5YjAxZGUtMjNiYS00MTIxLWIyNGItMDk2ZTVhYTEzY2ZmNjM3MzUxNDQzNDExMDYzMjg5',
           publicApiKey: process.env.GATSBY_WC_CONSUMER_SECRET,
           defaultLang: 'fr',
           currency: 'eur',
@@ -84,8 +83,6 @@ module.exports = {
         // true if using https. otherwise false.
         https: true,
         api_keys: {
-          // consumer_key: 'ck_7dcae439cc4e1b4b5b90ae3c64cae675d6b099c4',
-          // consumer_secret: 'cs_d7959d816869190bbaf8e277647a11bb47d63ade',
           consumer_key: process.env.GATSBY_WC_CONSUMER_KEY,
           consumer_secret: process.env.GATSBY_WC_CONSUMER_SECRET,
         },
