@@ -1,0 +1,368 @@
+
+.cent{
+  max-width:100%
+}
+
+.container-presentation{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  
+}
+
+.aligner-bas{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+.contenant {
+  position: relative;
+  /* text-align: center; */
+
+}
+
+.texte_centrer {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.under {
+  text-decoration: underline;
+}
+
+.colonne{
+  height: 90vh;
+}
+
+.carre{
+  height: 60vh;
+  width:100%;
+  overflow: scroll;
+  /* overscroll-behavior:contain */
+}
+
+.overscroll-behavior{
+  overscroll-behavior:contain
+}
+
+.no-scroll{
+  overflow:hidden;
+  height:100%;
+}
+
+.indent { text-indent: 3em; }
+
+.decoration-non{
+  text-decoration:none
+}
+
+.catalogue{
+  height: 55vh;
+  overflow: scroll;
+  overscroll-behavior:contain
+}
+
+/* Livres */
+
+.carteLivre{
+  box-shadow:8px 8px 4px #aaa;
+}
+
+.carteLivre:hover {
+  box-shadow: 8px 8px 12px rgba(0,0,0,0.24), 0 40px 50px 0 rgba(0,0,0,0.19);
+}
+
+.noHover{
+  pointer-events: none;
+}
+
+.formulaire{
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+
+/* Flip card des livres
+
+.card-back-color{
+  background-color: #B8F3EF;
+}
+.card-container {
+  perspective: 500px;
+  display: grid;
+}
+
+.card-flip, .card-container {
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+}
+
+.card-flip {
+  display: grid; grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+  width: 250px;
+  box-shadow:1px 1px 3px #aaa;
+  
+  
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+
+.front {
+  grid-area: frontAndBack;
+  box-shadow:1px 1px 3px #aaa;
+  
+} */
+
+
+
+
+/* logo du site */
+
+.logoDivergences{
+  font-family:'Druk' ;
+  font-size: xx-large;
+}
+
+
+
+.logoDivergences2{
+  font-family:'UniversLTStd-Ex' ;
+  font-size: x-large;
+}
+
+
+/* Bouttons  */
+
+.bouton9 {
+	border:none;
+	padding:6px 0 6px 0;
+	border-radius:10px;
+	box-shadow:2px 2px 3px #aaa;
+	background:#fff;
+	font:bold 13px Arial;
+	color:#555;
+}
+
+.bouton9:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.panier{
+  border : none;
+  background:#fff;
+}
+
+.snipcart-cart-header{
+  padding: 60px 16px;
+
+}
+
+/* Navbar */
+
+.navHover:hover{
+  color:grey;
+  font-weight: bold
+}
+
+
+.shadowBar{
+  -webkit-box-shadow: 8px 8px 20px rgba(0,0,0,0.10);
+   -moz-box-shadow:8px 8px 20px rgba(0,0,0,0.10);
+   box-shadow: 8px 8px 20px rgba(0,0,0,0.10);
+    }
+
+
+      /* Formulaire */
+
+.bordureForm{
+        border: none;
+        border-bottom: 1px solid;
+        border-color: grey;
+        font-family: "Concorde-Regular";
+        margin-bottom: 15px;
+      }
+
+
+
+/* Polices du site */
+
+
+h1,h2,h3,h4,h5{
+  font-family: 'UniversLTStd-Ex';
+}
+
+.navFont{
+  font-family: 'UniversLTStd-Ex';
+}
+
+.textFont{
+  font-family:'Concorde-Regular';
+}
+
+
+
+/* container agenda/parution/a paraitre  */
+
+.enlever-scroll-bar-firefox{
+  scrollbar-width: 0px;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+  width: 0px;
+    background: transparent
+}
+
+.agenda-container-parent {
+  height: 500px;
+  width: 100%;
+  overflow:hidden;
+  position: relative;
+}
+
+.agenda-container-enfant {
+position: absolute;
+/* top: 0;
+bottom: 0;
+left: 0;
+right: 0; */
+  overflow:auto;
+  scrollbar-width: none;
+  
+}
+
+.parution-container-parent {
+  height: 960px;
+  width: 100%;
+  overflow:hidden;
+  position: relative;
+}
+
+.parution-container-enfant {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  overflow:auto;
+  scrollbar-width: none;
+}
+
+.borderGeneral-top{
+  border-top: 2px solid black
+}
+
+.borderGeneral-bottom{
+  border-bottom: 2px solid black
+}
+.borderGeneral-right{
+  border-right: 2px solid black
+}
+
+
+.parution-container-parent2 {
+  height: 321px;
+  width: 100%;
+  overflow:hidden;
+  position: relative;
+  
+}
+
+.parution-container-enfant2 {
+  position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0px;
+  overflow:auto;
+  scrollbar-width: none;
+  
+}
+
+
+
+
+.catalogue-container-parent {
+  height: 610px;
+  width: 100%;
+  overflow:hidden;
+  position: relative;
+}
+
+.catalogue-container-enfant {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  overflow:auto;
+  scrollbar-width: none;
+}
+
+
+/* a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-family: Staatliches !important;
+  font-size: 120px !important;
+}
+
+#category {
+  font-family: Staatliches !important;
+  font-weight: 500 !important;
+}
+
+#title {
+  letter-spacing: 0.4px !important;
+  font-size: 22px !important;
+  font-size: 1.375rem !important;
+  line-height: 1.13636 !important;
+}
+
+#banner {
+  margin: 20px !important;
+  height: 800px !important;
+}
+
+#editor {
+  font-size: 16px !important;
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+}
+
+.uk-navbar-container {
+  background: #fff !important;
+  font-family: Staatliches !important;
+}
+
+img:hover {
+  opacity: 1 !important;
+  transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+} */

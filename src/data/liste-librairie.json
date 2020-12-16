@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "crs":{
+      "typ": "name",
+      "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}
+  },
+
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 1,
+          "NAME": "Librairie Quilombo",
+          "DESCRIPTIO": "23 rue Voltaire 75011 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3925606, 48.8528926]
+        }
+      },
+
+      
+      
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 1,
+          "NAME": "La Gryphe",
+          "DESCRIPTIO": "5 rue Sébastien Gryphe, Lyon 7"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.8458365, 45.7535729]
+        }
+      }
+      
+    
+
+
+
+      
+    ]
+ }
