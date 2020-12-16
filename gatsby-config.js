@@ -18,9 +18,6 @@ module.exports = {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     },
-    {
-      resolve: "gatsby-theme-location-mapper"
-    },
   
     {
       resolve: `gatsby-source-filesystem`,

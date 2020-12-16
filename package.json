@@ -22,7 +22,6 @@
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-source-wordpress": "^3.7.0",
     "gatsby-source-wordpress-experimental": "^5.0.0",
-    "gatsby-theme-location-mapper": "^1.0.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "leaflet": "^1.7.1",
     "prop-types": "^15.7.2",
