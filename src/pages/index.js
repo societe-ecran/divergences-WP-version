@@ -4,6 +4,9 @@ import Layout from "../components/layout"
 import "../assets/css/main.css"
 import EvenementsComponent from "../components/evenements"
 import "../fonts/fonts.css"
+import {Container, Row, Col } from "reactstrap";
+import AParaitre from "../components/a paraitre";
+import ParuRecement from "../components/paru recement";
 
 const IndexPage = () => (
   
@@ -39,8 +42,26 @@ const IndexPage = () => (
         }
       `}
       render={data => (
-        
-    <EvenementsComponent class="navFont" articles={data.allWpPost.edges} />
+        <span>
+           {/* <Container  className=" pl-0 ml-0 borderGeneral-bottom d-block d-sm-none"> */}
+        {/* <h5 className="navFont" >
+          Actualité
+        </h5> */}
+        {/* </Container> */}
+        {/* paru recemment smartphone */}
+
+        <Row className='' >
+                  <Col xs="6" className="d-block d-sm-none borderGeneral-top ">
+                  <div className="mt-2"><ParuRecement /></div>
+               </Col> 
+               <Col xs="6" className=" d-block d-sm-none borderGeneral-bottom pb-3">
+                  <div className="mt-2"><AParaitre /></div>
+               </Col> 
+                </Row>
+
+    <EvenementsComponent articles={data.allWpPost.edges} />
+        </span>
+       
       )}
     />
     

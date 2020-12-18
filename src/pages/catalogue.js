@@ -8,6 +8,7 @@ import Layout2 from "../components/layout2";
 // import Collections from "../components/collections";
 // import Livres from "../components/livreCatalogue";
 import Catalogue from "../components/catalogue";
+import { Container, Row, Col } from "reactstrap";
 
 const IndexPage = () => (
   <Layout2>
@@ -37,9 +38,9 @@ const IndexPage = () => (
         }
       `}
       render={(data) => (
-        <div>
+        <Container fluid>
           <Catalogue />
-        </div>
+        </Container>
       )}
     />
   </Layout2>

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import NavTop from "./navTop";
+import NavBar from '../components/navTop'
 import Seo from "./seo";
 import NavBottom from "../components/navBottom";
 // import LivresComponent from "../components/livres";
@@ -14,16 +14,18 @@ import { Row, Col } from "reactstrap";
 const Layout2 = ({ children }) => {
   return (
     <>
+    
       <Seo />
 
-    
-      <NavTop />
+      <NavBar/>
+      {/* <NavTop /> */}
 
-      <div className="container-fluid borderGeneral-top">
+      <div className="container-fluid no-scroll">
         <Row>
-          <Col md="6" className="borderGeneral-right ">
+          <Col md="6" className="borderGeneral-right d-none d-xl-block">
             <Row className="container-presentation">
-              <h3 className=" pl-3 pb-3 pt-3 ">
+              <h4 className=" pl-3 pb-3 pt-3 ">
+              <div className="d-none d-xl-block">
                 Editions divergences
                 <br />
                 3 Rue de l’Asile Popincourt
@@ -35,10 +37,11 @@ const Layout2 = ({ children }) => {
                 <br />
                 06 69 77 08 14
                 <br />
-                <div>
+                </div>
+                <div className="d-none d-xl-block" >
                   <span className="navHover">
                     <a
-                      className=" text-dark navFont"
+                      className=" text-dark navFont medieumSize"
                       style={{
                         textDecoration: "none",
                       }}
@@ -50,7 +53,7 @@ const Layout2 = ({ children }) => {
 
                   <span className="textFont navHover">
                     <a
-                      className=" text-dark navFont"
+                      className=" text-dark navFont medieumSize"
                       style={{
                         textDecoration: "none",
                       }}
@@ -63,7 +66,7 @@ const Layout2 = ({ children }) => {
 
                   <span className=" textFont navHover">
                     <a
-                      className=" text-dark navFont"
+                      className=" text-dark navFont medieumSize"
                       style={{
                         textDecoration: "none",
                       }}
@@ -76,7 +79,7 @@ const Layout2 = ({ children }) => {
 
                   <span className=" textFont navHover">
                     <a
-                      className=" text-dark navFont"
+                      className=" text-dark navFont medieumSize"
                       style={{
                         textDecoration: "none",
                       }}
@@ -87,13 +90,18 @@ const Layout2 = ({ children }) => {
                     </a>
                   </span>
                 </div>
-              </h3>
+              </h4>
             </Row>
-            <Navmillieu />
+            <Row className=" d-none d-xl-block">
+                  <Col sm="12">
+                    <Navmillieu className = ''/>
+                  </Col>
+                </Row>
+           
           </Col>
         </Row>
 
-        <div className="col-md-12 borderGeneral-top catalogue">
+        <div className="col-md-12 borderGeneral-top-speciale catalogue">
           <main>{children}</main>
         </div>
           <NavBottom />

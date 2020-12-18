@@ -1,3 +1,38 @@
+/* taille livre */
+
+.tailleLivreRcementParu{
+  width:335px;
+  height:565px;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+
+.tailleLivreAparaitre{
+  width:220px;
+  height:360px;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+
+.tailleLivrePardeffault{
+  width:250px;
+  height:auto;
+}
+
+
+
+
+.borderSlide{
+  border-right: 2px solid black
+}
+.buttonContact { 
+  border:none; 
+  background-color:white; 
+  outline:none; 
+} 
+.bgwhite{
+  background-color:white; 
+}
 
 .cent{
   max-width:100%
@@ -91,54 +126,6 @@
   border-radius: 10px;
 }
 
-/* Flip card des livres
-
-.card-back-color{
-  background-color: #B8F3EF;
-}
-.card-container {
-  perspective: 500px;
-  display: grid;
-}
-
-.card-flip, .card-container {
-  transform-style: preserve-3d;
-  transition: all 0.4s ease;
-}
-
-.card-flip {
-  display: grid; grid-template: 1fr / 1fr;
-  grid-template-areas: "frontAndBack";
-  transform-style: preserve-3d;
-  transition: all 0.4s ease;
-}
-
-.card-flip div {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.back {
-  grid-area: frontAndBack;
-  transform: rotateY(-180deg);
-  width: 250px;
-  box-shadow:1px 1px 3px #aaa;
-  
-  
-}
-
-.card-container:hover .card-flip {
-  transform: rotateY(180deg);
-}
-
-.front {
-  grid-area: frontAndBack;
-  box-shadow:1px 1px 3px #aaa;
-  
-} */
-
-
-
 
 /* logo du site */
 
@@ -146,8 +133,6 @@
   font-family:'Druk' ;
   font-size: xx-large;
 }
-
-
 
 .logoDivergences2{
   font-family:'UniversLTStd-Ex' ;
@@ -171,7 +156,6 @@
   box-shadow: 0 8px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
 .panier{
   border : none;
   background:#fff;
@@ -181,6 +165,7 @@
   padding: 60px 16px;
 
 }
+
 
 /* Navbar */
 
@@ -210,16 +195,12 @@
 
 
 /* Polices du site */
-
-
 h1,h2,h3,h4,h5{
   font-family: 'UniversLTStd-Ex';
 }
-
 .navFont{
   font-family: 'UniversLTStd-Ex';
 }
-
 .textFont{
   font-family:'Concorde-Regular';
 }
@@ -273,6 +254,10 @@ right: 0; */
   scrollbar-width: none;
 }
 
+.borderGeneral-top-speciale{
+  border-top: 2px solid black
+}
+
 .borderGeneral-top{
   border-top: 2px solid black
 }
@@ -284,6 +269,9 @@ right: 0; */
   border-right: 2px solid black
 }
 
+.borderGeneral-left{
+  border-left: 2px solid black
+}
 
 .parution-container-parent2 {
   height: 321px;
@@ -304,9 +292,6 @@ right: 0px;
   
 }
 
-
-
-
 .catalogue-container-parent {
   height: 610px;
   width: 100%;
@@ -325,44 +310,101 @@ right: 0px;
 }
 
 
-/* a {
-  text-decoration: none !important;
+
+@media (max-width: 576px) { 
+
+  .tailleLivreRcementParu{
+    width:150px;
+    height:265px;
+    padding-bottom:10px;
+    padding-top:10px;
+  }
+  
+  .tailleLivreAparaitre{
+    width:150px;
+    height:265px;
+    padding-bottom:10px;
+    padding-top:10px;
+  }
+  
+  .tailleLivrePardeffault{
+    width:250px;
+    height:auto;
+  }
+
+  .livreCentre{
+    display:flex;
+    justify-content: center;
+  }
+  
+
+
+  .logoDivergences{
+    font-family:'Druk' ;
+    font-size:medium;
+  }
+  
+  .logoDivergences2{
+    font-family:'UniversLTStd-Ex' ;
+    font-size: small;
+   
+  }
+
+  .medieumSize{
+    font-size:medium;
+  }
+
+  .carre{
+    height: 100vh;
+    /* overscroll-behavior:contain */
+  }
+
+  .catalogue{
+    height: 100vh;
+    overflow: scroll;
+    /* overscroll-behavior:contain */
+  }
+
+  .borderGeneral-right{
+    border-right: none
+  }
+ 
+  .textmap{
+    margin-top:15px
+  }
+
+  .no-scroll{
+    overflow:scroll;
+    height:100%;
+  }
+
+  .borderGeneral-top-speciale{
+    border-top:none
+  }
+  
+
+  .carre{
+    height: auto;
+    width:auto;
+    overflow: none;
+  }
+
+  .catalogue{
+    height: auto;
+    overflow: none;
+    overscroll-behavior:none
+  }
+
+.newsMagin{
+  margin-top: 20px;
 }
 
-h1 {
-  font-family: Staatliches !important;
-  font-size: 120px !important;
+.centerNewsletter{
+text-align: center;
 }
+   }
 
-#category {
-  font-family: Staatliches !important;
-  font-weight: 500 !important;
-}
-
-#title {
-  letter-spacing: 0.4px !important;
-  font-size: 22px !important;
-  font-size: 1.375rem !important;
-  line-height: 1.13636 !important;
-}
-
-#banner {
-  margin: 20px !important;
-  height: 800px !important;
-}
-
-#editor {
-  font-size: 16px !important;
-  font-size: 1rem !important;
-  line-height: 1.75 !important;
-}
-
-.uk-navbar-container {
-  background: #fff !important;
-  font-family: Staatliches !important;
-}
-
-img:hover {
-  opacity: 1 !important;
-  transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
-} */
+   .imagescarousel{
+    width:150;
+    height:220
+   }

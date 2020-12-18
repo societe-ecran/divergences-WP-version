@@ -20,26 +20,27 @@ categorieChoisie = article.node.categories[0].name;
   const tailleAffichageLivre = () => {
     if (categorieChoisie === "recemment paru") {
       return (
-        <Container className='borderGeneral-bottom'>
+        <Container className='borderGeneral-bottom 
+       
+         livreCentre'>
               <img
                 src={article.node.images[0].src}
                 alt={"couverture manquante"}
-                width="335"
-                height="565"
-                className='pb-2 pt-2'
+
+                className="tailleLivreRcementParu"
               />
               </Container>
       )
 
+
+
     } else if (categorieChoisie === "a paraitre") {
       return (
-        <Container className='borderGeneral-bottom'>
+        <Container className='borderGeneral-bottom livreCentre '>
                 <img
                   src={article.node.images[0].src}
                   alt={"couverture manquante"}
-                  width="220"
-                  height="360"
-                  className='pb-2 pt-2'
+                  className="tailleLivreAparaitre"
                 />
                 </Container>
       );
@@ -49,8 +50,7 @@ categorieChoisie = article.node.categories[0].name;
               <img
                 src={article.node.images[0].src}
                 alt={"couverture manquante"}
-                width="250"
-                height="auto"
+                className="tailleLivrePardeffault d-flex"
               />
         </Container>
       );

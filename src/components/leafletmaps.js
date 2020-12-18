@@ -5,8 +5,8 @@ import './leafletmap.css'
 import * as parkData from "../data/liste-librairie.json";
 
 export default function LeafletMaps() {
-  const [activePark, setActivePark] = React.useState(null);
-  const position = [51.505, -0.09]
+  // const [activePark, setActivePark] = React.useState(null);
+  const position = [47.295298, 2.550805]
   return (
 
 <MapContainer center={position} zoom={6} scrollWheelZoom={false}>

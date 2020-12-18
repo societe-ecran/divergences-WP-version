@@ -47,20 +47,40 @@ const Livre = ({ data }) => {
   const article = data.wcProducts;
   let description = "";
   let shortDescription = "";
+  let couv=''
+  let titre =''
+  let price=''
 
-  if (article.description === undefined || article.description === null) {
-    description = "...";
-  } else {
+  if (typeof article.description !== undefined) {
     description = article.description;
+  } else {
+    description = ''
   }
 
   if (
-    article.short_description === undefined ||
-    article.short_description === null
+    article.short_description !== undefined
   ) {
-    shortDescription = "...";
+    shortDescription = article.short_description
   } else {
-    description = article.short_description;
+    description = ''
+  }
+
+  if (typeof article.images[0] !== undefined) {
+    couv = article.images[0].src;
+  } else {
+    couv = ''
+  }
+
+  if (typeof article.name !== undefined) {
+    titre = article.name;
+  } else {
+    titre = ''
+  }
+
+  if (typeof article.price !== undefined) {
+    price = article.price;
+  } else {
+    price = ''
   }
 
   // const revue = article.attributes[4].options;
@@ -83,7 +103,7 @@ const Livre = ({ data }) => {
           <Col sm="3" className="ml-0 pl-0 text-center ">
             <img
               className="noHover"
-              src={article.images[0].src}
+              src={couv}
               alt={"couverture manquante"}
               width="290"
             />
@@ -92,73 +112,89 @@ const Livre = ({ data }) => {
           <Col sm="3" className=" aligner-bas ">
             <h4
               style={style}
-              className="text-uppercase text-center textFont text-blackmb-5"
+              className="text-uppercase text-center textFont text-blackmb-5 d-none d-xl-block"
             >
-              {article.name ? article.name : ""} <br />
-              {article.attributes[0].options
+              {titre} <br />
+              {typeof article.attributes[0] !== undefined
                 ? article.attributes[0].options
                 : ""}
             </h4>
 
-            <div>
-            {/* <div className="container">
-        <Slider {...settings}>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-        </Slider>
-      </div> */}
-
-
+            <div  className="d-none d-xl-block">
               <a
                 href=""
                 className="snipcart-add-item under mb-5 text-dark"
                 data-item-id={article.wordpress_id}
-                data-item-price={article.price ? article.price : ""}
-                data-item-image={
-                  article.images[0].src ? article.images[0].src : ""
-                }
+                data-item-price={price}
+                data-item-image={couv}
                 data-item-url="/"
-                data-item-name={article.name ? article.name : "..."}
+                data-item-name={titre}
               >
                 {"> "}Ajouter au panier
               </a>
               <br />
               Paru le{" "}
-              {article.attributes[1].options
+              {article.attributes[1] !== undefined
                 ? article.attributes[1].options
                 : ""}{" "}
               <br />
-              {article.attributes[2].options
+              {article.attributes[2] !== undefined
                 ? article.attributes[2].options
                 : ""}
               <br />
-              {article.price ? article.price : ""} euros
+              {price} euros
               <br />
-              {article.attributes[3].options
+              {article.attributes[3]!==undefined
                 ? article.attributes[3].options
                 : ""}
               <br />
             </div>
+
+
+
+{/* Version smartphone */}
+            <div  className="text-right mt-4 mb-3 d-block d-sm-none" >
+             
+              <a
+                href=""
+                className="snipcart-add-item under mb-5 text-dark"
+                data-item-id={article.wordpress_id}
+                data-item-price={price}
+                data-item-image={couv}
+                data-item-url="/"
+                data-item-name={titre}
+              >
+                {"> "}Ajouter au panier
+              </a>
+              <br />
+              Paru le{" "}
+              {article.attributes[1] !== undefined
+                ? article.attributes[1].options
+                : ""}{" "}
+              <br />
+              {article.attributes[2] !== undefined
+                ? article.attributes[2].options
+                : ""}
+              <br />
+              {price} euros
+              <br />
+              {article.attributes[3]!==undefined
+                ? article.attributes[3].options
+                : ""}
+              <br />
+            </div>
+
+
           </Col>
 
-          <Col sm="3" className="textFont pr-0">
-            <div dangerouslySetInnerHTML={{ __html: article.description }} />
+          <Col sm="3" className="textFont pr-0 ">
+            <div dangerouslySetInnerHTML={{ __html: description }} />
             {/* <div>{affichageRevuePress()}</div> */}
           </Col>
 
           <Col sm="2" className="textFont pr-0">
             <div
-              dangerouslySetInnerHTML={{ __html: article.short_description }}
+              dangerouslySetInnerHTML={{ __html: shortDescription }}
             />
           </Col>
 

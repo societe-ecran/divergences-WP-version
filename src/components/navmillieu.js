@@ -3,6 +3,7 @@ import "../assets/css/main.css";
 import { Link } from "gatsby";
 import "../fonts/fonts.css";
 import { Row, Col } from "reactstrap";
+import ParuRecement from "./paru recement";
 
 const style = {
   color: "black",
@@ -18,7 +19,7 @@ const Navmillieu = () => (
     <Col md="4">
       <h5>
         <Link
-          className=" navHover active "
+          className=" navHover active medieumSize  "
           to="/"
           style={style}
           activeStyle={activeStyle}
@@ -31,7 +32,7 @@ const Navmillieu = () => (
     <Col md="4">
       <h5>
         <Link
-          className="navHover"
+          className="navHover medieumSize "
           to="/plusDinfos/"
           style={style}
           activeStyle={activeStyle}
@@ -43,11 +44,17 @@ const Navmillieu = () => (
 
     <Col md="4">
       <h5>
-        <Link className="navHover" to="/about/" style={style} activeStyle={activeStyle}>
+        <Link className="navHover medieumSize" 
+        to="/about/" 
+        style={style} 
+        activeStyle={activeStyle}>
           Contact / Newsletter
         </Link>
       </h5>
     </Col>
+
+    
+
   </Row>
 );
 

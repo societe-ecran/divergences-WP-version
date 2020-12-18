@@ -40,6 +40,10 @@ function SEO({ description, lang, meta, title }) {
         // rel:"stylesheet", type:"text/css", charset:"UTF-8", href:"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
         // rel:"stylesheet", type:"text/css", href:"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css",
         // },
+
+        {
+          rel:"stylesheet", href:"https://sibforms.com/forms/end-form/build/sib-styles.css",
+        },
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css?family=Staatliches",
