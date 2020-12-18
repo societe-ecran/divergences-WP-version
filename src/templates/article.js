@@ -134,7 +134,7 @@ const Livre = ({ data }) => {
               </a>
               <br />
               Paru le{" "}
-              {article.attributes[1] !== undefined
+              {typeof article.attributes[1] !== undefined
                 ? article.attributes[1].options
                 : ""}{" "}
               <br />

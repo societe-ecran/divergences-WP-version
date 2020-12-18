@@ -12,14 +12,12 @@ const Btcarousel = ({ articles, titres }) => {
     <Container>
       <div className="text-center">{titre}</div>
       <Carousel
-        showArrows="false"
-        controls="false"
+        controls={false}
         justify-self="end"
         align-self="center"
         control-prev-icon-color="invert(100%)"
         control-next-icon-color="invert(100%)"
-        indicators="false"
-        nextLabel="null"
+        indicators={true}
         touch="true"
       >
         {article.map((livre, i) => {

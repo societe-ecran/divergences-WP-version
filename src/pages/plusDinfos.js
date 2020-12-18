@@ -6,11 +6,11 @@ import { Container, Row, Col } from "reactstrap";
 
 const plusDinfo = () => (
   <Layout>
-    <Row>
-      <Col xs="6" className="d-block d-sm-none borderGeneral-top "></Col>
+    <Row className='mx-0'>
+      <Col xs="6" className="d-block d-sm-none  "></Col>
     </Row>
     <Container fluid>
-      <Row>
+      <Row className='mx-0'>
         <div>
           <p className=" pt-2 textFont">
             Fondées en septembre 2016, les éditions divergences s’attachent à
@@ -22,7 +22,7 @@ const plusDinfo = () => (
           </p>
         </div>
       </Row>
-      <Row className="pt-3">
+      <Row className="pt-3 mx-0">
         <Col className="pr-5">
           <p className="textFont">
             Fondateur et directeur éditorial :<br />

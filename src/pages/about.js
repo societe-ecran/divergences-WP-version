@@ -9,7 +9,7 @@ const IndexPage = () => (
     <Container fluid>
 
   <Row>
-                  <Col xs="6" className="d-block d-sm-none borderGeneral-top ">
+                  <Col xs="6" className="d-block d-sm-none ">
                     </Col>
   </Row>
 
@@ -88,7 +88,7 @@ const IndexPage = () => (
                   required
                 />
               </div>
-              <a href="" className="text-dark under textFont">
+              <a href="" className="text-dark under textFont pb-5">
                 {"> "}inscription
               </a>
             </form>

@@ -8,7 +8,17 @@ import {Col } from "reactstrap";
 
 const Livre = ({ article }) => {
   let titre = article.node.name.toUpperCase();
-  let auteur = article.node.attributes[0].options;
+  let auteur = ""
+  console.log( article.node.attributes[0])
+  if(typeof article.node.attributes[0]!== undefined){
+    auteur =article.node.attributes[0].options;
+  }else{
+    auteur=""
+  }
+
+
+
+
   
 
   return (
@@ -16,8 +26,8 @@ const Livre = ({ article }) => {
       <ReactCardFlipper width="250px" height="380px" behavior="hover">
         <div>
           <img
-            src={article.node.images[0].src}
-            alt={article.node.name}
+            src={article.node.images[0]!== undefined? article.node.images[0].src:""}
+            alt=""
             className="pl-3 pr-3 pb-3 pt-3"
             width="250"
             height="380"

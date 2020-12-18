@@ -51,7 +51,7 @@ const IndexPage = () => (
         {/* paru recemment smartphone */}
 
         <Row className='' >
-                  <Col xs="6" className="d-block d-sm-none borderGeneral-top ">
+                  <Col xs="6" className="d-block d-sm-none  ">
                   <div className="mt-2"><ParuRecement /></div>
                </Col> 
                <Col xs="6" className=" d-block d-sm-none borderGeneral-bottom pb-3">

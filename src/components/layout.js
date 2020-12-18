@@ -132,13 +132,22 @@ const Layout = ({ children }) => {
                   </Col>
                 </Row>
                 
+
+
+
+
+                
 {/*  version smartphone */}
-                <Row className="">
+                {/* <Row className="">
                   <Col xs="3" className="d-block d-sm-none"></Col>
                   <Col xs="9" className="borderGeneral-left d-block d-sm-none">
                     <Navmillieu className="" />
+
+
+
+
                   </Col>
-                </Row>
+                </Row> */}
 
 
 

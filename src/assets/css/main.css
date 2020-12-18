@@ -390,7 +390,7 @@ right: 0px;
   }
 
   .catalogue{
-    height: auto;
+    height: 100vh;
     overflow: none;
     overscroll-behavior:none
   }
