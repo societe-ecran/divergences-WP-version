@@ -43,20 +43,14 @@ const IndexPage = () => (
       `}
       render={data => (
         <span>
-           {/* <Container  className=" pl-0 ml-0 borderGeneral-bottom d-block d-sm-none"> */}
-        {/* <h5 className="navFont" >
-          Actualité
-        </h5> */}
-        {/* </Container> */}
-        {/* paru recemment smartphone */}
 
         <Row className='' >
                   <Col xs="6" className="d-block d-sm-none  ">
                   <div className="mt-2"><ParuRecement /></div>
                </Col> 
-               <Col xs="6" className=" d-block d-sm-none borderGeneral-bottom pb-3">
+               {/* <Col xs="6" className=" d-block d-sm-none borderGeneral-bottom pb-3">
                   <div className="mt-2"><AParaitre /></div>
-               </Col> 
+               </Col>  */}
                 </Row>
 
     <EvenementsComponent articles={data.allWpPost.edges} />

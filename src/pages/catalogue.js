@@ -38,7 +38,7 @@ const IndexPage = () => (
         }
       `}
       render={(data) => (
-        <Container fluid>
+        <Container fluid className='pb-5 mb-5'>
           <Catalogue />
         </Container>
       )}

@@ -22,7 +22,7 @@ const Ounoustrouver = () => {
           </Col>
 
           <Col sm="3">
-            <p className="textFont textmap">
+            <p className="textFont textmap mb-5 pb-5">
               Voici certaines des librairies où vous pouvez retrouver nos
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande

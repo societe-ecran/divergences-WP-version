@@ -391,7 +391,7 @@ right: 0px;
 
   .catalogue{
     height: 100vh;
-    overflow: none;
+    overflow:scroll;
     overscroll-behavior:none
   }
 

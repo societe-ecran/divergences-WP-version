@@ -8,7 +8,7 @@ const Livres = ({ articles }) => {
   
 
   return (
-    <Container className="d-inline ">
+    <Container className="d-flex ">
       <Row >
           {article.map((livre,i) => {
             return (

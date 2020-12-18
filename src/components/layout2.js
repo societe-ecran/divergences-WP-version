@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import NavBar from '../components/navTop'
+import NavBar from "../components/navTop";
 import Seo from "./seo";
 import NavBottom from "../components/navBottom";
 // import LivresComponent from "../components/livres";
@@ -14,10 +14,9 @@ import { Row, Col } from "reactstrap";
 const Layout2 = ({ children }) => {
   return (
     <>
-    
       <Seo />
 
-      <NavBar/>
+      <NavBar />
       {/* <NavTop /> */}
 
       <div className="container-fluid no-scroll">
@@ -25,20 +24,20 @@ const Layout2 = ({ children }) => {
           <Col md="6" className="borderGeneral-right d-none d-xl-block">
             <Row className="container-presentation">
               <h4 className=" pl-3 pb-3 pt-3 ">
-              <div className="d-none d-xl-block">
-                Editions divergences
-                <br />
-                3 Rue de l’Asile Popincourt
-                <br />
-                75011 Paris
-                <br />
-                <br />
-                contact@editionsdivergences.com
-                <br />
-                06 69 77 08 14
-                <br />
+                <div className="d-none d-xl-block">
+                  Editions divergences
+                  <br />
+                  3 Rue de l’Asile Popincourt
+                  <br />
+                  75011 Paris
+                  <br />
+                  <br />
+                  contact@editionsdivergences.com
+                  <br />
+                  06 69 77 08 14
+                  <br />
                 </div>
-                <div className="d-none d-xl-block" >
+                <div className="d-none d-xl-block">
                   <span className="navHover">
                     <a
                       className=" text-dark navFont medieumSize"
@@ -93,20 +92,23 @@ const Layout2 = ({ children }) => {
               </h4>
             </Row>
             <Row className=" d-none d-xl-block">
-                  <Col sm="12">
-                    <Navmillieu className = ''/>
-                  </Col>
-                </Row>
-           
+              <Col sm="12">
+                <Navmillieu className="" />
+              </Col>
+            </Row>
           </Col>
         </Row>
 
-        <div className="col-md-12 borderGeneral-top-speciale catalogue">
+        <div className="col-md-12 borderGeneral-top-speciale catalogue d-none d-xl-block">
           <main>{children}</main>
         </div>
-          <NavBottom />
-      </div>
 
+        <div className="col-md-12 borderGeneral-top-speciale d-block d-sm-none">
+          <main>{children}</main>
+        </div>
+
+        <NavBottom />
+      </div>
     </>
   );
 };

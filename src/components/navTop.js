@@ -16,62 +16,77 @@ export default () => {
   return (
     <>
       <TopNav className="sticky-top borderGeneral-bottom">
-        <NavItems className='d-flex'>
-          <Col md="6">
-          <Link
-            className="text-dark font-weight-bold logoDivergences navfont text-decoration-none "
-            to="/"
-          >
-            {edition.toUpperCase()}
-          </Link>
+        <NavItems className="d-flex">
+          <Col md="6" xs="4">
+            <Link
+              className="text-dark font-weight-bold logoDivergences navfont text-decoration-none "
+              to="/"
+            >
+              {edition.toUpperCase()}
+            </Link>
           </Col>
 
-          <Col md="4">
-         
-            <Link className=" text-dark navFont logoDivergences2 d-none d-xl-block text-decoration-none" to="/">
+          <Col md="4" xs="0" className="d-none d-xl-block pt-2">
+            <Link
+              className=" text-dark navFont logoDivergences2  text-decoration-none"
+              to="/"
+            >
               critique sociale et politique
             </Link>
-
           </Col>
 
-          <Col md="2" className="d-flex justify-content-end">
-          <li className="d-none d-xl-block">
+          <Col md="2" className="d-flex justify-content-end mb-1">
             <button className="snipcart-checkout panier ">
               <Panier />
             </button>
-          </li>
           </Col>
+
+
+          <Col xs="1" className='d-block d-sm-none'>
+          </Col>
+
+
         </NavItems>
 
-        <SideMenu>
-          <Menu isOpen={menuState.menuOpen} className= 'borderSlide'>
 
+
+        <SideMenu>
+          <Menu isOpen={menuState.menuOpen} className="borderSlide">
             <Link className="navFont text-dark navHover" to="/">
               Actualité
             </Link>
 
             <Link
-              className="navFont text-dark navHover" to="/catalogue/" onClick={() => closeMenu()}
+              className="navFont text-dark navHover"
+              to="/catalogue/"
+              onClick={() => closeMenu()}
             >
               Catalogue
             </Link>
 
             <Link
-              className=" navFont text-dark navHover" to="/ounoustrouver/" onClick={() => closeMenu()}
+              className=" navFont text-dark navHover"
+              to="/ounoustrouver/"
+              onClick={() => closeMenu()}
             >
               Où nous trouver?
             </Link>
 
             <Link
-              className="navFont text-dark navHover" to="/plusDinfos/" onClick={() => closeMenu()}
+              className="navFont text-dark navHover"
+              to="/plusDinfos/"
+              onClick={() => closeMenu()}
             >
               Plus d'infos
             </Link>
 
-            <Link className="navFont text-dark navHover" to="/about/" onClick={() => closeMenu()}>
+            <Link
+              className="navFont text-dark navHover"
+              to="/about/"
+              onClick={() => closeMenu()}
+            >
               Contact / Newsletter
             </Link>
-            
           </Menu>
         </SideMenu>
       </TopNav>
@@ -80,18 +95,18 @@ export default () => {
 };
 
 const TopNav = styled.div`
-//   display: flex;
+  //   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
-//   overflow: hidden;
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   z-index: 1101;
-//   top: 0;
-//   width: 100vw;
+  //   overflow: hidden;
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   z-index: 1101;
+  //   top: 0;
+  //   width: 100vw;
 `;
 const Logo = styled.div`
   padding: 1em 1em 0 1em;
@@ -100,25 +115,24 @@ const Logo = styled.div`
 const NavItems = styled.div`
   display: flex;
   flex-direction: row;
-//   flex-wrap: nowrap;
-//   justify-content: flex-end;
-//   margin-top: 1em;
-//   a {
-//     color: #888;
-//     text-align: center;
-//     padding: 1em;
-//     text-decoration: none;
-//     font-size: 1em;
-//     &:hover {
-//       color: #333;
-//     }
-//   }
-//   @media (max-width: 721px) {
-//     display: none;
-//   }
-// `
-;
-
+  //   flex-wrap: nowrap;
+  //   justify-content: flex-end;
+  //   margin-top: 1em;
+  //   a {
+  //     color: #888;
+  //     text-align: center;
+  //     padding: 1em;
+  //     text-decoration: none;
+  //     font-size: 1em;
+  //     &:hover {
+  //       color: #333;
+  //     }
+  //   }
+  //   @media (max-width: 721px) {
+  //     display: none;
+  //   }
+  //
+`;
 const SideMenu = styled.div`
   /* Individual item */
   .bm-item {
@@ -133,7 +147,6 @@ const SideMenu = styled.div`
   .bm-item:hover {
     color: white;
   }
-  
 
   /* Position and sizing of burger button */
   .bm-burger-button {

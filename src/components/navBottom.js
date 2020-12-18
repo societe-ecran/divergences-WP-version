@@ -31,7 +31,7 @@ const NavBottom = () => (
 
     <li className="h5">
       <Link
-        className=" navFont navHover medieumSize"
+        className=" navFont navHover medieumSize mr-2"
         to="/ounoustrouver/"
         style={style}
         activeStyle={activeStyle}
@@ -40,11 +40,7 @@ const NavBottom = () => (
       </Link>
       
     </li>
-    <li className="d-block d-sm-none">
-      <button className="snipcart-checkout panier ">
-        <Panier />
-      </button>
-    </li>
+   
   </ul>
 );
 

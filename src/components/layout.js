@@ -11,8 +11,6 @@ import ParuRecement from "./paru recement";
 import { Row, Col } from "reactstrap";
 import NavBar from "../components/navTop";
 
-
-
 const Layout = ({ children }) => {
   let aparaitre = "à";
 
@@ -125,39 +123,20 @@ const Layout = ({ children }) => {
                   </h4>
                 </Row>
 
-{/* version ordi */}
+                {/* version ordi */}
                 <Row className="d-none d-xl-block">
                   <Col sm="12" className="borderGeneral-bottom ">
                     <Navmillieu className="" />
                   </Col>
                 </Row>
-                
 
-
-
-
-                
-{/*  version smartphone */}
-                {/* <Row className="">
-                  <Col xs="3" className="d-block d-sm-none"></Col>
-                  <Col xs="9" className="borderGeneral-left d-block d-sm-none">
-                    <Navmillieu className="" />
-
-
-
-
-                  </Col>
-                </Row> */}
-
-
-
-
-
-                <div className="carre">
+                <div className="carre d-none d-xl-block">
                   <main>{children}</main>
                 </div>
 
-
+                <div className="d-block d-sm-none">
+                  <main>{children}</main>
+                </div>
               </Col>
 
               <Col md="4" className="borderGeneral-right">
