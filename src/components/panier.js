@@ -9,7 +9,7 @@ const Panier = () => {
       <img
         src="https://res.cloudinary.com/dc0hoba1w/image/upload/v1607508272/small_panier_0629d32d81.png"
         alt="panier"
-        width="30"
+        width="20"
         // height= "565"
       />
     </div>

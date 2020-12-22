@@ -15,8 +15,10 @@ const activeStyle = {
 };
 
 const Navmillieu = () => (
-  <Row className="d-flex justify-content-beetwen pt-2 ">
-    <Col md="4">
+  <div className="d-flex justify-content-between pt-2 ">
+    {/* <Col md="3"> */}
+      
+      <div>
       <h5>
         <Link
           className=" navHover active medieumSize  "
@@ -24,12 +26,15 @@ const Navmillieu = () => (
           style={style}
           activeStyle={activeStyle}
         >
-          Actualité
+          Actualités
         </Link>
-      </h5>
-    </Col>
+      </h5></div>
+    {/* </Col> */}
 
-    <Col md="4">
+    {/* <Col md="3"> */}
+    <div>
+
+    
       <h5>
         <Link
           className="navHover medieumSize "
@@ -39,23 +44,25 @@ const Navmillieu = () => (
         >
           Plus d'infos
         </Link>
-      </h5>
-    </Col>
+      </h5></div>
+    {/* </Col> */}
 
-    <Col md="4">
-      <h5>
+    {/* <Col md="6"> */}
+     
+     <div>
+       <h5>
         <Link className="navHover medieumSize" 
         to="/about/" 
         style={style} 
         activeStyle={activeStyle}>
-          Contact / Newsletter
+          Contact/Newsletter
         </Link>
-      </h5>
-    </Col>
+      </h5></div> 
+    {/* </Col> */}
 
     
 
-  </Row>
+  </div>
 );
 
 export default Navmillieu;

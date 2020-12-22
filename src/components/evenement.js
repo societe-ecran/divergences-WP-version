@@ -1,35 +1,45 @@
-// import React from "react"
-// import { Link } from "gatsby"
-// import Moment from "react-moment"
-// import 'moment/locale/fr'
-// import "../fonts/fonts.css"
+import React from "react"
+import { Link } from "gatsby"
+import Moment from "react-moment"
+import 'moment/locale/fr'
+import "../fonts/fonts.css"
+import { Row, Col } from "reactstrap";
 
 
+const Evenement = ({ evenement }) => {
 
-// const Evenement = ({ evenement }) => {
+  return (
 
-//   return (
+    <div>
+    <Link 
+    style={{textDecoration:"none"}} 
+    to={`/evenements/${evenement.node.slug}`}
+    className="navHover"
+    state={{ valeur: evenement.node.slug }}
+    >
 
-//     <div>
-//     <Link 
-//     style={{textDecoration:"none"}} 
-//     to={`/evenements/${evenement.node.title}`}
-//     className="navHover" >
+        <Row className="d-flex textFont text-dark navFont border-bottom">
+       <Col sm="2" >
+       {evenement.node.dateevenement.dateEvenement}
+       </Col>
 
-//         <div class="d-flex justify-content-around text-dark navFont">
-//         <Moment class="pl-3" locale="fr" format="Do MMM YYYY">{evenement.node.dateevenement.dateevenement}</Moment> 
-//             <span class= "mx-auto">
-//               {evenement.node.title} 
-//             </span>
-//             <span class="pr-3">
-//               {evenement.node.ville.ville} 
-//             </span>
-//         </div>
+       <Col sm="8">
+        <div className="textFont">
+              {evenement.node.title} 
+            </div>
+       </Col>
+           <Col sm='2'>
+            <div className="text-right textFont">
+              {evenement.node.ville.ville}
+            </div>
+           </Col>
+           
+        </Row>
       
-//     </Link>
+    </Link>
 
-// </div>
-//   )
-// }
+</div>
+  )
+}
 
-// export default Evenement
+export default Evenement

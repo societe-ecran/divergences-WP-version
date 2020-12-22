@@ -41,19 +41,25 @@ export default () => {
             </button>
           </Col>
 
-
-          <Col xs="1" className='d-block d-sm-none'>
-          </Col>
-
-
+          <Col xs="1" className="d-block d-sm-none"></Col>
         </NavItems>
-
-
 
         <SideMenu>
           <Menu isOpen={menuState.menuOpen} className="borderSlide">
-            <Link className="navFont text-dark navHover" to="/">
-              Actualité
+            <Link
+              className="navFont text-dark navHover"
+              to="/"
+              onClick={() => closeMenu()}
+            >
+              Home
+            </Link>
+
+            <Link
+              className="navFont text-dark navHover"
+              to="/agenda"
+              onClick={() => closeMenu()}
+            >
+              Actualités
             </Link>
 
             <Link

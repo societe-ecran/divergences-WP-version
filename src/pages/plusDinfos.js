@@ -9,7 +9,7 @@ const plusDinfo = () => (
     <Row className='mx-0'>
       <Col xs="6" className="d-block d-sm-none  "></Col>
     </Row>
-    <Container fluid>
+    <Container fluid className='mb-5 pb-5'>
       <Row className='mx-0'>
         <div>
           <p className=" pt-2 textFont">
@@ -23,7 +23,7 @@ const plusDinfo = () => (
         </div>
       </Row>
       <Row className="pt-3 mx-0">
-        <Col className="pr-5">
+        <Col className="pr-3 borderGeneral-right">
           <p className="textFont">
             Fondateur et directeur éditorial :<br />
             <p className="text-right">Johan Badour</p>
@@ -54,20 +54,13 @@ const plusDinfo = () => (
           </p>
 
           <img
-            className="cent pt-5 mt-5"
+            className="cent pt-5"
             alt="divergences"
             src="https://res.cloudinary.com/dc0hoba1w/image/upload/v1607600822/small_depliant_215a65696f.png"
           ></img>
-          <p className=" pt-2 textFont text-white">
-            Fondées en septembre 2016, les éditions divergences s’attachent à
-            publier des ouvrages de critique sociale et politique. Quel que soit
-            l’angle par lequel ils abordent le réel nos livres cherchent à
-            comprendre et à rendre intelligible le monde dans lequel nous
-            vivons,
-          </p>
         </Col>
 
-        <Col className="textFont">
+        <Col className="textFont newsMagin">
           <p>
             Diffusion & Distribution
             <br />
@@ -131,13 +124,7 @@ const plusDinfo = () => (
               <br />
             </p>
           </p>
-          <p className=" pt-2 textFont text-white">
-            Fondées en septembre 2016, les éditions divergences s’attachent à
-            publier des ouvrages de critique sociale et politique. Quel que soit
-            l’angle par lequel ils abordent le réel nos livres cherchent à
-            comprendre et à rendre intelligible le monde dans lequel nous
-            vivons,
-          </p>
+          
         </Col>
       </Row>
     </Container>

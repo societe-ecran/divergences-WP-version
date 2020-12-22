@@ -41,9 +41,9 @@ const ParuRecement = () => {
             <div className="d-none d-xl-block">
               <LivresComponent articles={data.allWcProducts.edges} className=' d-none d-xl-block' />
             </div>
-            <div className='d-block d-sm-none'>
+            {/* <div className=''>
               <Btcarousel articles={data.allWcProducts.edges} titres="Parus recemment"/>
-            </div>
+            </div> */}
           </>
         )}
       />

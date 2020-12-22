@@ -34,8 +34,6 @@ const Layout2 = ({ children }) => {
                   <br />
                   contact@editionsdivergences.com
                   <br />
-                  06 69 77 08 14
-                  <br />
                 </div>
                 <div className="d-none d-xl-block">
                   <span className="navHover">
@@ -45,6 +43,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://fr-fr.facebook.com/EditionsDivergences/"
+                      target="_blank"
                     >
                       Facebook /
                     </a>
@@ -57,6 +56,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://www.instagram.com/editionsdivergences/?hl=fr"
+                      target="_blank"
                     >
                       {" "}
                       Instagram /
@@ -70,6 +70,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://twitter.com/EDivergences?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                      target="_blank"
                     >
                       {" "}
                       Twitter /
@@ -83,6 +84,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://www.linkedin.com/in/editions-divergences-5295a91b9/"
+                      target="_blank"
                     >
                       {" "}
                       Linkedin

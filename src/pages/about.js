@@ -88,7 +88,7 @@ const IndexPage = () => (
                   required
                 />
               </div>
-              <a href="" className="text-dark under textFont pb-5">
+              <a href="" className="text-dark under textFont pb-5 mb-5">
                 {"> "}inscription
               </a>
             </form>

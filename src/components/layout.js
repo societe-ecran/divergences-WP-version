@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import NavTop from "./navTop";
 import Seo from "./seo";
 import Navmillieu from "../components/navmillieu";
 import NavBottom from "../components/navBottom";
@@ -10,6 +9,8 @@ import AParaitre from "./a paraitre";
 import ParuRecement from "./paru recement";
 import { Row, Col } from "reactstrap";
 import NavBar from "../components/navTop";
+import ParuRecementSmart from "../components/parurecemmentSmartPhone";
+import AParaitreSmart from "../components/aparaitreSmart";
 
 const Layout = ({ children }) => {
   let aparaitre = "à";
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
                   adresse2 {
                     prix
                   }
+                  slug
                   content
                   dateevenement {
                     dateEvenement
@@ -64,8 +66,6 @@ const Layout = ({ children }) => {
                       <br />
                       contact@editionsdivergences.com
                       <br />
-                      06 69 77 08 14
-                      <br />
                     </div>
 
                     <div className="d-none d-xl-block">
@@ -76,6 +76,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://fr-fr.facebook.com/EditionsDivergences/"
+                          target="_blank"
                         >
                           Facebook /
                         </a>
@@ -88,6 +89,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://www.instagram.com/editionsdivergences/?hl=fr"
+                          target="_blank"
                         >
                           {" "}
                           Instagram /
@@ -101,6 +103,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://twitter.com/EDivergences?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                          target="_blank"
                         >
                           {" "}
                           Twitter /
@@ -114,6 +117,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://www.linkedin.com/in/editions-divergences-5295a91b9/"
+                          target="_blank"
                         >
                           {" "}
                           Linkedin
@@ -123,13 +127,16 @@ const Layout = ({ children }) => {
                   </h4>
                 </Row>
 
-                {/* version ordi */}
+               
+
+                {/*Nav millieu version ordi */}
                 <Row className="d-none d-xl-block">
                   <Col sm="12" className="borderGeneral-bottom ">
                     <Navmillieu className="" />
                   </Col>
                 </Row>
 
+                
                 <div className="carre d-none d-xl-block">
                   <main>{children}</main>
                 </div>
@@ -139,13 +146,13 @@ const Layout = ({ children }) => {
                 </div>
               </Col>
 
-              <Col md="4" className="borderGeneral-right">
+              <Col md="4" sm="12" xs="12" className="borderGeneral-right">
                 <div className="parution-container-enfant overscroll-behavior">
                   <h4 className="pl-3 bg-white pt-2 sticky-top">
                     Parus récemment
                   </h4>
 
-                  <div className="pl-3 pr-3">
+                  <div className="pl-3 pr-3 d-none d-xl-block">
                     <ParuRecement />
                   </div>
                 </div>

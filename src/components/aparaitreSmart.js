@@ -4,7 +4,7 @@ import "../fonts/fonts.css";
 import LivresComponent from "./livres";
 import Btcarousel from "../components/carousel";
 
-const AParaitre = () => {
+const AParaitreSmart = () => {
   return (
     <>
       <StaticQuery
@@ -37,20 +37,15 @@ const AParaitre = () => {
           }
         `}
         render={(data) => (
-          <div>
-            <div className="d-none d-xl-block" >
-              <LivresComponent articles={data.allWcProducts.edges} />
-            </div>
-            <div>
-              <div className="d-block d-sm-none">
+         
+              <div className="d-block d-sm-none pt-2 pb-2">
                 <Btcarousel articles={data.allWcProducts.edges} titres="A paraître"/>
               </div>
-            </div>
-          </div>
+          
         )}
       />
     </>
   );
 };
 
-export default AParaitre;
+export default AParaitreSmart;

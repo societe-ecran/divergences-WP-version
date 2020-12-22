@@ -5,12 +5,6 @@ import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
 import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 
-// import ReactDOM from "react-dom";
-// import Slider from "react-slick";
-// import './slide.css'
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
-
 const style = {
   color: "black",
   fontWeight: "bold",
@@ -98,7 +92,17 @@ const Livre = ({ data }) => {
 
   return (
     <Layout2>
-      <Container fluid className="mt-3 ml-0 pl-0">
+      <Container fluid className="mt-3 mx-0 pb-5 mb-5">
+
+      <Row sm="1" className="text-right d-block d-sm-none">
+            <Link
+              className="fas fa-times text-dark  "
+              to="/catalogue/"
+              style={{ textDecoration: "none" }}
+            ></Link>
+          </Row>
+
+
         <Row>
           <Col sm="3" className="ml-0 pl-0 text-center ">
             <img
@@ -109,7 +113,7 @@ const Livre = ({ data }) => {
             />
           </Col>
 
-          <Col sm="3" className=" aligner-bas ">
+          <Col sm="3" className="">
             <h4
               style={style}
               className="text-uppercase text-center textFont text-blackmb-5 d-none d-xl-block"
@@ -120,7 +124,7 @@ const Livre = ({ data }) => {
                 : ""}
             </h4>
 
-            <div  className="d-none d-xl-block">
+            <div  className="d-none d-xl-block mt-5 pt-5 ">
               <a
                 href=""
                 className="snipcart-add-item under mb-5 text-dark"
@@ -198,7 +202,7 @@ const Livre = ({ data }) => {
             />
           </Col>
 
-          <Col sm="1" className="text-right">
+          <Col sm="1" className="text-right d-none d-xl-block">
             <Link
               className="fas fa-times text-dark  "
               to="/catalogue/"

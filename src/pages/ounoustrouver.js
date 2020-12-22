@@ -10,7 +10,7 @@ import { Container, Row, Col } from "reactstrap";
 const Ounoustrouver = () => {
   return (
     <Layout2>
-      <Container fluid>
+      <Container fluid className='mb-5 pb-5'>
         <Row className="mt-4">
           <Col sm="9">
             {typeof window !== "undefined" && (
@@ -22,14 +22,16 @@ const Ounoustrouver = () => {
           </Col>
 
           <Col sm="3">
-            <p className="textFont textmap mb-5 pb-5">
+            <p className="textFont textmap">
               Voici certaines des librairies où vous pouvez retrouver nos
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
               plateforme d’achat en ligne, vous pouvez demander à votre libraire
               de vous le commander ou passer par
               {""}{" "}
-              <a href="https://www.leslibraires.fr/">
+              <a href="https://www.leslibraires.fr/"
+              target="_blank"
+              >
                 https://www.leslibraires.fr/
               </a>
             </p>

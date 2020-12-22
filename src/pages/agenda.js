@@ -25,6 +25,7 @@ const Agenda = () => {
                     prix
                 }
                   content
+                  slug
                   dateevenement {
                     dateEvenement
                   }

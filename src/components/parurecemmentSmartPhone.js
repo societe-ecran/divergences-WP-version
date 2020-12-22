@@ -4,7 +4,7 @@ import "../fonts/fonts.css";
 import LivresComponent from "./livres";
 import Btcarousel from "../components/carousel";
 
-const AParaitre = () => {
+const ParuRecementSmart = () => {
   return (
     <>
       <StaticQuery
@@ -12,7 +12,7 @@ const AParaitre = () => {
           query {
             allWcProducts(
               filter: {
-                categories: { elemMatch: { name: { eq: "a paraitre" } } }
+                categories: { elemMatch: { name: { eq: "recemment paru" } } }
               }
             ) {
               edges {
@@ -21,9 +21,9 @@ const AParaitre = () => {
                     name
                   }
                   description
+                  wordpress_id
                   name
                   price
-                  wordpress_id
                   attributes {
                     name
                     options
@@ -37,20 +37,15 @@ const AParaitre = () => {
           }
         `}
         render={(data) => (
-          <div>
-            <div className="d-none d-xl-block" >
-              <LivresComponent articles={data.allWcProducts.edges} />
+          <>
+            <div className='text-left pt-2  pb-2 ' >
+              <Btcarousel articles={data.allWcProducts.edges} titres="Parus recemment"/>
             </div>
-            <div>
-              <div className="d-block d-sm-none">
-                <Btcarousel articles={data.allWcProducts.edges} titres="A paraître"/>
-              </div>
-            </div>
-          </div>
+          </>
         )}
       />
     </>
   );
 };
 
-export default AParaitre;
+export default ParuRecementSmart;
