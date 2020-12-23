@@ -16,6 +16,7 @@ const Catalogue = () => {
                 }
                 description
                 name
+                slug
                 price
                 wordpress_id
                 attributes {

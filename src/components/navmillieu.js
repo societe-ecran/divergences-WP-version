@@ -2,8 +2,6 @@ import React from "react";
 import "../assets/css/main.css";
 import { Link } from "gatsby";
 import "../fonts/fonts.css";
-import { Row, Col } from "reactstrap";
-import ParuRecement from "./paru recement";
 
 const style = {
   color: "black",
@@ -16,9 +14,7 @@ const activeStyle = {
 
 const Navmillieu = () => (
   <div className="d-flex justify-content-between pt-2 ">
-    {/* <Col md="3"> */}
-      
-      <div>
+    <div>
       <h5>
         <Link
           className=" navHover active medieumSize  "
@@ -28,13 +24,9 @@ const Navmillieu = () => (
         >
           Actualités
         </Link>
-      </h5></div>
-    {/* </Col> */}
-
-    {/* <Col md="3"> */}
+      </h5>
+    </div>
     <div>
-
-    
       <h5>
         <Link
           className="navHover medieumSize "
@@ -44,24 +36,21 @@ const Navmillieu = () => (
         >
           Plus d'infos
         </Link>
-      </h5></div>
-    {/* </Col> */}
+      </h5>
+    </div>
 
-    {/* <Col md="6"> */}
-     
-     <div>
-       <h5>
-        <Link className="navHover medieumSize" 
-        to="/about/" 
-        style={style} 
-        activeStyle={activeStyle}>
+    <div>
+      <h5>
+        <Link
+          className="navHover medieumSize"
+          to="/about/"
+          style={style}
+          activeStyle={activeStyle}
+        >
           Contact/Newsletter
         </Link>
-      </h5></div> 
-    {/* </Col> */}
-
-    
-
+      </h5>
+    </div>
   </div>
 );
 

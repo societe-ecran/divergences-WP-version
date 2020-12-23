@@ -23,6 +23,7 @@ const AParaitre = () => {
                   description
                   name
                   price
+                  slug
                   wordpress_id
                   attributes {
                     name
@@ -38,7 +39,7 @@ const AParaitre = () => {
         `}
         render={(data) => (
           <div>
-            <div className="d-none d-xl-block" >
+            <div className="d-none d-sm-block" >
               <LivresComponent articles={data.allWcProducts.edges} />
             </div>
             <div>

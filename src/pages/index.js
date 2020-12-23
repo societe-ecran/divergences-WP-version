@@ -4,9 +4,7 @@ import Layout from "../components/layout";
 import "../assets/css/main.css";
 import EvenementsComponent from "../components/evenements";
 import "../fonts/fonts.css";
-import { Container, Row, Col } from "reactstrap";
-import AParaitre from "../components/a paraitre";
-import ParuRecement from "../components/paru recement";
+import { Row, Col } from "reactstrap";
 import ParuRecementSmart from "../components/parurecemmentSmartPhone";
 import AParaitreSmart from "../components/aparaitreSmart";
 

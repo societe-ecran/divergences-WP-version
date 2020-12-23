@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { stack as Menu } from "react-burger-menu";
 import styled from "@emotion/styled";
-import { Row, Col } from "reactstrap";
+import { Col } from "reactstrap";
 import "../images/panier.png";
 import Panier from "./panier";
 
@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <>
-      <TopNav className="sticky-top borderGeneral-bottom">
+      <TopNav className="sticky-top borderGeneral-bottom ">
         <NavItems className="d-flex">
           <Col md="6" xs="4">
             <Link
@@ -26,7 +26,7 @@ export default () => {
             </Link>
           </Col>
 
-          <Col md="4" xs="0" className="d-none d-xl-block pt-2">
+          <Col md="4" xs="0" className="pt-2 d-none d-md-block ">
             <Link
               className=" text-dark navFont logoDivergences2  text-decoration-none"
               to="/"
@@ -113,9 +113,6 @@ const TopNav = styled.div`
   //   z-index: 1101;
   //   top: 0;
   //   width: 100vw;
-`;
-const Logo = styled.div`
-  padding: 1em 1em 0 1em;
 `;
 
 const NavItems = styled.div`

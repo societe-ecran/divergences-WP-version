@@ -9,8 +9,6 @@ import AParaitre from "./a paraitre";
 import ParuRecement from "./paru recement";
 import { Row, Col } from "reactstrap";
 import NavBar from "../components/navTop";
-import ParuRecementSmart from "../components/parurecemmentSmartPhone";
-import AParaitreSmart from "../components/aparaitreSmart";
 
 const Layout = ({ children }) => {
   let aparaitre = "à";
@@ -54,7 +52,7 @@ const Layout = ({ children }) => {
           <div className="container-fluid no-scroll ">
             <Row>
               <Col md="6" className="borderGeneral-right colonne">
-                <Row className="container-presentation d-none d-xl-block">
+                <Row className="container-presentation d-none d-sm-block">
                   <h4 className=" pl-3 pb-3 pt-3 ">
                     <div className="">
                       Editions divergences
@@ -68,7 +66,7 @@ const Layout = ({ children }) => {
                       <br />
                     </div>
 
-                    <div className="d-none d-xl-block">
+                    <div className="d-none d-sm-block">
                       <span className="navHover">
                         <a
                           className=" text-dark navFont medieumSize"
@@ -76,7 +74,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://fr-fr.facebook.com/EditionsDivergences/"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                         >
                           Facebook /
                         </a>
@@ -89,7 +87,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://www.instagram.com/editionsdivergences/?hl=fr"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                         >
                           {" "}
                           Instagram /
@@ -103,7 +101,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://twitter.com/EDivergences?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                         >
                           {" "}
                           Twitter /
@@ -117,7 +115,7 @@ const Layout = ({ children }) => {
                             textDecoration: "none",
                           }}
                           href="https://www.linkedin.com/in/editions-divergences-5295a91b9/"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                         >
                           {" "}
                           Linkedin
@@ -127,17 +125,14 @@ const Layout = ({ children }) => {
                   </h4>
                 </Row>
 
-               
-
                 {/*Nav millieu version ordi */}
-                <Row className="d-none d-xl-block">
+                <Row className="d-none d-sm-block">
                   <Col sm="12" className="borderGeneral-bottom ">
                     <Navmillieu className="" />
                   </Col>
                 </Row>
 
-                
-                <div className="carre d-none d-xl-block">
+                <div className="carre d-none d-sm-block">
                   <main>{children}</main>
                 </div>
 
@@ -152,7 +147,7 @@ const Layout = ({ children }) => {
                     Parus récemment
                   </h4>
 
-                  <div className="pl-3 pr-3 d-none d-xl-block">
+                  <div className="pl-3 pr-3 d-none d-sm-block">
                     <ParuRecement />
                   </div>
                 </div>

@@ -17,8 +17,28 @@ const Livre = ({ article }) => {
   }
 
   return (
-    <div>
-      <ReactCardFlipper width="250px" height="380px" behavior="hover">
+    <div className="smooth">
+
+<div className="d-block d-sm-none">
+<Link
+            to={`/livre/${article.node.slug}`}
+            activeStyle={{ textDecoration: "none" }}
+            style={{ textDecoration: "none" }}
+          >
+      <img
+        src={
+          article.node.images[0] !== undefined ? article.node.images[0].src : ""
+        }
+        alt=""
+        className="ml-3 mr-3 mb-3 mt-3 tailleLivreCatalogue carteLivre"
+        width="250"
+        height="380"
+      />
+       </Link>
+</div>
+
+
+      <ReactCardFlipper className="d-none d-sm-block" width="250px" height="380px" behavior="hover">
         <div>
           <img
             src={
@@ -27,14 +47,14 @@ const Livre = ({ article }) => {
                 : ""
             }
             alt=""
-            className="pl-3 pr-3 pb-3 pt-3"
+            className="pl-3 pr-3 pb-3 pt-3 tailleLivreCatalogue"
             width="250"
             height="380"
           />
         </div>
         <Col className="text-center text-dark decoration-non containerlivre">
           <Link
-            to={`/livre/${article.node.wordpress_id}`}
+            to={`/livre/${article.node.slug}`}
             activeStyle={{ textDecoration: "none" }}
             style={{ textDecoration: "none" }}
           >

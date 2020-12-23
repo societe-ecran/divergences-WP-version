@@ -3,7 +3,6 @@ import "../assets/css/main.css";
 import { Link } from "gatsby";
 import "../fonts/fonts.css";
 import "../images/panier.png";
-import Panier from "./panier";
 
 const style = {
   color: "black",

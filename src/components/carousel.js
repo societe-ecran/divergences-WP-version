@@ -3,14 +3,13 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import "../fonts/fonts.css";
+import { Link } from "gatsby";
 
-const Btcarousel = ({ articles, titres }) => {
+const Btcarousel = ({ articles }) => {
   const article = articles;
-  // const titre = titres;
 
   return (
     <Container>
-      {/* <div className="text-center navFont">{titre}</div> */}
       <Carousel
         controls={true}
         justify-self="end"
@@ -24,52 +23,24 @@ const Btcarousel = ({ articles, titres }) => {
           return (
             <Carousel.Item>
               <Container clasName="imagescarousel">
-                <img
-                  className=""
-                  src={livre.node.images[0].src}
-                  alt="paru recemment"
-                  width="150"
-                  height="220"
-                />
+                <Link
+                  to={`/livre/${livre.node.wordpress_id}`}
+                  activeStyle={{ textDecoration: "none" }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <img
+                    src={livre.node.images[0].src}
+                    alt="paru recemment"
+                    width="150"
+                    height="220"
+                    className="carteLivre"
+                  />
+                </Link>
               </Container>
             </Carousel.Item>
           );
         })}
       </Carousel>
-
-      {/* {article.map((livre, i) => {
-          return (
-          
-              <Container clasName="d-flex-inline recemment">
-                <img
-                  className=""
-                  src={livre.node.images[0].src}
-                  alt="paru recemment"
-                  width="150"
-                  height="220"
-                />
-              </Container>
-          
-          );
-        })} */}
-
-{/* <div className="horizontal-scroll-wrapper squares">
-{article.map((livre, i) => {
-          return (
-           
-                <img
-                  className=""
-                  src={livre.node.images[0].src}
-                  alt="paru recemment"
-                  width="150"
-                  height="220"
-                />
-         
-          );
-        })}
-</div> */}
-
-
     </Container>
   );
 };

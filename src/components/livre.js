@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import "../assets/css/main.css";
-// import Moment from "react-moment";
 import "moment/locale/fr";
 import "../fonts/fonts.css";
 import { Container } from "reactstrap";
@@ -60,7 +59,7 @@ categorieChoisie = article.node.categories[0].name;
   return (
     <div class="text-dark textFont" style={{ textDecoration: "none" }}>
       <Link
-        to={`/livre/${article.node.wordpress_id}`}
+        to={`/livre/${article.node.slug}`}
         activeStyle={{ textDecoration: "none" }}
         style={{ textDecoration: "none" }}
       >

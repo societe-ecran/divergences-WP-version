@@ -2,7 +2,6 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import "../fonts/fonts.css";
 import LivresComponent from "./livres";
-import Btcarousel from "../components/carousel";
 
 const ParuRecement = () => {
   return (
@@ -23,6 +22,7 @@ const ParuRecement = () => {
                   description
                   wordpress_id
                   name
+                  slug
                   price
                   attributes {
                     name
@@ -38,8 +38,8 @@ const ParuRecement = () => {
         `}
         render={(data) => (
           <>
-            <div className="d-none d-xl-block">
-              <LivresComponent articles={data.allWcProducts.edges} className=' d-none d-xl-block' />
+            <div className="d-none d-sm-block">
+              <LivresComponent articles={data.allWcProducts.edges} className=' d-none d-sm-block' />
             </div>
             {/* <div className=''>
               <Btcarousel articles={data.allWcProducts.edges} titres="Parus recemment"/>

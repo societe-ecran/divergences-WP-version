@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Moment from "react-moment";
 import "moment/locale/fr";
 import Layout from "../components/layout";
 import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
@@ -53,12 +52,16 @@ const Evenement = ({ data }) => {
     <Layout>
       <Container fluid className="mx-0 pt-1 px-0 pb-5 mb-5">
         <Row className="d-block d-sm-none">
-          <div className=" h5 text-right pr-3 pt-2">
+          <div className=" text-right pr-3 pt-2">
             <Link
-              className="fas fa-times text-dark text-right "
+
               to="/agenda/"
               style={{ textDecoration: "none" }}
-            ></Link>
+            >
+              <div className="fas h5 fa-times text-dark text-right ">
+
+              </div>
+            </Link>
           </div>
         </Row>
 
@@ -67,7 +70,7 @@ const Evenement = ({ data }) => {
           <Col sm="8" className="">
             <div className="textFont font-weight-bold">{article.title}</div>
           </Col>
-          <Col sm="1" className="d-none d-xl-block">
+          <Col sm="1" className="d-none d-sm-block">
             <div className="text-right">
               <Link
                 className="fas fa-times text-dark text-right "

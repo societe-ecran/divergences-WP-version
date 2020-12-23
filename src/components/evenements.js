@@ -1,14 +1,5 @@
 import React from "react";
-import { Link } from "gatsby"
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
 import { StaticQuery, graphql } from "gatsby";
-import { Row, Col } from "reactstrap";
 import Evenement from "./evenement"
 
 const Evenements = ({ articles }) => {

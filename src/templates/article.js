@@ -11,8 +11,8 @@ const style = {
 };
 
 export const query = graphql`
-  query LivreQuery($id: Int!) {
-    wcProducts(wordpress_id: { eq: $id }) {
+  query LivreQuery($slug: String!) {
+    wcProducts(slug: { eq: $slug }) {
       name
       price
       wordpress_id
@@ -20,6 +20,7 @@ export const query = graphql`
         name
       }
       description
+      slug
       short_description
       attributes {
         name
@@ -33,10 +34,6 @@ export const query = graphql`
 `;
 
 const Livre = ({ data }) => {
-
-  var settings = {
-    dots: true
-  };
 
   const article = data.wcProducts;
   let description = "";
@@ -96,27 +93,32 @@ const Livre = ({ data }) => {
 
       <Row sm="1" className="text-right d-block d-sm-none">
             <Link
-              className="fas fa-times text-dark  "
+              
               to="/catalogue/"
               style={{ textDecoration: "none" }}
-            ></Link>
+            >
+              <div className="fas fa-times text-dark h4">
+
+              </div>
+            </Link>
           </Row>
 
 
         <Row>
           <Col sm="3" className="ml-0 pl-0 text-center ">
             <img
-              className="noHover"
+              className="noHover tailleLivreTemplate"
               src={couv}
               alt={"couverture manquante"}
-              width="290"
+              // width="290"
+            
             />
           </Col>
 
           <Col sm="3" className="">
             <h4
               style={style}
-              className="text-uppercase text-center textFont text-blackmb-5 d-none d-xl-block"
+              className="text-uppercase text-center textFont text-blackmb-5 d-none d-sm-block"
             >
               {titre} <br />
               {typeof article.attributes[0] !== undefined
@@ -124,7 +126,16 @@ const Livre = ({ data }) => {
                 : ""}
             </h4>
 
-            <div  className="d-none d-xl-block mt-5 pt-5 ">
+            <div  className="d-none d-sm-block mt-5 pt-5 ">
+
+            <div hidden id="snipcart" data-api-key="<API_KEY>">
+  
+    <component-to-override section="top">
+        <div class="root">
+            This will be inserted into the section named `top`.
+        </div>
+    </component-to-override>
+</div>
               <a
                 href=""
                 className="snipcart-add-item under mb-5 text-dark"
@@ -202,7 +213,7 @@ const Livre = ({ data }) => {
             />
           </Col>
 
-          <Col sm="1" className="text-right d-none d-xl-block">
+          <Col sm="1" className="text-right d-none d-sm-block">
             <Link
               className="fas fa-times text-dark  "
               to="/catalogue/"

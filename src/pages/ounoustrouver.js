@@ -30,7 +30,7 @@ const Ounoustrouver = () => {
               de vous le commander ou passer par
               {""}{" "}
               <a href="https://www.leslibraires.fr/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               >
                 https://www.leslibraires.fr/
               </a>

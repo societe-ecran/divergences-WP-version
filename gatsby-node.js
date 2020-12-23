@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
         livres: allWcProducts {
           edges {
             node {
-              wordpress_id
+              slug
             }
           }
         }
@@ -33,10 +33,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   livres.forEach((livre, index) => {
     createPage({
-      path: `/livre/${livre.node.wordpress_id}`,
+      path: `/livre/${livre.node.slug}`,
       component: require.resolve("./src/templates/article.js"),
       context: {
-        id: livre.node.wordpress_id,
+        slug: livre.node.slug,
       },
     });
   });

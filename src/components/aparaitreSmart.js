@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import "../fonts/fonts.css";
-import LivresComponent from "./livres";
 import Btcarousel from "../components/carousel";
 
 const AParaitreSmart = () => {
@@ -23,6 +22,7 @@ const AParaitreSmart = () => {
                   description
                   name
                   price
+                  slug
                   wordpress_id
                   attributes {
                     name

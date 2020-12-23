@@ -1,24 +1,43 @@
+.smooth{
+  scroll-behavior: smooth
+}
+
+.index{
+  z-index: 1;
+  position:relative
+}
+
 /* taille livre */
 
+
 .tailleLivreRcementParu {
-  width: 335px;
-  height: 565px;
+  width: 60%;
+  height: auto;
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
 .tailleLivreAparaitre {
-  width: 220px;
-  height: 360px;
+  max-width: 80%;
+  height: auto;
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
 .tailleLivrePardeffault {
-  width: 250px;
+  max-width: 250px;
   height: auto;
 }
 
+/* .tailleLivreCatalogue {
+  width: auto;
+  height: 200px;
+} */
+
+.tailleLivreTemplate {
+  max-width: 70%;
+  height: auto;
+}
 .borderSlide {
   border-right: 2px solid black;
 }
@@ -292,6 +311,21 @@ right: 0; */
   scrollbar-width: none;
 }
 
+
+
+@media (max-width: 1199.98px) {
+  .logoDivergences {
+    font-family: "Druk";
+    font-size: x-large;
+  }
+
+  .logoDivergences2 {
+    font-family: "UniversLTStd-Ex";
+    font-size: medium;
+  }
+ }
+
+
 @media (max-width: 576px) {
   .tailleLivreRcementParu {
     width: 150px;
@@ -404,20 +438,21 @@ right: 0; */
   border-radius: 50%;
   border: 1px solid black;
   background-image: black;
-  color:black
+  color:black;
+  background-color: black;
 } */
 
 .carousel-control-next-icon
 {
   content: '>';
   font-size: 55px;
-  color: red;
+  color:black;
 }
 
 .carousel-control-prev-icon {
   content: '<';
   font-size: 55px;
-  color: red;
+  color:black;
 }
 
 

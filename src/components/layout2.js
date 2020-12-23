@@ -3,12 +3,8 @@ import PropTypes from "prop-types";
 import NavBar from "../components/navTop";
 import Seo from "./seo";
 import NavBottom from "../components/navBottom";
-// import LivresComponent from "../components/livres";
 import Navmillieu from "./navmillieu";
 import "../fonts/fonts.css";
-// import AParaitre from "./a paraitre";
-// import ParuRecement from "./paru recement";
-// import Catalogue from "../components/catalogue";
 import { Row, Col } from "reactstrap";
 
 const Layout2 = ({ children }) => {
@@ -17,14 +13,13 @@ const Layout2 = ({ children }) => {
       <Seo />
 
       <NavBar />
-      {/* <NavTop /> */}
 
       <div className="container-fluid no-scroll">
         <Row>
-          <Col md="6" className="borderGeneral-right d-none d-xl-block">
+          <Col md="6" className="borderGeneral-right d-none d-sm-block">
             <Row className="container-presentation">
               <h4 className=" pl-3 pb-3 pt-3 ">
-                <div className="d-none d-xl-block">
+                <div className="d-none d-sm-block">
                   Editions divergences
                   <br />
                   3 Rue de l’Asile Popincourt
@@ -35,7 +30,7 @@ const Layout2 = ({ children }) => {
                   contact@editionsdivergences.com
                   <br />
                 </div>
-                <div className="d-none d-xl-block">
+                <div className="d-none d-sm-block">
                   <span className="navHover">
                     <a
                       className=" text-dark navFont medieumSize"
@@ -43,7 +38,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://fr-fr.facebook.com/EditionsDivergences/"
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                     >
                       Facebook /
                     </a>
@@ -56,7 +51,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://www.instagram.com/editionsdivergences/?hl=fr"
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                     >
                       {" "}
                       Instagram /
@@ -70,7 +65,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://twitter.com/EDivergences?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                     >
                       {" "}
                       Twitter /
@@ -84,7 +79,7 @@ const Layout2 = ({ children }) => {
                         textDecoration: "none",
                       }}
                       href="https://www.linkedin.com/in/editions-divergences-5295a91b9/"
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                     >
                       {" "}
                       Linkedin
@@ -93,7 +88,7 @@ const Layout2 = ({ children }) => {
                 </div>
               </h4>
             </Row>
-            <Row className=" d-none d-xl-block">
+            <Row className=" d-none d-sm-block">
               <Col sm="12">
                 <Navmillieu className="" />
               </Col>
@@ -101,7 +96,7 @@ const Layout2 = ({ children }) => {
           </Col>
         </Row>
 
-        <div className="col-md-12 borderGeneral-top-speciale catalogue d-none d-xl-block">
+        <div className="col-md-12 borderGeneral-top-speciale catalogue d-none d-sm-block">
           <main>{children}</main>
         </div>
 

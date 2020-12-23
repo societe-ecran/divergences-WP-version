@@ -8,7 +8,7 @@ const Livres = ({ articles }) => {
   
 
   return (
-    <Container className="d-flex ">
+    <Container fluid className="d-flex justify-content-center ">
       <Row >
           {article.map((livre,i) => {
             return (
