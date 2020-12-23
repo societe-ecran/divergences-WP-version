@@ -9,7 +9,10 @@ const Btcarousel = ({ articles }) => {
   const article = articles;
 
   return (
-    <Container>
+    <div>
+
+    
+    {/* <Container fluid> */}
       <Carousel
         controls={true}
         justify-self="end"
@@ -22,17 +25,17 @@ const Btcarousel = ({ articles }) => {
         {article.map((livre, i) => {
           return (
             <Carousel.Item>
-              <Container clasName="imagescarousel">
+              <Container fluid clasName="imagescarousel">
                 <Link
-                  to={`/livre/${livre.node.wordpress_id}`}
+                  to={`/livre/${livre.node.slug}`}
                   activeStyle={{ textDecoration: "none" }}
                   style={{ textDecoration: "none" }}
                 >
                   <img
                     src={livre.node.images[0].src}
-                    alt="paru recemment"
-                    width="150"
-                    height="220"
+                    alt="couverture"
+                    width="120"
+                    height="200"
                     className="carteLivre"
                   />
                 </Link>
@@ -41,7 +44,8 @@ const Btcarousel = ({ articles }) => {
           );
         })}
       </Carousel>
-    </Container>
+    {/* </Container> */}
+    </div>
   );
 };
 
