@@ -35,7 +35,7 @@ export default () => {
             </Link>
           </Col>
 
-          <Col md="2" className="d-flex justify-content-end mb-1">
+          <Col md="2" className="d-flex justify-content-end mb-3">
             <button className="snipcart-checkout panier ">
               <Panier />
             </button>
@@ -154,8 +154,8 @@ const SideMenu = styled.div`
   /* Position and sizing of burger button */
   .bm-burger-button {
     position: fixed;
-    width: 30px;
-    height: 25px;
+    width: 25px;
+    height: 20px;
     right: 15px;
     top: 10px;
   }

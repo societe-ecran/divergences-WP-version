@@ -5,8 +5,10 @@ import "../fonts/fonts.css";
 import { Row, Col } from "reactstrap";
 
 const Evenement = ({ evenement }) => {
-  let date2 = Date(evenement.node.dateevenement.dateEvenement)
-  console.log(date2)
+  let month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
+  let corectMonth=month+=1
+  let date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '/' + corectMonth +'/'+new Date(evenement.node.dateevenement.dateEvenement).getFullYear() 
+
   return (
     <div>
       <Link
@@ -16,7 +18,7 @@ const Evenement = ({ evenement }) => {
         state={{ valeur: evenement.node.slug }}
       >
         <Row className="d-flex textFont text-dark navFont border-bottom">
-          <Col sm="2">{evenement.node.dateevenement.dateEvenement}</Col>
+          <Col sm="2">{date}</Col>
 
           <Col sm="8">
             <div className="textFont">{evenement.node.title}</div>

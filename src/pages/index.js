@@ -87,7 +87,7 @@ const IndexPage = () => (
           {/* </Row> */}
 
           <EvenementsComponent
-            class="navFont"
+            className="navFont pb-5 mb-5"
             articles={data.allWpPost.edges}
           />
       
@@ -99,105 +99,3 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
-
-// import React from "react"
-// import { graphql } from "gatsby"
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
-
-// export default ({ data }) => {
-
-//   return (
-//     <Layout>
-//       <SEO title="home" />
-//       <h4>Posts</h4>
-//       {data.allWcProducts.edges.map(({ node }) => (
-//         <div>
-//           <p dangerouslySetInnerHTML={{ __html: node.name }}/>
-
-//           <div dangerouslySetInnerHTML={{ __html: node.description }} />
-//           <p>{node.price}</p>
-//         {/* <p>
-//           {auteur}
-//         </p> */}
-
-//           <p>
-//             {node.attributes[0].options}
-//               </p>
-//             <p>
-//               {node.attributes[1].options}
-//             </p>
-//             <p>
-//               {node.attributes[2].options}
-//             </p>
-//             {node.attributes[3].options}
-//             <p>
-//             </p>
-//             <p>
-//             <div dangerouslySetInnerHTML={{ __html: node.categories[0].name }} />
-//             </p>
-
-//             <img
-//                 src={node.images[0].src}
-//                 width='300'
-//           >
-//           </img>
-
-//         </div>
-//       ))}
-
-//       {/* {data.allWordpressPost.edges.map(({ node }) => {
-
-// let imageSource = null;
-// if (
-//   node.featured_media &&
-//   node.featured_media.localFile &&
-//   node.featured_media.localFile.url
-// ) {
-//   imageSource = node.featured_media.localFile.url
-// }
-
-// return (
-//         <div>
-
-//           <div dangerouslySetInnerHTML={{ __html: node.title }}/>
-
-//           <div dangerouslySetInnerHTML={{ __html: node.content }} />
-//           <p>{node.date}</p>
-
-//           <img
-
-//   src={imageSource}
-
-//           >
-//           </img>
-
-//         </div>
-// )
-//       })} */}
-//     </Layout>
-//   )
-// }
-
-// export const pageQuery = graphql`
-//   query {
-//     allWcProducts {
-//     edges {
-//       node {
-//         attributes {
-//           name
-//           options
-//         }
-//         categories {
-//           name
-//         }
-//         images {
-//           src
-//         }
-//         name
-//         price
-//         description
-//       }
-//     }
-//   }
-//   }`

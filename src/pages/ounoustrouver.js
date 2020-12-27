@@ -27,12 +27,11 @@ const Ounoustrouver = () => {
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
               plateforme d’achat en ligne, vous pouvez demander à votre libraire
-              de vous le commander ou passer par
+              de vous le commander ou passer par 
               {""}{" "}
               <a href="https://www.leslibraires.fr/"
               target="_blank" rel="noreferrer"
-              >
-                https://www.leslibraires.fr/
+              >les libraires.fr
               </a>
             </p>
           </Col>

@@ -20,12 +20,12 @@ const Btcarousel = ({ articles }) => {
         control-prev-icon-color="invert(100%)"
         control-next-icon-color="invert(100%)"
         indicators={false}
-        touch="true"
+        touch={true}
       >
         {article.map((livre, i) => {
           return (
             <Carousel.Item>
-              <Container fluid clasName="imagescarousel">
+              <Container fluid className="imagescarousel">
                 <Link
                   to={`/livre/${livre.node.slug}`}
                   activeStyle={{ textDecoration: "none" }}

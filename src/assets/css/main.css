@@ -1,3 +1,7 @@
+.colorisation{
+background-color: green;
+}
+
 .smooth{
   scroll-behavior: smooth
 }
@@ -310,7 +314,6 @@ right: 0; */
   overflow: auto;
   scrollbar-width: none;
 }
-
 
 
 @media (max-width: 1199.98px) {

@@ -6,8 +6,12 @@ import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 
 const style = {
-  color: "black",
   fontWeight: "bold",
+  textDecoration: "none" 
+};
+
+const activeStyle = {
+  backgroundColor: 'grey',
 };
 
 export const query = graphql`
@@ -93,11 +97,13 @@ const Livre = ({ data }) => {
 
       <Row sm="1" className="text-right d-block d-sm-none">
             <Link
-              
+              className=''
               to="/catalogue/"
-              style={{ textDecoration: "none" }}
+              style={style}
+              activeStyle={activeStyle}
             >
-              <div className="fas fa-times text-dark h4">
+              <div className="fas fa-times text-dark h4 navHover" style={style}
+              activeStyle={activeStyle}>
 
               </div>
             </Link>
@@ -130,23 +136,22 @@ const Livre = ({ data }) => {
 
             <div hidden id="snipcart" data-api-key="<API_KEY>">
   
-    <component-to-override section="top">
-        <div class="root">
-            This will be inserted into the section named `top`.
-        </div>
-    </component-to-override>
 </div>
+             <div>
               <a
                 href=""
-                className="snipcart-add-item under mb-5 text-dark"
+                className="snipcart-add-item under text-dark"
                 data-item-id={article.wordpress_id}
                 data-item-price={price}
                 data-item-image={couv}
-                data-item-url="/"
+                data-item-url={"/livre/"+article.slug}
                 data-item-name={titre}
               >
                 {"> "}Ajouter au panier
-              </a>
+              </a> 
+
+
+              </div>
               <br />
               Paru le{" "}
               {typeof article.attributes[1] !== undefined

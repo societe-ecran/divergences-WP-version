@@ -18,7 +18,7 @@ const plusDinfo = () => (
             l’angle par lequel ils abordent le réel nos livres cherchent à
             comprendre et à rendre intelligible le monde dans lequel nous
             vivons, à le combattre et en imaginer de nouveaux, plus beaux, plus
-            justes et plus désirables
+            justes et plus désirables.
           </p>
         </div>
       </Row>
@@ -39,16 +39,16 @@ const plusDinfo = () => (
             </p>
             Graphisme :<br />
             <p className="text-right textFont">
-              Morgane Masse,
-              <br /> Anouk Rebaud,
+              Morgane Masse
+              <br /> Anouk Rebaud
               <br />
-              Alexandre Mouawad
+              Mouvement C (Arnaud Crassat et Alexandre Mouawad)
               <br />
             </p>
-            Développement Web:
+            Développement Web :
             <br />
             <p className="text-right textFont">
-              Antonin Reigneaud
+              Société écrans
               <br />
             </p>
           </p>

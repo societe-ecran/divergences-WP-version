@@ -63,10 +63,10 @@ const IndexPage = () => (
             Lecteurs et lectrices, curieuses et curieux, libraires,
             journalistes, si vous souhaitez être tenu au courant de nos
             ouvrages, de nos événements et de nos activités une fois par mois,
-            laissez-nous votre adresse mail ici.
+            vous pouvez vous inscrire ici.
           </p>
 
-          <div className="">
+          {/* <div className="">
             <form name="contact" method="post" className="centerNewsletter">
               {" "}
               <input type="hidden" name="bot-field" />{" "}
@@ -86,10 +86,12 @@ const IndexPage = () => (
                 {"> "}inscription
               </a>
             </form>
-          </div>
+          </div> */}
 
-          <a href="https://7f2e55d6.sibforms.com/serve/MUIEAPu6EnKV7IJoR6psDKgtgMp6soTokmJsXassfGmozRAEgHRXMyjpbM8SBvSiF3ogsX5QoS_kemCe9YfyLl2IdXGRI3Hm-IAyJNj28jcAdg0_uLswENknS8MyO0d5k9Gv8evH3b-EVe2dnk4LmZrrQyYmtlPNEIn94vatwNYPkLugj774msJikiSU7fnisSxcLAzHTng-SQHH">
-            test sendinblue
+          <a 
+          className="text-dark under textFont pb-5 mb-5"
+          href="https://5a8a505d.sibforms.com/serve/MUIEAOJL2B0dBAjd8iZLAhtbkCZnhyo7jjxw_ktVSzhmmnd15zD3_XKVm8J94Ls8-wuwY-Wvj6kuJoKER1q9m3yiPthxJWEW1JdOxd69ftoFZDIVmebcGxrLeLg7cEPe1fbdtqpWPCLMV_Jr2f1aHKivEWXN0WwKt4uzsgd1L9nwsZQ0xqJzyh9xMlheUw3b8r333qL8m_VZOyE8">
+            {"> "}s'inscrire
           </a>
         </Col>
       </Row>

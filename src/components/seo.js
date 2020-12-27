@@ -31,15 +31,11 @@ function SEO({ description, lang, meta, title }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={[
-        // {
-        // rel:"stylesheet", type:"text/css", charset:"UTF-8", href:"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
-        // rel:"stylesheet", type:"text/css", href:"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css",
-        // },
 
         {
           rel:"stylesheet", href:"https://sibforms.com/forms/end-form/build/sib-styles.css",
@@ -118,6 +114,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+
     />
   )
 }
@@ -125,7 +122,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `fr`,
   meta: [],
-  description: ``,
+  description: `Site des éditions Divergences. 3 Rue de l’Asile Popincourt 75011 Paris contact@editionsdivergences.com`,
 }
 
 SEO.propTypes = {

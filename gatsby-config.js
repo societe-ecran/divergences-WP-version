@@ -7,11 +7,13 @@ require('dotenv').config(
 module.exports = {
   siteMetadata: {
     title: `Editions Divergences`,
-    description: `Editions Divergences, catalogue, contact`,
-    author: `antoninreigneaud@gmail.com`,
+    description: `Site des éditions Divergences. 3 Rue de l’Asile Popincourt 75011 Paris contact@editionsdivergences.com`,
+    author: `Société écrans`,
+    siteUrl: `https://adoring-volhard-0f7152.netlify.app/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
@@ -46,7 +48,7 @@ module.exports = {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
           // version: '3.0.15',
-          publicApiKey: process.env.GATSBY_WC_CONSUMER_SECRET,
+          publicApiKey: process.env.GATSBY_SNIPCART_PUBLIC_API_KEY,
           defaultLang: 'fr',
           currency: 'eur',
           openCartOnAdd: true,

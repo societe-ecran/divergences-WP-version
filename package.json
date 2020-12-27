@@ -19,7 +19,7 @@
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-react-leaflet": "^2.0.13",
     "gatsby-plugin-sharp": "^2.8.0",
-    "gatsby-plugin-sitemap": "^2.8.0",
+    "gatsby-plugin-sitemap": "^2.9.0",
     "gatsby-plugin-snipcart-advanced": "^1.0.1",
     "gatsby-plugin-snipcartv3": "^2.3.3",
     "gatsby-plugin-web-font-loader": "^1.0.4",
