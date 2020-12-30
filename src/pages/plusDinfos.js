@@ -9,10 +9,10 @@ const plusDinfo = () => (
     <Row className='mx-0'>
       <Col xs="6" className="d-block d-sm-none  "></Col>
     </Row>
-    <Container fluid className='mb-5 pb-5'>
-      <Row className='mx-0'>
+    <Container fluid className='mb-5 pb-5 mx-0 px-0 interligne'>
+      <Row className='mx-0 px-0'>
         <div>
-          <p className=" pt-2 textFont">
+          <p className="textFont">
             Fondées en septembre 2016, les éditions divergences s’attachent à
             publier des ouvrages de critique sociale et politique. Quel que soit
             l’angle par lequel ils abordent le réel nos livres cherchent à
@@ -22,23 +22,26 @@ const plusDinfo = () => (
           </p>
         </div>
       </Row>
-      <Row className="pt-3 mx-0">
-        <Col className="pr-3 borderGeneral-right">
-          <p className="textFont">
+      <Row className="pt-3 mx-0 px-0">
+        <Col className="pr-3 pl-0 borderGeneral-right">
+          <div className=" textFont" >
+          <p>
             Fondateur et directeur éditorial :<br />
-            <p className="text-right">Johan Badour</p>
+           Johan Badour
+           </p>
+
             Éditeur :<br />
-            <p className="text-right textFont">
+            <p >
               Alex Taillard
-              <br />
-            </p>
+            </p> 
+          
             Communication et relations presse :<br />
-            <p className="text-right textFont">
+            <p >
               Zoé Serafinowicz
               <br />
             </p>
             Graphisme :<br />
-            <p className="text-right textFont">
+            <p >
               Morgane Masse
               <br /> Anouk Rebaud
               <br />
@@ -47,11 +50,11 @@ const plusDinfo = () => (
             </p>
             Développement Web :
             <br />
-            <p className="text-right textFont">
+            <p >
               Société écrans
               <br />
             </p>
-          </p>
+            </div>
 
           <img
             className="cent pt-5"
@@ -61,7 +64,7 @@ const plusDinfo = () => (
         </Col>
 
         <Col className="textFont newsMagin">
-          <p>
+        
             Diffusion & Distribution
             <br />
             <p className="text-center font-italic textFont">
@@ -69,7 +72,7 @@ const plusDinfo = () => (
               <br />
             </p>
             Diffusion :<br />
-            <p className="text-right">
+            <p className="">
               HOBO DIFFUSION
               <br />
               23 rue Pradier
@@ -80,7 +83,7 @@ const plusDinfo = () => (
               <br />
             </p>
             Distribution :<br />
-            <p className="text-right">
+            <p className="">
               MAKASSAR DISTRIBUTION
               <br />
               8 rue Pelleport
@@ -98,8 +101,9 @@ const plusDinfo = () => (
               Pour la Suisse
               <br />
             </p>
+            <p>
             Diffusion :<br />
-            <p className="text-right">
+          
               AVEC PLAISIR
               <br />
               Phil Berger
@@ -107,7 +111,8 @@ const plusDinfo = () => (
               Tél. : + 41 22 301 17 74
               <br />
               pberger@servidis.ch
-              <br />
+              <br /></p>
+
               Distribution :<br />
               SERVIDIS
               <br />
@@ -115,16 +120,16 @@ const plusDinfo = () => (
               1279 Chavennes-de-Bogis | Tél. : + 41 22 960 95 10 |<br />
               commande@servidis.ch
               <br />
-            </p>
+         
             <p className="text-center font-italic">
-              Pour le Québec : <br />
+              Pour le Québec <br />
             </p>
-            <p className="text-right">
+            <p className="mb-5 pb-5">
               Diffusion/Distribution : DIMEDIA
               <br />
             </p>
-          </p>
-          
+      
+        
         </Col>
       </Row>
     </Container>

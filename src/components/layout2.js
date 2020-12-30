@@ -6,10 +6,18 @@ import NavBottom from "../components/navBottom";
 import Navmillieu from "./navmillieu";
 import "../fonts/fonts.css";
 import { Row, Col } from "reactstrap";
+import AParaitre from "./a paraitre";
+import ParuRecement from "./paru recement";
 
 const Layout2 = ({ children }) => {
+  const aparaitre = "à";
+  const e= "é"
+  const eMaj=e.toUpperCase()
   return (
-    <>
+ 
+    <div className='scroll-bar-firefox'>
+
+  
       <Seo />
 
       <NavBar />
@@ -18,11 +26,14 @@ const Layout2 = ({ children }) => {
         <Row>
           <Col md="6" className="borderGeneral-right d-none d-sm-block">
             <Row className="container-presentation">
-              <h4 className=" pl-3 pb-3 pt-3 ">
-                <div className="d-none d-sm-block">
-                  Editions divergences
+              <h4 className=" pl-3 pb-2 pt-2 ">
+                <div className="d-none d-sm-block quatorze">
+                  {eMaj}ditions divergences
                   <br />
-                  3 Rue de l’Asile Popincourt
+                  <span className='interligne'>
+                      3, rue de l’Asile Popincourt
+                  </span>
+                
                   <br />
                   75011 Paris
                   <br />
@@ -30,10 +41,10 @@ const Layout2 = ({ children }) => {
                   contact@editionsdivergences.com
                   <br />
                 </div>
-                <div className="d-none d-sm-block">
-                  <span className="navHover">
+                <div className="d-none d-sm-block quatorze">
+                  <span className="navHover ">
                     <a
-                      className=" text-dark navFont medieumSize"
+                      className=" text-dark navFont quatorze"
                       style={{
                         textDecoration: "none",
                       }}
@@ -46,7 +57,7 @@ const Layout2 = ({ children }) => {
 
                   <span className="textFont navHover">
                     <a
-                      className=" text-dark navFont medieumSize"
+                      className=" text-dark navFont quatorze"
                       style={{
                         textDecoration: "none",
                       }}
@@ -60,7 +71,7 @@ const Layout2 = ({ children }) => {
 
                   <span className=" textFont navHover">
                     <a
-                      className=" text-dark navFont medieumSize"
+                      className=" text-dark navFont quatorze"
                       style={{
                         textDecoration: "none",
                       }}
@@ -74,7 +85,7 @@ const Layout2 = ({ children }) => {
 
                   <span className=" textFont navHover">
                     <a
-                      className=" text-dark navFont medieumSize"
+                      className=" text-dark navFont quatorze"
                       style={{
                         textDecoration: "none",
                       }}
@@ -87,16 +98,57 @@ const Layout2 = ({ children }) => {
                   </span>
                 </div>
               </h4>
+
+           
+
+
+
+
             </Row>
+
+
+            
             <Row className=" d-none d-sm-block">
               <Col sm="12">
                 <Navmillieu className="" />
               </Col>
+
+            
+
             </Row>
+            
           </Col>
+
+          <Col md="4" sm="12" xs="12" className="borderGeneral-right">
+                <div className="parution-container-enfant overscroll-behavior">
+                  <Row className="pl-3 bg-white pt-1 pb-0 mb-0 sticky-top navFont dix">
+                    <span className="pl-2 bg-white pb-0 mb-0 navFont dix interligneAparaitreParuR">
+                      Paru récemment
+                    </span>
+                  </Row>
+
+                  <div className="pl-2 pr-3 mb-0 pb-0 d-none d-sm-block">
+                    <ParuRecement />
+                  </div>
+                </div>
+              </Col>
+
+              <Col md="2" className="">
+                <div className="parution-container-enfant overscroll-behavior">
+                  <Row className=" dix pl-2 bg-white  pb-0 mb-0 sticky-top">
+                    <span className=" dix pl-3 bg-white  pb-0 mb-0 sticky-top navFont interligneAparaitreParuR pt-1">
+                      {aparaitre.toUpperCase()} paraître
+                    </span>
+                  </Row>
+
+                  <div className="pl-2">
+                    <AParaitre />
+                  </div>
+                </div>
+              </Col>
         </Row>
 
-        <div className="col-md-12 borderGeneral-top-speciale catalogue d-none d-sm-block">
+        <div className="col-md-12 borderGeneral-top-speciale catalogue d-none d-sm-block mx-0 px-0">
           <main>{children}</main>
         </div>
 
@@ -105,8 +157,8 @@ const Layout2 = ({ children }) => {
         </div>
 
         <NavBottom />
-      </div>
-    </>
+      </div>  </div>
+   
   );
 };
 

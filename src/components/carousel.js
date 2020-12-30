@@ -10,11 +10,11 @@ const Btcarousel = ({ articles }) => {
 
   return (
     <div>
-
     
     {/* <Container fluid> */}
       <Carousel
-        controls={true}
+        controls={false}
+     
         justify-self="end"
         align-self="center"
         control-prev-icon-color="invert(100%)"
@@ -24,7 +24,7 @@ const Btcarousel = ({ articles }) => {
       >
         {article.map((livre, i) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
               <Container fluid className="imagescarousel">
                 <Link
                   to={`/livre/${livre.node.slug}`}
@@ -34,8 +34,9 @@ const Btcarousel = ({ articles }) => {
                   <img
                     src={livre.node.images[0].src}
                     alt="couverture"
-                    width="120"
-                    height="200"
+                     height="290" 
+                     width='auto'
+                  
                     className="carteLivre"
                   />
                 </Link>

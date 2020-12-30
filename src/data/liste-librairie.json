@@ -24,7 +24,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 1,
+          "PARK_ID": 2,
           "NAME": "La Gryphe",
           "DESCRIPTIO": "5 rue Sébastien Gryphe, Lyon 7"
         },

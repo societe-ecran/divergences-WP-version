@@ -1,8 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import "moment/locale/fr";
 import Layout from "../components/layout";
-import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
+// import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
 import { Container, Row, Col } from "reactstrap";
 
 export const query = graphql`
@@ -32,11 +31,16 @@ export const query = graphql`
 
 const Evenement = ({ data }) => {
   const article = data.wpPost;
+  let month =new Date(article.dateevenement.dateEvenement).getMonth()
+  let corectMonth=month+=1
+  let date = new Date(article.dateevenement.dateEvenement).getDate() + '/' + corectMonth +'/'+new Date(article.dateevenement.dateEvenement).getFullYear() 
+
+
   return (
     <Layout>
-      <Container fluid className="mx-0 pt-1 px-0 pb-5 mb-5">
+      <Container fluid className="mx-0 px-0 pb-5 mb-5 interligne">
         <Row className="d-block d-sm-none">
-          <div className=" text-right pr-3 pt-2">
+          <div className=" text-right pr-2">
             <Link to="/agenda/" style={{ textDecoration: "none" }}>
               <div className="fas h5 fa-times text-dark text-right "></div>
             </Link>
@@ -61,8 +65,8 @@ const Evenement = ({ data }) => {
 
         <Row className="pb-5 pb-5">
           <Col sm="3" className="textFont borderGeneral-right">
-            <div>
-              {article.dateevenement.dateEvenement} <br />
+            <div className='textFont douze '>
+              {date} <br />
               {article.adresse.adresse}
               <br />
               {article.adresse2.prix}
@@ -76,7 +80,7 @@ const Evenement = ({ data }) => {
 
           <Col sm="9" className=" textFont">
             <br />
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+            <div className=" textFont" dangerouslySetInnerHTML={{ __html: article.content }} />
           </Col>
         </Row>
       </Container>

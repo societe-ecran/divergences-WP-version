@@ -28,6 +28,17 @@ const ParuRecement = () => {
                     name
                     options
                   }
+        #           images {
+        #   localFile {
+        #     childImageSharp {
+        #       fluid(maxWidth: 350) {
+        #         src
+        #       }
+        #     }
+        #   }
+        # }
+
+
                   images {
                     src
                   }

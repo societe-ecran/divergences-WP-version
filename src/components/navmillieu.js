@@ -4,30 +4,33 @@ import { Link } from "gatsby";
 import "../fonts/fonts.css";
 
 const style = {
-  color: "black",
   textDecoration: "none",
+  color: "black",
 };
 
 const activeStyle = {
   color: "grey",
 };
 
+
+
 const Navmillieu = () => (
-  <div className="d-flex justify-content-between pt-2 ">
+  <div className="d-flex justify-content-between pt-2 navFont dix">
     <div>
-      <h5>
+     
         <Link
           className=" navHover active medieumSize  "
           to="/"
           style={style}
           activeStyle={activeStyle}
+
         >
           Actualités
         </Link>
-      </h5>
+     
     </div>
     <div>
-      <h5>
+  
         <Link
           className="navHover medieumSize "
           to="/plusDinfos/"
@@ -36,11 +39,11 @@ const Navmillieu = () => (
         >
           Plus d'infos
         </Link>
-      </h5>
+     
     </div>
 
     <div>
-      <h5>
+    
         <Link
           className="navHover medieumSize"
           to="/about/"
@@ -49,7 +52,7 @@ const Navmillieu = () => (
         >
           Contact/Newsletter
         </Link>
-      </h5>
+     
     </div>
   </div>
 );

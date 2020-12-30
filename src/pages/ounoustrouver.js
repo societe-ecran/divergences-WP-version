@@ -11,8 +11,8 @@ const Ounoustrouver = () => {
   return (
     <Layout2>
       <Container fluid className='mb-5 pb-5'>
-        <Row className="mt-4">
-          <Col sm="9">
+        <Row className="mt-2">
+          <Col sm="9" className="pl-0">
             {typeof window !== "undefined" && (
               <LeafletMaps
                 position={[46.52863469527167, 2.43896484375]}
@@ -22,7 +22,7 @@ const Ounoustrouver = () => {
           </Col>
 
           <Col sm="3">
-            <p className="textFont textmap">
+            <span className="textFont interligne">
               Voici certaines des librairies où vous pouvez retrouver nos
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
@@ -33,7 +33,7 @@ const Ounoustrouver = () => {
               target="_blank" rel="noreferrer"
               >les libraires.fr
               </a>
-            </p>
+            </span>
           </Col>
         </Row>
       </Container>

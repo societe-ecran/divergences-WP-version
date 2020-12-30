@@ -17,7 +17,7 @@ export default () => {
     <>
       <TopNav className="sticky-top borderGeneral-bottom ">
         <NavItems className="d-flex">
-          <Col md="6" xs="4">
+          <Col md="6" s='4' xs="4">
             <Link
               className="text-dark font-weight-bold logoDivergences navfont text-decoration-none "
               to="/"
@@ -26,7 +26,7 @@ export default () => {
             </Link>
           </Col>
 
-          <Col md="4" xs="0" className="pt-2 d-none d-md-block ">
+          <Col md="5" xs="0" className="pt-2 d-none d-md-block pl-2">
             <Link
               className=" text-dark navFont logoDivergences2  text-decoration-none"
               to="/"
@@ -35,19 +35,19 @@ export default () => {
             </Link>
           </Col>
 
-          <Col md="2" className="d-flex justify-content-end mb-3">
+          <Col md="1" className="d-flex justify-content-end ">
             <button className="snipcart-checkout panier ">
               <Panier />
             </button>
           </Col>
 
-          <Col xs="1" className="d-block d-sm-none"></Col>
+          <Col  xs="1" sm='1' md='1' lg='1'className="d-block d-md-none"></Col>
         </NavItems>
 
         <SideMenu>
           <Menu isOpen={menuState.menuOpen} className="borderSlide">
             <Link
-              className="navFont text-dark navHover"
+              className="navFont text-dark navHover text-decoration-none"
               to="/"
               onClick={() => closeMenu()}
             >
@@ -75,7 +75,7 @@ export default () => {
               to="/ounoustrouver/"
               onClick={() => closeMenu()}
             >
-              Où nous trouver?
+              Où nous trouver
             </Link>
 
             <Link
@@ -157,7 +157,7 @@ const SideMenu = styled.div`
     width: 25px;
     height: 20px;
     right: 15px;
-    top: 10px;
+    top: 16px;
   }
   /* Color/shape of burger icon bars */
   .bm-burger-bars {

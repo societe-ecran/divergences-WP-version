@@ -29,6 +29,16 @@ const AParaitre = () => {
                     name
                     options
                   }
+        #           images {
+        #   localFile {
+        #     childImageSharp {
+        #       fluid(maxWidth: 240) {
+        #         src
+        #       }
+        #     }
+        #   }
+        # }
+
                   images {
                     src
                   }
@@ -38,15 +48,15 @@ const AParaitre = () => {
           }
         `}
         render={(data) => (
-          <div>
+          <div >
             <div className="d-none d-sm-block" >
               <LivresComponent articles={data.allWcProducts.edges} />
             </div>
-            <div>
+
               <div className="d-block d-sm-none">
                 <Btcarousel articles={data.allWcProducts.edges} titres="A paraître"/>
               </div>
-            </div>
+            
           </div>
         )}
       />

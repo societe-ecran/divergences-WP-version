@@ -23,6 +23,17 @@ const Catalogue = () => {
                   name
                   options
                 }
+        #          images {
+        #   localFile {
+        #     childImageSharp {
+        #       fluid(maxWidth: 240) {
+        #         src
+        #       }
+        #     }
+        #   }
+        # }
+
+
                 images {
                   src
                 }

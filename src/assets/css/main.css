@@ -1,31 +1,70 @@
-.colorisation{
-background-color: green;
+body{
+  overflow: hidden;
 }
 
-.smooth{
-  scroll-behavior: smooth
+button {
+  border:none;
+  background-color:transperant;
+  outline:none;
 }
 
-.index{
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+/* taille de la police */
+.quatorze {
+  font-size: 19px;
+}
+
+.dix {
+  font-size: 13px;
+}
+
+.douze {
+  font-size: 16px;
+}
+
+/* interlignage */
+.interligne {
+  line-height: 1.2em;
+}
+
+.interligneAparaitreParuR {
+}
+
+br {
+  line-height: 0.9em;
+}
+
+.livretemplate {
+  width: auto;
+  max-height: 540;
+}
+
+.smooth {
+  scroll-behavior: smooth;
+}
+
+.index {
   z-index: 1;
-  position:relative
+  position: relative;
 }
 
 /* taille livre */
 
-
 .tailleLivreRcementParu {
   width: 60%;
   height: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .tailleLivreAparaitre {
   max-width: 80%;
   height: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .tailleLivrePardeffault {
@@ -88,14 +127,15 @@ background-color: green;
 }
 
 .colonne {
-  height: 90vh;
+  height: 92vh;
+  scrollbar-width: none;
 }
 
 .carre {
-  height: 60vh;
-  width: 100%;
+  height: 80vh;
   overflow: scroll;
-  /* overscroll-behavior:contain */
+  overscroll-behavior: contain;
+  scrollbar-width: none;
 }
 
 .overscroll-behavior {
@@ -106,7 +146,9 @@ background-color: green;
   overflow: hidden;
   height: 100%;
 }
-
+.scroll{
+  overflow: hidden;
+}
 .indent {
   text-indent: 3em;
 }
@@ -116,9 +158,10 @@ background-color: green;
 }
 
 .catalogue {
-  height: 60vh;
+  height: 80vh;
   overflow: scroll;
   overscroll-behavior: contain;
+  scrollbar-width: none;
 }
 
 /* Livres */
@@ -145,12 +188,13 @@ background-color: green;
 
 .logoDivergences {
   font-family: "Druk";
-  font-size: xx-large;
+  /* font-size: xx-large; */
+  font-size: 24px;
 }
 
 .logoDivergences2 {
   font-family: "UniversLTStd-Ex";
-  font-size: x-large;
+  font-size: 19px;
 }
 
 /* Bouttons  */
@@ -182,7 +226,7 @@ background-color: green;
 
 .navHover:hover {
   color: grey;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .shadowBar {
@@ -218,9 +262,10 @@ h5 {
 
 /* container agenda/parution/a paraitre  */
 
-.enlever-scroll-bar-firefox {
-  scrollbar-width: 0px;
+.scroll-bar-firefox {
+  scrollbar-width: thin;
 }
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -229,7 +274,7 @@ h5 {
 }
 
 .agenda-container-parent {
-  height: 500px;
+  height: 510px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -246,7 +291,7 @@ right: 0; */
 }
 
 .parution-container-parent {
-  height: 960px;
+  height: 980px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -315,21 +360,24 @@ right: 0; */
   scrollbar-width: none;
 }
 
-
 @media (max-width: 1199.98px) {
   .logoDivergences {
     font-family: "Druk";
-    font-size: x-large;
+    font-size: 24px;
   }
 
   .logoDivergences2 {
     font-family: "UniversLTStd-Ex";
-    font-size: medium;
+    font-size: 19px;
   }
- }
-
+}
 
 @media (max-width: 576px) {
+
+  body{
+    overflow: scroll;
+  }
+
   .tailleLivreRcementParu {
     width: 150px;
     height: 265px;
@@ -356,30 +404,38 @@ right: 0; */
 
   .logoDivergences {
     font-family: "Druk";
-    font-size: medium;
+    font-size: 16px;
   }
 
-  .logoDivergences2 {
+  /* .logoDivergences2 {
     font-family: "UniversLTStd-Ex";
-    font-size: small;
-  }
-
-  .medieumSize {
-    font-size: medium;
-  }
+    font-size: 19px;
+  } */
 
   .carre {
     height: 100vh;
-    width:auto
+    /* width:auto; */
+    margin-right: 200px;
+    padding-right: 200px;
     /* overscroll-behavior:contain */
   }
 
 
+
   
+
+
+  .testScrollBar {
+    margin-right: -14px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .catalogue {
     height: 100vh;
     overflow: scroll;
-    /* overscroll-behavior:contain */
+    overscroll-behavior:contain;
+    scrollbar-width: none;
   }
 
   .borderGeneral-right {
@@ -387,7 +443,7 @@ right: 0; */
   }
 
   .textmap {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .no-scroll {
@@ -403,34 +459,32 @@ right: 0; */
     height: auto;
     width: auto;
     overflow: none;
+    scrollbar-width: none;
   }
 
   .catalogue {
     height: 100vh;
     overflow: scroll;
     overscroll-behavior: none;
+    scrollbar-width: none;
   }
 
   .newsMagin {
     margin-top: 20px;
   }
 
-  .centerNewsletter {
-    text-align: center;
-  }
+  
 }
 
-.imagescarousel {
-  width: 150;
+/* .imagescarousel {
+ width: 100%;
   height: auto;
-}
+} */
 
-
-.recemment{
+.recemment {
   width: 1000px;
   overflow-y: auto;
 }
-
 
 /* .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -445,32 +499,29 @@ right: 0; */
   background-color: black;
 } */
 
-.carousel-control-next-icon
-{
-  content: '>';
+.carousel-control-next-icon {
+  content: ">";
   font-size: 55px;
-  color:black;
+  color: black;
 }
 
 .carousel-control-prev-icon {
-  content: '<';
+  content: "<";
   font-size: 55px;
-  color:black;
+  color: black;
 }
 
-
-.ecritureVericale{
+.ecritureVericale {
   writing-mode: vertical-rl;
-text-orientation: sideways;
-transform: rotate(180deg)
+  text-orientation: sideways;
+  transform: rotate(180deg);
 }
 .borderGeneral-rightSmart {
   border-right: 2px solid black;
 }
-.maginSpecial{
-  margin-top:80px
+.maginSpecial {
+  margin-top: 80px;
 }
-
 
 div.scrollmenu {
   background-color: #333;

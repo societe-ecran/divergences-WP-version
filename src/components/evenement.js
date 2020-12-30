@@ -14,17 +14,17 @@ const Evenement = ({ evenement }) => {
       <Link
         style={{ textDecoration: "none" }}
         to={`/evenements/${evenement.node.slug}`}
-        className="navHover"
+        className="navHover dix"
         state={{ valeur: evenement.node.slug }}
       >
         <Row className="d-flex textFont text-dark navFont border-bottom">
-          <Col sm="2">{date}</Col>
+          <Col sm="2"><span className="navFont">{date}</span></Col>
 
           <Col sm="8">
-            <div className="textFont">{evenement.node.title}</div>
+            <div className="navFont">{evenement.node.title}</div>
           </Col>
           <Col sm="2">
-            <div className="text-right textFont">
+            <div className="text-right navFont">
               {evenement.node.ville.ville}
             </div>
           </Col>

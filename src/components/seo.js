@@ -45,11 +45,11 @@ function SEO({ description, lang, meta, title }) {
           href: "https://fonts.googleapis.com/css?family=Staatliches",
         },
         
-        {
-            rel:"stylesheet",
-            type:"text/css",
-            href:"../assets/css/fontawesome-free-5.13.1-web/css/all.css",
-        },
+        // {
+        //     rel:"stylesheet",
+        //     type:"text/css",
+        //     href:"/assets/css/fontawesome-free-5.13.1-web/css/all.css",
+        // },
 
         {
           rel: "stylesheet", 

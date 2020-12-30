@@ -1,45 +1,51 @@
 import React from "react";
 import { Link } from "gatsby";
 import "../assets/css/main.css";
-import "moment/locale/fr";
-import "../fonts/fonts.css";
-import ReactCardFlipper from "react-card-flipper";
-import { Col } from "reactstrap";
+// import Img from "gatsby-image"
+// import "../fonts/fonts.css";
+// import ReactCardFlipper from "react-card-flipper";
+
 
 const Livre = ({ article }) => {
-  let titre = article.node.name.toUpperCase();
-  let auteur = "";
-  console.log(article.node.attributes[0]);
-  if (typeof article.node.attributes[0] !== undefined) {
-    auteur = article.node.attributes[0].options;
-  } else {
-    auteur = "";
-  }
+
+  // let auteur = "";
+  // console.log(article.node.attributes[0].options);
+  // if (typeof article.node.attributes[0] !== undefined) {
+  //   auteur = article.node.attributes[0].options[0];
+  // } else {
+  //   auteur = "";
+  // }
 
   return (
     <div className="smooth">
 
-<div className="d-block d-sm-none">
+<div className="d-block d-sm-none mx-0 ">
 <Link
             to={`/livre/${article.node.slug}`}
             activeStyle={{ textDecoration: "none" }}
             style={{ textDecoration: "none" }}
           >
+             {/* <Img fixed={article.node.images[0].localFile.childImageSharp.fixed} /> */}
       <img
         src={
           article.node.images[0] !== undefined ? article.node.images[0].src : ""
         }
         alt=""
-        className="ml-3 mr-3 mb-3 mt-3 tailleLivreCatalogue carteLivre"
-        width="250"
-        height="380"
+        className="ml-3 mr-3 mb-2 mt-2 tailleLivreCatalogue carteLivre"
+        width="220"
+        height="auto"
       />
        </Link>
 </div>
 
 
-      <ReactCardFlipper className="d-none d-sm-block" width="250px" height="380px" behavior="hover">
-        <div>
+      {/* <ReactCardFlipper className="d-none d-sm-block" width="250px" height="380px" behavior="hover"> */}
+        <div  className="d-none d-sm-block">
+        <Link
+            to={`/livre/${article.node.slug}`}
+            activeStyle={{ textDecoration: "none" }}
+            style={{ textDecoration: "none" }}
+          >
           <img
             src={
               article.node.images[0] !== undefined
@@ -47,12 +53,13 @@ const Livre = ({ article }) => {
                 : ""
             }
             alt=""
-            className="pl-3 pr-3 pb-3 pt-3 tailleLivreCatalogue"
+            className="pl-3 pr-3 pb- pt-2 tailleLivreCatalogue"
             width="250"
-            height="380"
+            height="auto"
           />
+            </Link>
         </div>
-        <Col className="text-center text-dark decoration-non containerlivre">
+        {/* <Col className="text-center text-dark decoration-non containerlivre">
           <Link
             to={`/livre/${article.node.slug}`}
             activeStyle={{ textDecoration: "none" }}
@@ -66,18 +73,18 @@ const Livre = ({ article }) => {
                 width="250"
                 height="380"
               />
-              <div class="texte_centrer">
+              <div className="texte_centrer textFont">
                 <div className="text-dark decoration-non font-weight-bolder ">
                   {titre}
                 </div>
                 <div className="text-dark decoration-non font-weight-bolder mt-5 ">
-                  {auteur}
+                  {auteurMaj}
                 </div>
               </div>
             </div>
           </Link>
-        </Col>
-      </ReactCardFlipper>
+        </Col> */}
+      {/* </ReactCardFlipper> */}
     </div>
   );
 };

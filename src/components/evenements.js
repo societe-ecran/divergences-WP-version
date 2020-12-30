@@ -13,10 +13,11 @@ const Evenements = ({ articles }) => {
     <div>
       {articles.map((article, i) => {
         return (
-          <div>
+          <div  key={i}>
             <Evenement
               evenement={article}
-              key={`evenements__${article.node.slug}`}
+             
+              // key={`evenements__${article.node.slug}`}
             />
           </div>
         );
