@@ -14,7 +14,6 @@ const Btcarousel = ({ articles }) => {
     {/* <Container fluid> */}
       <Carousel
         controls={false}
-     
         justify-self="end"
         align-self="center"
         control-prev-icon-color="invert(100%)"

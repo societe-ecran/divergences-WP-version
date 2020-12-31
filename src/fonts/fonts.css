@@ -1,17 +1,17 @@
 
-  @font-face {
+@font-face {
     font-family: "Druk";
-    src: url("Druk.otf");
+    src: url("./Druk.otf");
   }
 
   @font-face {
     font-family: "UniversLTStd-ExObl";
-    src: url("UniversLTStd-ExObl.otf");
+    src: url("./UniversLTStd-ExObl.otf");
   }
 
   @font-face {
     font-family: "UniversLTStd-Ex";
-    src: url("UniversLTStd-Ex.otf");
+    src: url("./UniversLTStd-Ex.otf");
   }
 
   /* @font-face {
@@ -19,7 +19,7 @@
     src: url("UniversLTStd-ExObl.otf");
   } */
 
-  @font-face {
+@font-face {
     font-family: "Concorde-Regular";
-    src: url("Concorde-Regular.otf");
+    src: url("./Concorde-Regular.otf");
   }

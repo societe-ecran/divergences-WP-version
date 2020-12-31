@@ -3,9 +3,14 @@ import Layout from "../components/layout";
 import "../assets/css/main.css";
 import "../fonts/fonts.css";
 import { Container, Row, Col } from "reactstrap";
+import Seo from "../components/seo";
 
 const plusDinfo = () => (
   <Layout>
+    <Seo siteTitle="Editions Divergences"
+          title="Infos"
+          keywords={[`editeur`, `graphisme`, `developpement web`, `diffusion`]}
+        />
     <Row className='mx-0'>
       <Col xs="6" className="d-block d-sm-none  "></Col>
     </Row>

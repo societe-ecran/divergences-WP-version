@@ -4,14 +4,17 @@ import Layout from "../components/layout"
 import "../assets/css/main.css"
 import EvenementsComponent from "../components/evenements"
 import "../fonts/fonts.css"
-
+import Seo from "../components/seo";
 
 const Agenda = () => {
 
   return(
   
   <Layout>
-   
+   <Seo siteTitle="Editions Divergences"
+          title="Actualités"
+          keywords={[`évènements`, `actualités`, `agenda`]}
+        />
     <StaticQuery
       query={graphql`
         query {

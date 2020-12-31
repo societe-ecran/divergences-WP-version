@@ -7,10 +7,14 @@ import "../fonts/fonts.css";
 import { Container, Row, Col } from "reactstrap";
 import ParuRecementSmart from "../components/parurecemmentSmartPhone";
 import AParaitreSmart from "../components/aparaitreSmart";
-
+import Seo from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
+    <Seo siteTitle="Editions Divergences"
+          title="Home"
+          keywords={[`Editions divergences`, `home`, `index`]}
+        />
     <StaticQuery
       query={graphql`
         query {

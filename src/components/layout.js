@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import Seo from "./seo";
+// import Seo from "./seo";
 import Navmillieu from "../components/navmillieu";
 import NavBottom from "../components/navBottom";
 import "../fonts/fonts.css";
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   return (
     
     <div className="no-scroll scroll-bar-firefox">
-      <Seo />
+      {/* <Seo /> */}
 
       <NavBar />
 

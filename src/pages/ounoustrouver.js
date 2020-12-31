@@ -6,10 +6,15 @@ import LeafletMaps from "../components/leafletmaps";
 import "../fonts/fonts.css";
 import { Container, Row, Col } from "reactstrap";
 // import { Map, TileLayer , Marker, Popup } from 'react-leaflet'
+import Seo from "../components/seo";
 
 const Ounoustrouver = () => {
   return (
     <Layout2>
+      <Seo siteTitle="Editions Divergences"
+          title="Librairies"
+          keywords={[`Ou nous trouver`, `librairies`, `carte`]}
+        />
       <Container fluid className='mb-5 pb-5'>
         <Row className="mt-2">
           <Col sm="9" className="pl-0">

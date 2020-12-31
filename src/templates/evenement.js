@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 // import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
 import { Container, Row, Col } from "reactstrap";
+import Seo from "../components/seo";
 
 export const query = graphql`
   query EvenementsQuery($slug: String!) {
@@ -38,6 +39,7 @@ const Evenement = ({ data }) => {
 
   return (
     <Layout>
+        <Seo siteTitle="Editions Divergences" title={article.title} description={date} image={article.images[0].src} />
       <Container fluid className="mx-0 px-0 pb-5 mb-5 interligne">
         <Row className="d-block d-sm-none">
           <div className=" text-right pr-2">

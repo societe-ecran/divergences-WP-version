@@ -1,11 +1,16 @@
 import React from "react";
 import "../assets/css/main.css";
-import "../fonts/fonts.css";
+// import "../fonts/fonts.css";
+import Seo from "../components/seo";
 import Layout from "../components/layout";
 import { Container, Row, Col } from "reactstrap";
 
 const IndexPage = () => (
   <Layout>
+    <Seo siteTitle="Editions Divergences"
+          title="Contact Newsletter"
+          keywords={[`Newsletter`, `contact`]}
+        />
     <Container fluid className="px-0 interligne">
       <Row>
         <Col xs="6" className="d-block d-sm-none "></Col>

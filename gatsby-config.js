@@ -9,7 +9,11 @@ module.exports = {
     title: `Editions Divergences`,
     description: `Site des éditions Divergences. 3 Rue de l’Asile Popincourt 75011 Paris contact@editionsdivergences.com`,
     author: `Société écrans`,
-    siteUrl: `https://adoring-volhard-0f7152.netlify.app/`
+    siteUrl: `https://adoring-volhard-0f7152.netlify.app/`,
+    social: {
+      twitter: `EDivergences`,
+    },
+
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -59,10 +63,10 @@ module.exports = {
               },
             }
           },
-          innerHTML: `
-          <billing section="bottom">
-              <!-- Customization goes here -->
-          </billing>`,
+          // innerHTML: `
+          // <billing section="bottom">
+          //     <!-- Customization goes here -->
+          // </billing>`,
       },
   },
 
@@ -130,7 +134,7 @@ module.exports = {
       options: {
         name: `Editions divergences`,
         short_name: `divergences`,
-        start_url: `https://www.editionsdivergences.com/`,
+        start_url: `https://adoring-volhard-0f7152.netlify.app/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,

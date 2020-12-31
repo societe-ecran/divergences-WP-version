@@ -5,6 +5,7 @@ import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
 import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "react-bootstrap/Carousel";
+import Seo from "../components/seo";
 
 const style = {
   fontWeight: "bold",
@@ -55,7 +56,7 @@ const Livre = ({ data }) => {
   if (article.short_description !== undefined) {
     shortDescription = article.short_description;
   } else {
-    description = "";
+    shortDescription = "";
   }
 
   if (typeof article.images[0] !== undefined) {
@@ -93,6 +94,7 @@ const Livre = ({ data }) => {
 
   return (
     <Layout2>
+       <Seo siteTitle="Editions Divergences" title={titre} description={description} image={article.images[0].src} />
       <Container fluid className="mt-2 pb-5 mb-5 interligne ">
         <Row sm="1" className="text-right d-block d-sm-none">
           <Link

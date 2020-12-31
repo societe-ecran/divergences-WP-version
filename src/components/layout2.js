@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import NavBar from "../components/navTop";
-import Seo from "./seo";
+// import Seo from "./seo";
 import NavBottom from "../components/navBottom";
 import Navmillieu from "./navmillieu";
 import "../fonts/fonts.css";
@@ -18,7 +18,7 @@ const Layout2 = ({ children }) => {
     <div className='scroll-bar-firefox'>
 
   
-      <Seo />
+      {/* <Seo /> */}
 
       <NavBar />
 
