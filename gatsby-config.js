@@ -32,15 +32,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["Palace, Druk, UniveExt,UniveExtObl, ConcoRom "],
-          urls: ["/src/fonts/fonts.css"],
-        },
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     custom: {
+    //       families: ["Palace, Druk, UniveExt,UniveExtObl, ConcoRom "],
+    //       urls: ["/src/fonts/fonts.css"],
+    //     },
+    //   },
+    // },
     // {
     //   resolve: 'gatsby-plugin-snipcartv3',
     //   options: {
