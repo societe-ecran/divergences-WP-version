@@ -12,7 +12,8 @@ import Seo from "../components/seo";
 const IndexPage = () => (
   <Layout>
     <Seo siteTitle="Editions Divergences"
-          title="Home"
+          title="Editions Divergences"
+          description="Bienvenue sur le site des éditions Divergences."
           keywords={[`Editions divergences`, `home`, `index`]}
         />
     <StaticQuery
@@ -100,15 +101,17 @@ const IndexPage = () => (
               </Container>
             </Row>
 
-            <Row className="">
-              {/* <Col xs="2"></Col> */}
-              <Col xs="1" className="d-block d-sm-none px-2">
-                <div className="ecritureVericale text-center mt-5 d-block d-sm-none dix px-0 mx-0">
+                      <Container fluid className="px-0 d-block d-sm-none pb-5" >
+
+                      
+            <Row className="borderGeneral-bottom ">
+              {/* <Col xs="1" className="d-block d-sm-none px-2"> */}
+                <div className="text-center mt-1 pl-3 d-block d-sm-none dix px-0 mx-0">
                   Paru recemment
                 </div>
-              </Col>
-              <Col xs="10" className="pl-2">
-                <div className=" borderGeneral-left d-block d-sm-none  ">
+              {/* </Col> */}
+              <Col xs="10" className="px-0 pb-1">
+                <div className=" d-block d-sm-none  ">
                   <ParuRecementSmart />
                 </div>
               </Col>
@@ -116,50 +119,22 @@ const IndexPage = () => (
 
             {/* A paraitre Smartphone */}
             <Row className=" ">
-              <Col xs="1" className="d-block d-sm-none px-2">
-                <div className="ecritureVericale maginSpecial dix">
+              {/* <Col xs="1" className="d-block d-sm-none px-2"> */}
+             
+              {/* </Col> */}
+              <Col xs="10" className="px-0"> 
+                <div className=" pl-3  mt-1 dix">
                   A paraître{" "}
                 </div>
-              </Col>
-              <Col xs="10" className="pl-2">
-                <div className=" borderGeneral-left d-block d-sm-none">
+                <div className=" d-block d-sm-none px-0">
                   <AParaitreSmart />
                 </div>
               </Col>
             </Row>
+            </Container>
 
-            {/* <Row className=" pt-1 pb-1 pl-2 navFont d-block d-sm-none dix">
-              <Row className='borderGeneral-bottom pl-3'>
-                 <Link
-                className="navFont text-dark navHover text-decoration-none"
-                to="/agenda"
-              >
-                Actualité {">"}<br/>
-              </Link>
-              </Row>
-             
-              <Row className='borderGeneral-bottom pl-3 navFont  pt-1 pb-1'>
- Où nous trouver {">"} <br />
-              </Row>
-              <Row className='borderGeneral-bottom pl-3 navFont  pt-1 pb-1'>
-                 Plus d'infos {">"} <br />
-              </Row>
-              <Row className='borderGeneral-bottom pl-3 navFont  pt-1 pb-1'>
-                 Contact / Newsletter {">"} <br />
-              </Row>
-             
-             
-             
-            </Row> */}
           </span>
-          {/* <Row className='' >
-                  <Col xs="6" className="d-block d-sm-none  ">
-                  <div className="mt-2"><ParuRecement /></div>
-               </Col>  */}
-          {/* <Col xs="6" className=" d-block d-sm-none borderGeneral-bottom pb-3">
-                  <div className="mt-2"><AParaitre /></div>
-               </Col>  */}
-          {/* </Row> */}
+
           <span className="d-none d-sm-block">
             <EvenementsComponent
               className="navFont pb-5 mb-5"

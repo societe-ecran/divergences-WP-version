@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
   const eMaj = e.toUpperCase();
   return (
     
-    <div className="no-scroll scroll-bar-firefox">
+    <div className="no-scroll">
       {/* <Seo /> */}
 
       <NavBar />
@@ -150,7 +150,7 @@ const Layout = ({ children }) => {
               <Col md="4" sm="12" xs="12" className="borderGeneral-right">
                 <div className="parution-container-enfant overscroll-behavior">
                   <Row className="pl-2 bg-white pt-1 pb-0 mb-0 sticky-top navFont dix">
-                    <span className="pl-3 bg-white pb-0 mb-0 navFont dix interligneAparaitreParuR">
+                    <span className="pl-3 bg-white pb-0 mb-0 navFont dix  ">
                       Paru récemment
                     </span>
                   </Row>
@@ -164,7 +164,7 @@ const Layout = ({ children }) => {
               <Col md="2" className="">
                 <div className="parution-container-enfant overscroll-behavior">
                   <Row className=" dix pl-2 bg-white  pb-0 mb-0 sticky-top">
-                    <span className=" dix pl-3 bg-white pt-1  pb-0 mb-0 sticky-top navFont interligneAparaitreParuR">
+                    <span className=" dix pl-3 bg-white pt-1  pb-0 mb-0 sticky-top navFont">
                       {aparaitre.toUpperCase()} paraître
                     </span>
                   </Row>

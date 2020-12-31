@@ -10,6 +10,7 @@ const IndexPage = () => (
   <Layout2>
     <Seo siteTitle="Editions Divergences"
           title="Catalogue"
+          description="Catalogue des éditions Divergences"
           keywords={[`Catalogue`, `livres`]}
         />
     <Container fluid className="pb-5 mb-5 mx-0 px-0  ">

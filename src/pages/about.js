@@ -9,6 +9,10 @@ const IndexPage = () => (
   <Layout>
     <Seo siteTitle="Editions Divergences"
           title="Contact Newsletter"
+          description="Lecteurs et lectrices, curieuses et curieux, libraires,
+          journalistes, si vous souhaitez être tenu au courant de nos
+          ouvrages, de nos événements et de nos activités une fois par mois,
+          vous pouvez vous inscrire où nous écrire"
           keywords={[`Newsletter`, `contact`]}
         />
     <Container fluid className="px-0 interligne">

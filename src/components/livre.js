@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import "../assets/css/main.css";
-import "moment/locale/fr";
 import "../fonts/fonts.css";
 import { Container } from "reactstrap";
 

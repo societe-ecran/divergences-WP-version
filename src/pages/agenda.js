@@ -13,6 +13,7 @@ const Agenda = () => {
   <Layout>
    <Seo siteTitle="Editions Divergences"
           title="Actualités"
+          description="Evènements à venir partout en France."
           keywords={[`évènements`, `actualités`, `agenda`]}
         />
     <StaticQuery

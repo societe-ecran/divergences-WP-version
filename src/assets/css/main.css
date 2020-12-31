@@ -1,11 +1,12 @@
-body{
+body {
   overflow: hidden;
 }
 
+
 button {
-  border:none;
-  background-color:transperant;
-  outline:none;
+  border: none;
+  background-color: transperant;
+  outline: none;
 }
 
 .carousel-control-next {
@@ -28,9 +29,6 @@ button {
 /* interlignage */
 .interligne {
   line-height: 1.2em;
-}
-
-.interligneAparaitreParuR {
 }
 
 br {
@@ -146,12 +144,12 @@ br {
   overflow: hidden;
   height: 100%;
 }
-.scroll{
+.scroll {
   overflow: hidden;
 }
-.indent {
+/* .indent {
   text-indent: 3em;
-}
+} */
 
 .decoration-non {
   text-decoration: none;
@@ -199,7 +197,7 @@ br {
 
 /* Bouttons  */
 
-.bouton9 {
+/* .bouton9 {
   border: none;
   padding: 6px 0 6px 0;
   border-radius: 10px;
@@ -207,19 +205,15 @@ br {
   background: #fff;
   font: bold 13px Arial;
   color: #555;
-}
+} */
 
-.bouton9:hover {
+/* .bouton9:hover {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
+} */
 
 .panier {
   border: none;
   background: #fff;
-}
-
-.snipcart-cart-header {
-  padding: 60px 16px;
 }
 
 /* Navbar */
@@ -229,11 +223,11 @@ br {
   /* font-weight: bold; */
 }
 
-.shadowBar {
+/* .shadowBar {
   -webkit-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Formulaire */
 
@@ -262,10 +256,9 @@ h5 {
 
 /* container agenda/parution/a paraitre  */
 
-.scroll-bar-firefox {
+/* .scroll-bar-firefox {
   scrollbar-width: thin;
-}
-
+} */
 
 ::-webkit-scrollbar {
   display: none;
@@ -273,12 +266,12 @@ h5 {
   background: transparent;
 }
 
-.agenda-container-parent {
+/* .agenda-container-parent {
   height: 510px;
   width: 100%;
   overflow: hidden;
   position: relative;
-}
+} */
 
 .agenda-container-enfant {
   position: absolute;
@@ -290,12 +283,12 @@ right: 0; */
   scrollbar-width: none;
 }
 
-.parution-container-parent {
+/* .parution-container-parent {
   height: 980px;
   width: 100%;
   overflow: hidden;
   position: relative;
-}
+} */
 
 .parution-container-enfant {
   position: absolute;
@@ -326,14 +319,14 @@ right: 0; */
   border-left: 2px solid black;
 }
 
-.parution-container-parent2 {
+/* .parution-container-parent2 {
   height: 321px;
   width: 100%;
   overflow: hidden;
   position: relative;
-}
+} */
 
-.parution-container-enfant2 {
+/* .parution-container-enfant2 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -341,16 +334,16 @@ right: 0; */
   right: 0px;
   overflow: auto;
   scrollbar-width: none;
-}
+} */
 
-.catalogue-container-parent {
+/* .catalogue-container-parent {
   height: 610px;
   width: 100%;
   overflow: hidden;
   position: relative;
-}
+} */
 
-.catalogue-container-enfant {
+/* .catalogue-container-enfant {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -358,7 +351,7 @@ right: 0; */
   right: 0px;
   overflow: auto;
   scrollbar-width: none;
-}
+} */
 
 @media (max-width: 1199.98px) {
   .logoDivergences {
@@ -373,8 +366,7 @@ right: 0; */
 }
 
 @media (max-width: 576px) {
-
-  body{
+  body {
     overflow: scroll;
   }
 
@@ -407,11 +399,6 @@ right: 0; */
     font-size: 16px;
   }
 
-  /* .logoDivergences2 {
-    font-family: "UniversLTStd-Ex";
-    font-size: 19px;
-  } */
-
   .carre {
     height: 100vh;
     /* width:auto; */
@@ -419,11 +406,6 @@ right: 0; */
     padding-right: 200px;
     /* overscroll-behavior:contain */
   }
-
-
-
-  
-
 
   .testScrollBar {
     margin-right: -14px !important;
@@ -434,7 +416,7 @@ right: 0; */
   .catalogue {
     height: 100vh;
     overflow: scroll;
-    overscroll-behavior:contain;
+    overscroll-behavior: contain;
     scrollbar-width: none;
   }
 
@@ -472,50 +454,21 @@ right: 0; */
   .newsMagin {
     margin-top: 20px;
   }
-
-  
 }
-
-/* .imagescarousel {
- width: 100%;
-  height: auto;
-} */
 
 .recemment {
   width: 1000px;
   overflow-y: auto;
 }
 
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-image: black;
-  color:black;
-  background-color: black;
-} */
-
-.carousel-control-next-icon {
-  content: ">";
-  font-size: 55px;
-  color: black;
-}
-
-.carousel-control-prev-icon {
-  content: "<";
-  font-size: 55px;
-  color: black;
-}
+/* 
 
 .ecritureVericale {
   writing-mode: vertical-rl;
   text-orientation: sideways;
   transform: rotate(180deg);
-}
+} */
+
 .borderGeneral-rightSmart {
   border-right: 2px solid black;
 }
@@ -539,4 +492,12 @@ div.scrollmenu a {
 
 div.scrollmenu a:hover {
   background-color: #777;
+}
+
+.borderGeneral-bottom {
+  border-bottom: 1px solid black;
+}
+
+.borderGeneral-top {
+  border-top: 1px solid black;
 }

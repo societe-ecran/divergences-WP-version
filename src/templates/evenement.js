@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
-// import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
 import { Container, Row, Col } from "reactstrap";
 import Seo from "../components/seo";
 
@@ -32,14 +31,22 @@ export const query = graphql`
 
 const Evenement = ({ data }) => {
   const article = data.wpPost;
-  let month =new Date(article.dateevenement.dateEvenement).getMonth()
-  let corectMonth=month+=1
-  let date = new Date(article.dateevenement.dateEvenement).getDate() + '/' + corectMonth +'/'+new Date(article.dateevenement.dateEvenement).getFullYear() 
-
+  let month = new Date(article.dateevenement.dateEvenement).getMonth();
+  let corectMonth = (month += 1);
+  let date =
+    new Date(article.dateevenement.dateEvenement).getDate() +
+    "/" +
+    corectMonth +
+    "/" +
+    new Date(article.dateevenement.dateEvenement).getFullYear();
 
   return (
     <Layout>
-        <Seo siteTitle="Editions Divergences" title={article.title} description={date}/>
+      <Seo
+        siteTitle="Editions Divergences"
+        title={article.title}
+        description={date}
+      />
       <Container fluid className="mx-0 px-0 pb-5 mb-5 interligne">
         <Row className="d-block d-sm-none">
           <div className=" text-right pr-2">
@@ -50,8 +57,8 @@ const Evenement = ({ data }) => {
         </Row>
 
         <Row className="">
-          <Col sm="3"  className="borderGeneral-right"></Col>
-          <Col sm="8" >
+          <Col sm="3" className="borderGeneral-right"></Col>
+          <Col sm="8">
             <div className="textFont font-weight-bold">{article.title}</div>
           </Col>
           <Col sm="1" className="d-none d-sm-block">
@@ -67,7 +74,7 @@ const Evenement = ({ data }) => {
 
         <Row className="pb-5 pb-5">
           <Col sm="3" className="textFont borderGeneral-right">
-            <div className='textFont douze '>
+            <div className="textFont douze ">
               {date} <br />
               {article.adresse.adresse}
               <br />
@@ -82,7 +89,10 @@ const Evenement = ({ data }) => {
 
           <Col sm="9" className=" textFont">
             <br />
-            <div className=" textFont" dangerouslySetInnerHTML={{ __html: article.content }} />
+            <div
+              className=" textFont"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
           </Col>
         </Row>
       </Container>

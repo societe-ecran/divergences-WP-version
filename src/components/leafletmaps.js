@@ -1,10 +1,9 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "./leafletmap.css";
+import "../assets/css/main.css";
 import * as parkData from "../data/liste-librairie.json";
 
 export default function LeafletMaps() {
-  // const [activePark, setActivePark] = React.useState(null);
   const position = [47.295298, 2.550805];
   return (
     <MapContainer center={position} zoom={6} scrollWheelZoom={false}>

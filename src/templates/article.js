@@ -142,13 +142,6 @@ const Livre = ({ data }) => {
               })}
             </Carousel>
 
-            {/* <img
-              className="noHover tailleLivreTemplate"
-              src={couv}
-              alt={"couverture manquante"}
-              // width="290"
-            
-            /> */}
           </Col>
 
           <Col sm="3" className="livretemplate">
@@ -169,7 +162,7 @@ const Livre = ({ data }) => {
                   className="snipcart-add-item text-dark textFont douze"
                   data-item-id={article.wordpress_id}
                   data-item-price={price}
-                  data-item-image={couv}
+                  data-item-image={article.images[0].src}
                   data-item-url={"/livre/" + article.slug}
                   data-item-name={titre}
                 >
@@ -205,7 +198,7 @@ const Livre = ({ data }) => {
                   className="snipcart-add-item  mb-5 text-dark textFont"
                   data-item-id={article.wordpress_id}
                   data-item-price={price}
-                  data-item-image={couv}
+                  data-item-image={article.images[0].src}
                   data-item-url="/"
                   data-item-name={titre}
                 >

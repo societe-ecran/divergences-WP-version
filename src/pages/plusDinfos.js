@@ -9,6 +9,12 @@ const plusDinfo = () => (
   <Layout>
     <Seo siteTitle="Editions Divergences"
           title="Infos"
+          description="Fondées en septembre 2016, les éditions divergences s’attachent à
+          publier des ouvrages de critique sociale et politique. Quel que soit
+          l’angle par lequel ils abordent le réel nos livres cherchent à
+          comprendre et à rendre intelligible le monde dans lequel nous
+          vivons, à le combattre et en imaginer de nouveaux, plus beaux, plus
+          justes et plus désirables."
           keywords={[`editeur`, `graphisme`, `developpement web`, `diffusion`]}
         />
     <Row className='mx-0'>

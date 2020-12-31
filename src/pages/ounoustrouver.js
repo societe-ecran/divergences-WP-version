@@ -13,6 +13,8 @@ const Ounoustrouver = () => {
     <Layout2>
       <Seo siteTitle="Editions Divergences"
           title="Librairies"
+          description="Voici certaines des librairies où vous pouvez retrouver nos
+          livres."
           keywords={[`Ou nous trouver`, `librairies`, `carte`]}
         />
       <Container fluid className='mb-5 pb-5'>
