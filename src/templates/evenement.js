@@ -39,7 +39,7 @@ const Evenement = ({ data }) => {
 
   return (
     <Layout>
-        <Seo siteTitle="Editions Divergences" title={article.title} description={date} image={article.images[0].src} />
+        <Seo siteTitle="Editions Divergences" title={article.title} description={date}/>
       <Container fluid className="mx-0 px-0 pb-5 mb-5 interligne">
         <Row className="d-block d-sm-none">
           <div className=" text-right pr-2">

@@ -11,7 +11,7 @@ module.exports = {
     author: `Société écrans`,
     siteUrl: `https://adoring-volhard-0f7152.netlify.app/`,
     social: {
-      twitter: `EDivergences`,
+      twitter: `@EDivergences`,
     },
 
   },
