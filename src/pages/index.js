@@ -47,7 +47,7 @@ const IndexPage = () => (
       `}
       render={(data) => (
         <span>
-          <span className="d-block d-sm-none">
+          <span className="d-block d-sm-none pb-5">
             {/* Paru Recemment Smartphone */}
 
             <Row className="borderGeneral-bottom dix">

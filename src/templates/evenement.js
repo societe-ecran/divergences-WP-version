@@ -31,20 +31,72 @@ export const query = graphql`
 
 const Evenement = ({ data }) => {
   const article = data.wpPost;
-  let month = new Date(article.dateevenement.dateEvenement).getMonth();
+
+  let adresse = "";
+  let prix = "";
+  let content = "";
+  let dateEvenement = "";
+  let horaire = "";
+  let title=""
+  let ville=''
+
+
+  if (typeof article.adresse.adresse !== undefined) {
+    adresse = article.adresse.adresse
+  } else {
+    adresse = "";
+  }
+
+  if (typeof article.adresse2.prix !== undefined) {
+    prix = article.adresse2.prix
+  } else {
+    prix = "";
+  }
+
+  if (typeof article.content !== undefined) {
+    content = article.content
+  } else {
+    content = "";
+  }
+
+  if (typeof article.dateevenement.dateEvenement !== undefined) {
+    dateEvenement = article.dateevenement.dateEvenement
+  } else {
+    dateEvenement = "";
+  }
+
+  if (typeof article.horaire.horaire !== undefined) {
+    horaire = article.horaire.horaire
+  } else {
+    horaire = "";
+  }
+
+  if (typeof article.title !== undefined) {
+    title = article.title
+  } else {
+    title = "";
+  }
+
+  if (typeof article.ville.ville !== undefined) {
+    ville = article.ville.ville
+  } else {
+    ville = "";
+  }
+
+  let month = new Date(dateEvenement).getMonth();
   let corectMonth = (month += 1);
   let date =
-    new Date(article.dateevenement.dateEvenement).getDate() +
+    new Date(dateEvenement).getDate() +
     "/" +
     corectMonth +
     "/" +
-    new Date(article.dateevenement.dateEvenement).getFullYear();
+    new Date(dateEvenement).getFullYear();
 
   return (
     <Layout>
       <Seo
         siteTitle="Editions Divergences"
-        title={article.title}
+        title={title}
         description={date}
       />
       <Container fluid className="mx-0 px-0 pb-5 mb-5 interligne">
@@ -59,7 +111,7 @@ const Evenement = ({ data }) => {
         <Row className="">
           <Col sm="3" className="borderGeneral-right"></Col>
           <Col sm="8">
-            <div className="textFont font-weight-bold">{article.title}</div>
+            <div className="textFont font-weight-bold">{title}</div>
           </Col>
           <Col sm="1" className="d-none d-sm-block">
             <div className="text-right">
@@ -76,13 +128,13 @@ const Evenement = ({ data }) => {
           <Col sm="3" className="textFont borderGeneral-right">
             <div className="textFont douze ">
               {date} <br />
-              {article.adresse.adresse}
+              {adresse}
               <br />
-              {article.adresse2.prix}
+              {prix}
               <br />
-              {article.ville.ville}
+              {ville}
               <br />
-              {article.horaire.horaire}
+              {horaire}
               <br />
             </div>
           </Col>
@@ -91,7 +143,7 @@ const Evenement = ({ data }) => {
             <br />
             <div
               className=" textFont"
-              dangerouslySetInnerHTML={{ __html: article.content }}
+              dangerouslySetInnerHTML={{ __html: content }}
             />
           </Col>
         </Row>

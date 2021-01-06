@@ -14,6 +14,9 @@ const Catalogue = () => {
                 categories {
                   name
                 }
+                acf {
+                  date_de_parution
+                }
                 description
                 name
                 slug
@@ -23,16 +26,15 @@ const Catalogue = () => {
                   name
                   options
                 }
-        #          images {
-        #   localFile {
-        #     childImageSharp {
-        #       fluid(maxWidth: 240) {
-        #         src
-        #       }
-        #     }
-        #   }
-        # }
-
+                #          images {
+                #   localFile {
+                #     childImageSharp {
+                #       fluid(maxWidth: 240) {
+                #         src
+                #       }
+                #     }
+                #   }
+                # }
 
                 images {
                   src

@@ -16,6 +16,9 @@ const ParuRecementSmart = () => {
             ) {
               edges {
                 node {
+                  acf {
+                  date_de_parution
+                }
                   categories {
                     name
                   }

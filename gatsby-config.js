@@ -90,7 +90,9 @@ module.exports = {
           consumer_secret: process.env.GATSBY_WC_CONSUMER_SECRET,
         },
         // Array of strings with fields you'd like to create nodes for...
-        fields: ['products', 'products/categories', 'products/attributes'],
+        fields: ['products',
+        //  'products/categories', 'products/attributes'
+        ],
         // Send the API keys as query string parameters instead of using the authorization header
         // OPTIONAL: defaults to false
         query_string_auth: false,
@@ -117,11 +119,8 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        /*
-         * The full URL of the WordPress site's GraphQL API.
-         * Example : 'https://www.example-site.com/graphql'
-         */
-        url: `https://redirectiondivergences.com/graphql`,
+        url: `https://redirectiondivergences.com/graphql`
+        
       },
     },
 

@@ -4,11 +4,17 @@ import { Container, Row } from "reactstrap";
 
 const Livres = ({ articles }) => {
   const article = articles;
+  article.sort(function (a, b) {
+    return (
+      new Date(b.node.acf.date_de_parution) -
+      new Date(a.node.acf.date_de_parution)
+    );
+  });
 
   return (
-    <Container fluid className="d-flex justify-content-start mx-0 px-0">
+    <Container fluid className="d-flex centrageCatalogue mx-0 px-0 pb-5 mb-5">
       <Row>
-        {article.map((livre, i) => {
+        {article.map((livre) => {
           return (
             <Livre
               article={livre}

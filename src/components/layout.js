@@ -138,8 +138,8 @@ const Layout = ({ children }) => {
                   </Col>
                 </Row>
 
-                <div className="carre d-none d-sm-block ">
-                  <main className="pt-1">{children}</main>
+                <div className="carre d-none d-sm-block px-0 mx-0 ">
+                  <div className="pt-1 pr-1">{children}</div>
                 </div>
 
                 <div className="d-block d-sm-none">
@@ -164,7 +164,7 @@ const Layout = ({ children }) => {
               <Col md="2" className="">
                 <div className="parution-container-enfant overscroll-behavior">
                   <Row className=" dix pl-2 bg-white  pb-0 mb-0 sticky-top">
-                    <span className=" dix pl-3 bg-white pt-1  pb-0 mb-0 sticky-top navFont">
+                    <span className=" dix pl-3 bg-white pt-1  pb-0 mb-0  navFont">
                       {aparaitre.toUpperCase()} paraître
                     </span>
                   </Row>

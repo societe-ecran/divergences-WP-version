@@ -17,14 +17,14 @@ const Evenement = ({ evenement }) => {
         className="navHover dix"
         state={{ valeur: evenement.node.slug }}
       >
-        <Row className="d-flex textFont text-dark navFont border-bottom">
+        <Row className="d-flex textFont text-dark navFont border-bottom mr-0">
           <Col sm="2"><span className="navFont">{date}</span></Col>
 
           <Col sm="8">
             <div className="navFont">{evenement.node.title}</div>
           </Col>
-          <Col sm="2">
-            <div className="text-right navFont">
+          <Col sm="2" className="px-0 mx-0">
+            <div className="text-right navFont ">
               {evenement.node.ville.ville}
             </div>
           </Col>

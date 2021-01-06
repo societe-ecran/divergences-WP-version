@@ -19,7 +19,7 @@ const Navmillieu = () => (
     <div>
      
         <Link
-          className=" navHover active medieumSize  "
+          className=" navHover active   "
           to="/"
           style={style}
           activeStyle={activeStyle}
@@ -32,7 +32,7 @@ const Navmillieu = () => (
     <div>
   
         <Link
-          className="navHover medieumSize "
+          className="navHover "
           to="/plusDinfos/"
           style={style}
           activeStyle={activeStyle}
@@ -45,7 +45,7 @@ const Navmillieu = () => (
     <div>
     
         <Link
-          className="navHover medieumSize"
+          className="navHover "
           to="/about/"
           style={style}
           activeStyle={activeStyle}

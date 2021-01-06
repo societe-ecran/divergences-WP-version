@@ -14,7 +14,7 @@ const IndexPage = () => (
           keywords={[`Catalogue`, `livres`]}
         />
     <Container fluid className="pb-5 mb-5 mx-0 px-0  ">
-      <Catalogue className="mx-0 px-0" />
+      <Catalogue className="mx-0 px-0 pb-5 mb-5" />
     </Container>
   </Layout2>
 );

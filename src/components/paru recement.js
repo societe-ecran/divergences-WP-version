@@ -22,6 +22,9 @@ const ParuRecement = () => {
                   description
                   wordpress_id
                   name
+                  acf {
+                  date_de_parution
+                }
                   slug
                   price
                   attributes {

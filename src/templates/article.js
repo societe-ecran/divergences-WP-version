@@ -13,12 +13,18 @@ const style = {
 };
 
 const activestyle = {
-  backgroundColor: "grey",
+  backgroundColor: "white",
 };
 
 export const query = graphql`
   query LivreQuery($slug: String!) {
     wcProducts(slug: { eq: $slug }) {
+      acf {
+        auteur
+        date_de_parution
+        isbn
+        nombre_de_page
+      }
       name
       price
       wordpress_id
@@ -41,61 +47,103 @@ export const query = graphql`
 
 const Livre = ({ data }) => {
   const article = data.wcProducts;
+
   let description = "";
   let shortDescription = "";
   let couv = "";
   let titre = "";
   let price = "";
+  let auteur = "";
+  let dateDeParution = "";
+  let nbPages = "";
+  let isbn = "";
 
-  if (typeof article.description !== undefined) {
+  if (typeof article.acf.isbn !== "undefined") {
+    isbn = article.acf.isbn;
+  } else {
+    isbn = "";
+  }
+
+  if (typeof article.acf.nombre_de_page !== "undefined") {
+    nbPages = article.acf.nombre_de_page;
+  } else {
+    nbPages = "";
+  }
+
+  if (typeof article.acf.auteur !== "undefined") {
+    auteur = article.acf.auteur;
+  } else {
+    auteur = "";
+  }
+
+  if (typeof article.acf.date_de_parution !== "undefined") {
+    dateDeParution = article.acf.date_de_parution;
+  } else {
+    dateDeParution = "";
+  }
+
+  let month = new Date(article.acf.date_de_parution).getMonth();
+  let corectMonth = (month += 1);
+  let date =
+    new Date(article.acf.date_de_parution).getDate() +
+    "/" +
+    corectMonth +
+    "/" +
+    new Date(article.acf.date_de_parution).getFullYear();
+
+  if (typeof article.description !== "undefined") {
     description = article.description;
   } else {
     description = "";
   }
 
-  if (article.short_description !== undefined) {
+  if (typeof article.short_description !== "undefined") {
     shortDescription = article.short_description;
   } else {
     shortDescription = "";
   }
 
-  if (typeof article.images[0] !== undefined) {
-    // couv = article.images[0].src;
+  if (typeof article.images[0] !== "undefined") {
     couv = article.images;
   } else {
     couv = "";
   }
 
-
-  if (typeof article.name !== undefined) {
+  if (typeof article.name !== "undefined") {
     titre = article.name;
   } else {
     titre = "";
   }
 
-  if (typeof article.price !== undefined) {
+  if (typeof article.price !== "undefined") {
     price = article.price;
   } else {
     price = "";
   }
 
-  // const revue = article.attributes[4].options;
-  // const affichageRevuePress = () => {
-  //   if (revue != null) {
-  //     return (
-  //       <div>
-  //         <p>_______________</p>
-  //         <p style={style}>Revue de presse</p>
-  //         <div dangerouslySetInnerHTML={{ __html: article.attributes[4].options }}/>
-  //       </div>
-  //     );
-  //   }
-  // };
+  let affichagePremiereImage = "";
+  if (typeof article.images[1] !== "undefined") {
+    affichagePremiereImage = article.images[1].src;
+  } else {
+    affichagePremiereImage = article.images[0].src;
+  }
+
+  let affichageTroisiemeImage = "";
+  if (typeof article.images[2] !== "undefined") {
+    affichageTroisiemeImage = true;
+  } else {
+    affichageTroisiemeImage = false;
+  }
+  console.log(affichageTroisiemeImage);
 
   return (
     <Layout2>
-       <Seo siteTitle="Editions Divergences" title={titre} description={description}  />
-      <Container fluid className="mt-2 pb-5 mb-5 interligne ">
+      <Seo
+        siteTitle="Editions Divergences"
+        title={titre}
+        description={description}
+      />
+      <Container fluid className="mt-2 pb-5 mb-5 interligne  ">
         <Row sm="1" className="text-right d-block d-sm-none">
           <Link
             className=""
@@ -112,90 +160,90 @@ const Livre = ({ data }) => {
         </Row>
 
         <Row>
+
+          
           <Col sm="3" className="ml-0 pl-0 text-left ">
             <Carousel
               controls={false}
               justify-self="end"
-              align-self="center"
+              align-self="left"
               // control-prev-icon-color="invert(100%)"
               // control-next-icon-color="invert(100%)"
               indicators={true}
               touch={true}
               interval={null}
               nextLabel="next"
-              className="text-left"
+              className=""
             >
-              {couv.map((couv, i) => {
-                return (
-                  <Carousel.Item key={i}>
-                    <Container fluid className="imagescarousel text-left pr-0 px-0">
-                      <img
-                        src={article.images[i].src}
-                        alt="couverture"
-                        width="80%"
-                        height="auto"
-                        className=""
-                      />
-                    </Container>
-                  </Carousel.Item>
-                );
-              })}
-            </Carousel>
+              <Carousel.Item>
+                <Container fluid className="imagescarousel text-left pr-0 px-0">
+                  <img
+                    src={affichagePremiereImage}
+                    alt="couverture"
+                    className="tailleImageTemplate"
+                  />
+                </Container>
+              </Carousel.Item>
 
+              {affichageTroisiemeImage && (
+                <Carousel.Item>
+                  <Container
+                    fluid
+                    className="imagescarousel text-left pr-0 px-0"
+                  >
+                    <img
+                      src={article.images[2].src}
+                      alt="couverture"
+
+                      className="tailleImageTemplate"
+                    />
+                  </Container>
+                </Carousel.Item>
+              )}
+            </Carousel>
           </Col>
 
-          <Col sm="3" className="livretemplate">
-            <span
-              style={style}
-              className="text-uppercase text-center textFont text-blackmb-5 d-none d-sm-block douze"
-            >
-              {titre} <br />
-              {typeof article.attributes[0] !== undefined
-                ? article.attributes[0].options
-                : ""}
+          <Col sm="3">
+            <Container fluid className="px-0">
+              <span className=" text-uppercase text-center textFont text-black d-none d-sm-block douze ">
+                {titre} <br />
+                {auteur}
             </span>
 
             <div className="d-none d-sm-block mt-5 pt-5">
               <div>
                 <button
                   href=""
-                  className="snipcart-add-item text-dark textFont douze"
+                  className="snipcart-add-item text-dark textFont douze px-0 bg-white"
                   data-item-id={article.wordpress_id}
                   data-item-price={price}
                   data-item-image={article.images[0].src}
                   data-item-url={"/livre/" + article.slug}
                   data-item-name={titre}
                 >
-                 <span className="douze">  {"> "} </span> 
+                  <span className="douze"> {"> "} </span>
                   <span className="under">Ajouter au panier</span>
                 </button>
               </div>
               <span className="textFont">
                 <br />
-                Paru le{" "}
-                {typeof article.attributes[1] !== undefined
-                  ? article.attributes[1].options
-                  : ""}{" "}
-                <br />
-                {article.attributes[2] !== undefined
-                  ? article.attributes[2].options
-                  : ""}
+                Paru le {date} <br />
+                {nbPages} pages
                 <br />
                 {price} euros
                 <br />
-                {article.attributes[3] !== undefined
-                  ? article.attributes[3].options
-                  : ""}
+                ISBN : {isbn}
                 <br />{" "}
               </span>
             </div>
-
+ 
+            </Container>
             {/* Version smartphone */}
             <div className="text-right mt-4 mb-3 d-block d-sm-none textFont">
               <div>
                 <button
                   href=""
-                  className="snipcart-add-item  mb-5 text-dark textFont"
+                  className="snipcart-add-item  text-dark textFont px-0 bg-white"
                   data-item-id={article.wordpress_id}
                   data-item-price={price}
                   data-item-image={article.images[0].src}
@@ -208,26 +256,18 @@ const Livre = ({ data }) => {
               </div>
               <span className=" textfont">
                 <br />
-                Paru le{" "}
-                {article.attributes[1] !== undefined
-                  ? article.attributes[1].options
-                  : ""}{" "}
-                <br />
-                {article.attributes[2] !== undefined
-                  ? article.attributes[2].options
-                  : ""}
+                Paru le {date} <br />
+                {nbPages} pages
                 <br />
                 {price} euros
                 <br />
-                {article.attributes[3] !== undefined
-                  ? article.attributes[3].options
-                  : ""}
+                ISBN : {isbn}
                 <br />
               </span>
             </div>
           </Col>
 
-          <Col sm="4" className="textFont pr-0 ">
+          <Col sm="4" className="textFont pr-0 px-0">
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: description }}
@@ -235,8 +275,17 @@ const Livre = ({ data }) => {
             {/* <div>{affichageRevuePress()}</div> */}
           </Col>
 
-          <Col sm="2" className="textFont pr-0 pb-5 mb-5">
+          <Col sm="2" className="textFont ">
+          <div className="text-right py-0 my-0 d-none d-sm-block">
+               <Link
+              className="fas fa-times text-dark  "
+              to="/catalogue/"
+              style={{ textDecoration: "none" }}
+            >
+            </Link>
+          </div>
             
+         
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: shortDescription }}
