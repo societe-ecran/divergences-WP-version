@@ -160,8 +160,6 @@ const Livre = ({ data }) => {
         </Row>
 
         <Row>
-
-          
           <Col sm="3" className="ml-0 pl-0 text-left ">
             <Carousel
               controls={false}
@@ -194,7 +192,6 @@ const Livre = ({ data }) => {
                     <img
                       src={article.images[2].src}
                       alt="couverture"
-
                       className="tailleImageTemplate"
                     />
                   </Container>
@@ -205,38 +202,39 @@ const Livre = ({ data }) => {
 
           <Col sm="3">
             <Container fluid className="px-0">
-              <span className=" text-uppercase text-center textFont text-black d-none d-sm-block douze ">
-                {titre} <br />
-                {auteur}
-            </span>
-
-            <div className="d-none d-sm-block mt-5 pt-5">
-              <div>
-                <button
-                  href=""
-                  className="snipcart-add-item text-dark textFont douze px-0 bg-white"
-                  data-item-id={article.wordpress_id}
-                  data-item-price={price}
-                  data-item-image={article.images[0].src}
-                  data-item-url={"/livre/" + article.slug}
-                  data-item-name={titre}
-                >
-                  <span className="douze"> {"> "} </span>
-                  <span className="under">Ajouter au panier</span>
-                </button>
+              <div className=" text-uppercase text-center textFont text-black d-none d-sm-block douze pb-5 ">
+                <div className="pb-5 mb-5">
+                  {titre} <br />
+                  {auteur}
+                </div>
               </div>
-              <span className="textFont">
-                <br />
-                Paru le {date} <br />
-                {nbPages} pages
-                <br />
-                {price} euros
-                <br />
-                ISBN : {isbn}
-                <br />{" "}
-              </span>
-            </div>
- 
+
+              <div className="d-none d-sm-block mt-5 pt-5">
+                <div>
+                  <button
+                    href=""
+                    className="snipcart-add-item text-dark textFont douze px-0 bg-white"
+                    data-item-id={article.wordpress_id}
+                    data-item-price={price}
+                    data-item-image={article.images[0].src}
+                    data-item-url={"/livre/" + article.slug}
+                    data-item-name={titre}
+                  >
+                    <span className="douze"> {"> "} </span>
+                    <span className="under">Ajouter au panier</span>
+                  </button>
+                </div>
+                <span className="textFont">
+                  <br />
+                  Paru le {date} <br />
+                  {nbPages} pages
+                  <br />
+                  {price} euros
+                  <br />
+                  ISBN : {isbn}
+                  <br />{" "}
+                </span>
+              </div>
             </Container>
             {/* Version smartphone */}
             <div className="text-right mt-4 mb-3 d-block d-sm-none textFont">
@@ -267,7 +265,7 @@ const Livre = ({ data }) => {
             </div>
           </Col>
 
-          <Col sm="4" className="textFont pr-0 px-0">
+          <Col sm="4" className="textFont mb-5 pb-5 px-0">
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: description }}
@@ -276,16 +274,17 @@ const Livre = ({ data }) => {
           </Col>
 
           <Col sm="2" className="textFont ">
-          <div className="text-right py-0 my-0 d-none d-sm-block">
-               <Link
-              className="fas fa-times text-dark  "
-              to="/catalogue/"
-              style={{ textDecoration: "none" }}
-            >
-            </Link>
-          </div>
-            
-         
+            <div className="text-right py-0 my-0 d-none d-sm-block">
+              <Link
+                className="fas fa-times text-dark  "
+                to="/catalogue/"
+                style={{ textDecoration: "none" }}
+              ></Link>
+            </div>
+
+                <div className='pb-5 mb-5'>
+
+                </div>
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: shortDescription }}
