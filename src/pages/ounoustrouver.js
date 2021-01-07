@@ -29,7 +29,7 @@ const Ounoustrouver = () => {
           </Col>
 
           <Col sm="3">
-            <span className="textFont interligne">
+            <div className="textFont interligne">
               Voici certaines des librairies où vous pouvez retrouver nos
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
@@ -40,7 +40,7 @@ const Ounoustrouver = () => {
               target="_blank" rel="noreferrer"
               >les libraires.fr
               </a>
-            </span>
+            </div>
           </Col>
         </Row>
       </Container>

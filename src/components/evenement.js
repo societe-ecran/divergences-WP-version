@@ -7,7 +7,7 @@ import { Row, Col } from "reactstrap";
 const Evenement = ({ evenement }) => {
   let month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
   let corectMonth=month+=1
-  let date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '/' + corectMonth +'/'+new Date(evenement.node.dateevenement.dateEvenement).getFullYear() 
+  let date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(evenement.node.dateevenement.dateEvenement).getFullYear()).substr(2) 
 
   return (
     <div>
@@ -17,14 +17,14 @@ const Evenement = ({ evenement }) => {
         className="navHover dix"
         state={{ valeur: evenement.node.slug }}
       >
-        <Row className="d-flex textFont text-dark navFont border-bottom mr-0">
-          <Col sm="2"><span className="navFont">{date}</span></Col>
+        <Row className="d-flex textFont text-dark textFont border-bottom mr-0 interligne container-presentation">
+          <Col sm="2" ><span className="textFont">{date}</span></Col>
 
-          <Col sm="8">
-            <div className="navFont">{evenement.node.title}</div>
+          <Col sm="8" className='px-0'>
+            <div className="textFont">{evenement.node.title}</div>
           </Col>
           <Col sm="2" className="px-0 mx-0">
-            <div className="text-right navFont ">
+            <div className="text-right textFont ">
               {evenement.node.ville.ville}
             </div>
           </Col>

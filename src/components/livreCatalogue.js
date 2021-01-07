@@ -32,6 +32,7 @@ const Livre = ({ article }) => {
             alt=""
             className="ml-3 mr-3 mb-2 mt-2 tailleLivreCatalogue carteLivre"
             height="220"
+            // width="auto"
             width="auto"
           />
         </Link>
@@ -51,9 +52,10 @@ const Livre = ({ article }) => {
                 : ""
             }
             alt=""
-            className="pl-3 pr-3 pb- pt-2 tailleLivreCatalogue"
-            width="auto"
-            height="350"
+            className="pl-4 pr-4 pt-2 pb-3 tailleLivreCatalogue"
+            // width="auto"
+            height="auto"
+            width="240"
           />
         </Link>
       </div>

@@ -86,10 +86,10 @@ const Livre = ({ data }) => {
   let corectMonth = (month += 1);
   let date =
     new Date(article.acf.date_de_parution).getDate() +
-    "/" +
+    "." +
     corectMonth +
-    "/" +
-    new Date(article.acf.date_de_parution).getFullYear();
+    "." +
+    JSON.stringify(new Date(article.acf.date_de_parution).getFullYear()).substr(2) 
 
   if (typeof article.description !== "undefined") {
     description = article.description;
@@ -143,7 +143,7 @@ const Livre = ({ data }) => {
         title={titre}
         description={description}
       />
-      <Container fluid className="mt-2 pb-5 mb-5 interligne  ">
+      <Container fluid className="mt-2 pb-5 mb-5 interligne">
         <Row sm="1" className="text-right d-block d-sm-none">
           <Link
             className=""
@@ -160,14 +160,17 @@ const Livre = ({ data }) => {
         </Row>
 
         <Row>
-          <Col sm="3" className="ml-0 pl-0 text-left ">
+          <Col sm="6" className='d-flex px-0'>
+
+          <Col sm="7" className="ml-0 pl-0 pr-0 text-left ">
             <Carousel
-              controls={false}
+              controls={true}
+         
               justify-self="end"
               align-self="left"
               // control-prev-icon-color="invert(100%)"
               // control-next-icon-color="invert(100%)"
-              indicators={true}
+              indicators={false}
               touch={true}
               interval={null}
               nextLabel="next"
@@ -200,9 +203,9 @@ const Livre = ({ data }) => {
             </Carousel>
           </Col>
 
-          <Col sm="3" className="d-none d-sm-block">
-            <div className="containerQuatriem">
-              <div className="block text-uppercase text-center textFont ">
+          <Col sm="5" className="d-none d-sm-block ">
+            <div className="containerQuatriem ">
+              <div className="block text-uppercase text-center textFont">
                 {titre} <br />
                 {auteur}
               </div>
@@ -210,7 +213,7 @@ const Livre = ({ data }) => {
               <div className="block">
                 <button
                   href=""
-                  className="snipcart-add-item text-dark textFont douze px-0 bg-white douze"
+                  className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
                   data-item-id={article.wordpress_id}
                   data-item-price={price}
                   data-item-image={article.images[0].src}
@@ -262,8 +265,8 @@ const Livre = ({ data }) => {
               </span>
             </div>
           </Col>
-
-          <Col sm="4" className="textFont mb-5 pb-5 pl-2 pr-0">
+          </Col>
+          <Col sm="4" className="textFont mb-5 pb-5 pl-2 pr-0 scrollColonne">
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: description }}
@@ -271,7 +274,7 @@ const Livre = ({ data }) => {
           </Col>
 
           <Col sm="2" className="textFont ">
-            <div className="text-right py-0 my-0 d-none d-sm-block">
+            <div className="text-right py-0 my-0 d-none d-sm-block ">
               <Link
                 className="fas fa-times text-dark  "
                 to="/catalogue/"
