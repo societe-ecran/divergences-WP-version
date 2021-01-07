@@ -32,7 +32,104 @@
           "type": "Point",
           "coordinates": [4.8458365, 45.7535729]
         }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Par Chemins",
+          "DESCRIPTIO": "116 rue Berthelot, 1190 Forest"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.330355167388916, 50.82486343383789]
+        }
+      },
+
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Le temps qu'il fait ",
+          "DESCRIPTIO": "12 Place de L' Église, 22110 Mellionnec"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.3144, 48.237]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "L'angle rouge",
+          "DESCRIPTIO": "9 rue de l’Hôpital, 29100 Douarnenez"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-4.3264194, 48.0919738]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "HAB Galerie ",
+          "DESCRIPTIO": "21 Quai des Antilles, 44200 Nantes"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.5732795, 47.2007699]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Librairie Blaest / Le Palais du pantalon",
+          "DESCRIPTIO": "207 Rue Blaes, 1000 Bruxelles"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.3446131, 50.8357121]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Le Monte-en-l'air ",
+          "DESCRIPTIO": "2 Rue de la Mare, 75020 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3884763, 48.8685329]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "L'atelier ",
+          "DESCRIPTIO": "2bis Rue du Jourdain, 75020 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3896709, 48.8742788]
+        }
       }
+
+
+
+      
+
       
     
 

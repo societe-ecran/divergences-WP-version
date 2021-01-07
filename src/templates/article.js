@@ -200,30 +200,26 @@ const Livre = ({ data }) => {
             </Carousel>
           </Col>
 
-          <Col sm="3">
-            <Container fluid className="px-0">
-              <div className=" text-uppercase text-center textFont text-black d-none d-sm-block douze pb-5 ">
-                <div className="pb-5 mb-5">
-                  {titre} <br />
-                  {auteur}
-                </div>
+          <Col sm="3" className="d-none d-sm-block">
+            <div className="containerQuatriem">
+              <div className="block text-uppercase text-center textFont ">
+                {titre} <br />
+                {auteur}
               </div>
 
-              <div className="d-none d-sm-block mt-5 pt-5">
-                <div>
-                  <button
-                    href=""
-                    className="snipcart-add-item text-dark textFont douze px-0 bg-white"
-                    data-item-id={article.wordpress_id}
-                    data-item-price={price}
-                    data-item-image={article.images[0].src}
-                    data-item-url={"/livre/" + article.slug}
-                    data-item-name={titre}
-                  >
-                    <span className="douze"> {"> "} </span>
-                    <span className="under">Ajouter au panier</span>
-                  </button>
-                </div>
+              <div className="block">
+                <button
+                  href=""
+                  className="snipcart-add-item text-dark textFont douze px-0 bg-white douze"
+                  data-item-id={article.wordpress_id}
+                  data-item-price={price}
+                  data-item-image={article.images[0].src}
+                  data-item-url={"/livre/" + article.slug}
+                  data-item-name={titre}
+                >
+                  <span className="douze"> {"> "} </span>
+                  <span className="under">Ajouter au panier</span>
+                </button>
                 <span className="textFont">
                   <br />
                   Paru le {date} <br />
@@ -234,8 +230,10 @@ const Livre = ({ data }) => {
                   ISBN : {isbn}
                   <br />{" "}
                 </span>
+
               </div>
-            </Container>
+            </div>
+
             {/* Version smartphone */}
             <div className="text-right mt-4 mb-3 d-block d-sm-none textFont">
               <div>
@@ -265,12 +263,11 @@ const Livre = ({ data }) => {
             </div>
           </Col>
 
-          <Col sm="4" className="textFont mb-5 pb-5 px-0">
+          <Col sm="4" className="textFont mb-5 pb-5 pl-2 pr-0">
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: description }}
             />
-            {/* <div>{affichageRevuePress()}</div> */}
           </Col>
 
           <Col sm="2" className="textFont ">
@@ -282,9 +279,7 @@ const Livre = ({ data }) => {
               ></Link>
             </div>
 
-                <div className='pb-5 mb-5'>
-
-                </div>
+            <div className="pb-5 mb-5"></div>
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: shortDescription }}

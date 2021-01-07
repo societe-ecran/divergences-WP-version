@@ -23,7 +23,7 @@ const Ounoustrouver = () => {
             {typeof window !== "undefined" && (
               <LeafletMaps
                 position={[46.52863469527167, 2.43896484375]}
-                zoom={6}
+                // zoom={5}
               />
             )}
           </Col>
