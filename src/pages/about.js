@@ -15,12 +15,12 @@ const IndexPage = () => (
           vous pouvez vous inscrire où nous écrire"
           keywords={[`Newsletter`, `contact`]}
         />
-    <Container fluid className="px-0 interligne">
+    <Container fluid className="px-0 interligne pb-5 mb-5 ">
       <Row>
         <Col xs="6" className="d-block d-sm-none "></Col>
       </Row>
 
-      <Row className="px-0 mx-0">
+      <Row className="px-0 mx-0 pb-5">
         <Col md="6 " className=" borderGeneral-right textFont pl-0 pr-1">
           <p className="text-center textFont font-italic ">Contact mail</p>
           <p className="textFont">

@@ -160,12 +160,11 @@ const Livre = ({ data }) => {
         </Row>
 
         <Row>
-          <Col sm="6" className='d-flex px-0'>
+          <Col sm="6" className='d-flex px-0 mb-5 pb-5'>
 
           <Col sm="7" className="ml-0 pl-0 pr-0 text-left ">
             <Carousel
               controls={true}
-         
               justify-self="end"
               align-self="left"
               // control-prev-icon-color="invert(100%)"

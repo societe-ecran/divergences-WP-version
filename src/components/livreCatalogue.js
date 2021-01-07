@@ -16,6 +16,9 @@ const Livre = ({ article }) => {
 
   return (
     <div className="smooth">
+     
+     
+     
       <div className="d-block d-sm-none mx-0 ">
         <Link
           to={`/livre/${article.node.slug}`}
@@ -39,6 +42,9 @@ const Livre = ({ article }) => {
       </div>
 
       {/* <ReactCardFlipper className="d-none d-sm-block" width="250px" height="380px" behavior="hover"> */}
+     
+     
+     
       <div className="d-none d-sm-block">
         <Link
           to={`/livre/${article.node.slug}`}
@@ -53,12 +59,15 @@ const Livre = ({ article }) => {
             }
             alt=""
             className="pl-4 pr-4 pt-2 pb-3 tailleLivreCatalogue"
-            // width="auto"
             height="auto"
             width="240"
           />
         </Link>
       </div>
+
+
+
+      
       {/* <Col className="text-center text-dark decoration-non containerlivre">
           <Link
             to={`/livre/${article.node.slug}`}

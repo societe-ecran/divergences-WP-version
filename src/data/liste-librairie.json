@@ -124,7 +124,136 @@
           "type": "Point",
           "coordinates": [2.3896709, 48.8742788]
         }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Libertalia",
+          "DESCRIPTIO": "12 rue Marcelin-Berthelot 93100 Montreuil"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.4392667, 48.8556892]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Terra Nova ",
+          "DESCRIPTIO": "18 Rue Léon Gambetta, 31000 Toulouse"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [1.4412982, 43.6025562]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Ombres Blanches ",
+          "DESCRIPTIO": "50 Rue Léon Gambetta, 31000 Toulouse"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [1.4422483, 43.6033585]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "L'hydre aux mille têtes  ",
+          "DESCRIPTIO": "96 rue Saint Savournin, 13001 Marseille"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.3699525, 43.2961743]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Goulard ",
+          "DESCRIPTIO": "37 Cours Mirabeau, 13100 Aix-en-Provence"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.4507774, 43.5269416]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "La Régulière ",
+          "DESCRIPTIO": "43 Rue Myrha, 75018 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3527266, 48.8869417]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "La Friche  ",
+          "DESCRIPTIO": "36, rue Léon-Frot 75011"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3870617, 48.8553246]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Les Villes Invisibles  ",
+          "DESCRIPTIO": "1 Rue Basse des Halles, 44190 Clisson"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.2819093465805054, 47.08726501464844]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Alimentation Générale ",
+          "DESCRIPTIO": "30 Grande Rue, 26340 Saillans"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.1963858, 44.6964764]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 3,
+          "NAME": "Café Plùm ",
+          "DESCRIPTIO": "12 Rue de Lengouzy, 81440 Lautrec"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.1375744, 43.705742]
+        }
       }
+
+
 
 
 

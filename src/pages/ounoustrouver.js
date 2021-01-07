@@ -18,7 +18,7 @@ const Ounoustrouver = () => {
           keywords={[`Ou nous trouver`, `librairies`, `carte`]}
         />
       <Container fluid className='mb-5 pb-5'>
-        <Row className="mt-2">
+        <Row className="mt-2 pb-5 mb-5">
           <Col sm="9" className="pl-0">
             {typeof window !== "undefined" && (
               <LeafletMaps
