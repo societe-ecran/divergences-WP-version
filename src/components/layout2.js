@@ -122,7 +122,7 @@ const Layout2 = ({ children }) => {
 
           <Col md="2" className="">
             <div className="parution-container-enfant overscroll-behavior">
-              <Row className=" dix pl-2 bg-white  pb-0 mb-0 sticky-top">
+              <Row className=" dix pl-2 bg-white  pb-0 mb-0">
                 <span className=" dix pl-3 bg-white  pb-0 mb-0  navFont pt-1">
                 {/* sticky-top */}
                   {aparaitre.toUpperCase()} paraître
