@@ -107,7 +107,8 @@ const Layout2 = ({ children }) => {
 
           <Col md="4" sm="12" xs="12" className="borderGeneral-right">
             <div className="parution-container-enfant overscroll-behavior">
-              <Row className="pl-3 bg-white pt-1 pb-0 mb-0 sticky-top navFont dix">
+              <Row className="pl-3 bg-white pt-1 pb-0 mb-0  navFont dix">
+              {/* sticky-top */}
                 <span className="pl-2 bg-white pb-0 mb-0 navFont dix">
                   Paru récemment
                 </span>
@@ -122,7 +123,8 @@ const Layout2 = ({ children }) => {
           <Col md="2" className="">
             <div className="parution-container-enfant overscroll-behavior">
               <Row className=" dix pl-2 bg-white  pb-0 mb-0 sticky-top">
-                <span className=" dix pl-3 bg-white  pb-0 mb-0 sticky-top navFont pt-1">
+                <span className=" dix pl-3 bg-white  pb-0 mb-0  navFont pt-1">
+                {/* sticky-top */}
                   {aparaitre.toUpperCase()} paraître
                 </span>
               </Row>

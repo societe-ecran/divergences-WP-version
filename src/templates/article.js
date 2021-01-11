@@ -26,7 +26,6 @@ export const query = graphql`
         isbn
         nombre_de_page
       }
-
       name
       price
       wordpress_id
@@ -244,6 +243,7 @@ console.log( article.images)
                     data-item-image={article.images[0].src}
                     data-item-url={"/livre/" + article.slug}
                     data-item-name={titre}
+                    data-item-weight="100"
                   >
                     <span className="douze"> {"> "} </span>
                     <span className="under">Ajouter au panier</span>

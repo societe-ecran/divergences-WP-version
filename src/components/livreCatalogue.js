@@ -6,13 +6,6 @@ import Img from "gatsby-image"
 // import ReactCardFlipper from "react-card-flipper";
 
 const Livre = ({ article }) => {
-  // let auteur = "";
-  // console.log(article.node.attributes[0].options);
-  // if (typeof article.node.attributes[0] !== undefined) {
-  //   auteur = article.node.attributes[0].options[0];
-  // } else {
-  //   auteur = "";
-  // }
 
   return (
     <div className="smooth">
@@ -25,7 +18,7 @@ const Livre = ({ article }) => {
           activeStyle={{ textDecoration: "none" }}
           style={{ textDecoration: "none" }}
         >
-          <Img fluid={article.node.images[0].localFile.childImageSharp.fluid} />
+          {/* <Img fluid={article.node.images[0].localFile.childImageSharp.fluid} /> */}
           <img
             src={
               article.node.images[0] !== undefined
@@ -33,20 +26,39 @@ const Livre = ({ article }) => {
                 : ""
             }
             alt=""
-            className="ml-3 mr-3 mb-2 mt-2 tailleLivreCatalogue carteLivre"
+            className="ml-3 mr-3 mb-2 mt-2 carteLivre"
             height="220"
-
             width="auto"
           />
         </Link>
       </div>
 
-      {/* <ReactCardFlipper className="d-none d-sm-block" width="250px" height="380px" behavior="hover"> */}
-     
-     
-     
+
       <div className="d-none d-sm-block">
-        <Link
+
+        {/* <div className=' ml-5 pl-1 verso'>
+         {article.node.name}
+          
+        </div> */}
+     
+      {/* <div class="class_test">
+     <img
+            src={
+              article.node.images[0] !== undefined
+                ? article.node.images[0].src
+                : ""
+            }
+            alt=""
+            className="pl-4 pr-4 pt-2 pb-3 transparent"
+            height="auto"
+            width="240"
+          />
+
+    <p class="text">Texte affiché</p>
+</div>        */}
+
+
+<Link
           to={`/livre/${article.node.slug}`}
           activeStyle={{ textDecoration: "none" }}
           style={{ textDecoration: "none" }}
@@ -58,11 +70,11 @@ const Livre = ({ article }) => {
                 : ""
             }
             alt=""
-            className="pl-4 pr-4 pt-2 pb-3 tailleLivreCatalogue"
+            className="pl-4 pr-4 pt-2 pb-3"
             height="auto"
             width="240"
           />
-        </Link>
+           </Link>
       </div>
 
 
