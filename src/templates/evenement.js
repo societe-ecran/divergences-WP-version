@@ -20,6 +20,13 @@ export const query = graphql`
       horaire {
         horaire
       }
+      illustration {
+        illustration {
+          localFile {
+            url
+          }
+        }
+      }
       title
       slug
       ville {
@@ -33,52 +40,58 @@ const Evenement = ({ data }) => {
   const article = data.wpPost;
 
   let adresse = "";
-  let prix = "";
+  let complementAdresse = "";
   let content = "";
   let dateEvenement = "";
   let horaire = "";
-  let title=""
-  let ville=''
-
-
-  if (typeof article.adresse.adresse !== undefined) {
-    adresse = article.adresse.adresse
-  } else {
-    adresse = "";
-  }
+  let title = "";
+  let ville = "";
+  let illustration = "";
 
   if (typeof article.adresse2.prix !== undefined) {
-    prix = article.adresse2.prix
+    complementAdresse = article.adresse2.prix;
   } else {
-    prix = "";
+    complementAdresse = "";
+  }
+
+  if (typeof article.illustration.illustration.localFile.url !== undefined) {
+    illustration = article.illustration.illustration.localFile.url;
+  } else {
+    illustration = "";
   }
 
   if (typeof article.content !== undefined) {
-    content = article.content
+    content = article.content;
   } else {
     content = "";
   }
 
+  if (typeof article.adresse.adresse !== undefined) {
+    adresse = article.adresse.adresse;
+  } else {
+    adresse = "";
+  }
+
   if (typeof article.dateevenement.dateEvenement !== undefined) {
-    dateEvenement = article.dateevenement.dateEvenement
+    dateEvenement = article.dateevenement.dateEvenement;
   } else {
     dateEvenement = "";
   }
 
   if (typeof article.horaire.horaire !== undefined) {
-    horaire = article.horaire.horaire
+    horaire = article.horaire.horaire;
   } else {
     horaire = "";
   }
 
   if (typeof article.title !== undefined) {
-    title = article.title
+    title = article.title;
   } else {
     title = "";
   }
 
   if (typeof article.ville.ville !== undefined) {
-    ville = article.ville.ville
+    ville = article.ville.ville;
   } else {
     ville = "";
   }
@@ -87,36 +100,85 @@ const Evenement = ({ data }) => {
   let corectMonth = (month += 1);
   let date =
     new Date(dateEvenement).getDate() +
-    "/" +
+    "." +
     corectMonth +
-    "/" +
-    new Date(dateEvenement).getFullYear();
+    "." +
+    JSON.stringify(new Date(dateEvenement).getFullYear()).substr(2);
 
   return (
     <Layout>
-      <Seo
-        siteTitle="Editions Divergences"
-        title={title}
-        description={date}
-      />
-      <Container fluid className="mx-0 px-0 pb-5 mb-5 interligne">
-        <Row className="d-block d-sm-none">
-          <div className=" text-right pr-2">
-            <Link to="/agenda/" style={{ textDecoration: "none" }}>
-              <div className="fas h5 fa-times text-dark text-right "></div>
-            </Link>
-          </div>
+      <Seo siteTitle="Editions Divergences" title={title} description={date} />
+      <Container
+        fluid
+        className="mx-0 px-0 pb-5 mb-5 interligne textFont d-none d-sm-block dix"
+      >
+        <Row className="d-flex textFont text-dark border-bottom mr-0 interligne container-presentation">
+          <Col sm="2">
+            <div className="textFont">{date}</div>
+          </Col>
+
+          <Col sm="8" className="px-0">
+            <div className="textFont dix">{title}</div>
+          </Col>
+          <Col sm="2" className="px-0 mx-0">
+            <div className="text-right textFont ">{ville}</div>
+          </Col>
         </Row>
 
-        <Row className="">
-          <Col sm="3" className="borderGeneral-right"></Col>
-          <Col sm="8">
-            <div className="textFont font-weight-bold">{title}</div>
+        <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
+          <Col sm="2">
+            <div className="text-left">
+              <Link
+                className="fas fa-times text-dark text-left "
+                to="/agenda/"
+                style={{ textDecoration: "none" }}
+              ></Link>
+            </div>
           </Col>
-          <Col sm="1" className="d-none d-sm-block">
+          <Col sm="8" className="px-0">
+            <div
+              className=" textFont d-none d-sm-block"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </Col>
+          <Col sm="2" className="px-0 mx-0">
+            <div className="text-right ">
+              {horaire} <br />
+              <div className="mt-2">
+                {adresse} <br />
+              </div>
+              {complementAdresse}
+              <br />
+              {ville}
+            </div>
+          </Col>
+        </Row>
+
+        <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
+          <Col sm="2"></Col>
+          <Col sm="8" className="px-0">
+            <img
+              src={illustration}
+              alt="illustration"
+              width="80%"
+              height="auto"
+            />
+          </Col>
+          <Col sm="2" className="px-0 mx-0"></Col>
+        </Row>
+      </Container>
+
+      {/* Version smartphone */}
+
+      <Container
+        fluid
+        className=" pb-5 mb-5 interligne textFont d-block d-sm-none"
+      >
+        <Row >
+          <Col sm="12" className=''>
             <div className="text-right">
               <Link
-                className="fas fa-times text-dark text-right "
+                className="fas fa-times text-dark h4 "
                 to="/agenda/"
                 style={{ textDecoration: "none" }}
               ></Link>
@@ -124,26 +186,38 @@ const Evenement = ({ data }) => {
           </Col>
         </Row>
 
-        <Row className="pb-5 pb-5">
-          <Col sm="3" className="textFont borderGeneral-right">
-            <div className="textFont douze ">
-              {date} <br />
-              {adresse}
-              <br />
-              {prix}
-              <br />
-              {ville}
-              <br />
-              {horaire}
-              <br />
-            </div>
+        <Row>
+          <Col sm="12 mb-3">
+            <div className="font-weight-bold text-center">{title}</div>
           </Col>
+        </Row>
 
-          <Col sm="9" className=" textFont">
-            <br />
+        <Row className="text-right mb-3">
+          <Col sm="12" className="dix">
+            <div>{date}</div>
+            <div>{horaire}</div>
+            <div>{adresse}</div>
+            <div>{complementAdresse}</div>
+            <div>{ville}</div>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col sm="12">
             <div
               className=" textFont"
               dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </Col>
+        </Row>
+
+        <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
+          <Col sm="12" className="d-flex justify-content-center">
+            <img
+              src={illustration}
+              alt="illustration"
+              width="50%"
+              height="auto"
             />
           </Col>
         </Row>

@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
         render={(data) => (
           <div className="container-fluid no-scroll ">
             <Row>
-              <Col md="6" className="borderGeneral-right colonne">
+              <Col md="6" className="borderGeneral-right colonne ">
                 <Row className="container-presentation d-none d-sm-block">
                   <h4 className=" pl-3 pb-2 pt-2 ">
                     <div className="quatorze">

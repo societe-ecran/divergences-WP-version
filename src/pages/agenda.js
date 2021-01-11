@@ -48,6 +48,7 @@ const Agenda = () => {
       `}
       render={data => (
     <EvenementsComponent className="navFont pb-5 mb-5 pt-2" articles={data.allWpPost.edges} />
+    
       )}
     />
   </Layout>

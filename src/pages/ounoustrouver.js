@@ -11,21 +11,38 @@ import Seo from "../components/seo";
 const Ounoustrouver = () => {
   return (
     <Layout2>
-      <Seo siteTitle="Editions Divergences"
-          title="Librairies"
-          description="Voici certaines des librairies où vous pouvez retrouver nos
+      <Seo
+        siteTitle="Editions Divergences"
+        title="Librairies"
+        description="Voici certaines des librairies où vous pouvez retrouver nos
           livres."
-          keywords={[`Ou nous trouver`, `librairies`, `carte`]}
-        />
-      <Container fluid className='mb-5 pb-5'>
+        keywords={[`Ou nous trouver`, `librairies`, `carte`]}
+      />
+      <Container fluid className="mb-5 pb-5">
         <Row className="mt-2 pb-5 mb-5">
           <Col sm="9" className="pl-0">
             {typeof window !== "undefined" && (
-              <LeafletMaps
-                position={[46.52863469527167, 2.43896484375]}
-                // zoom={5}
-              />
+              <LeafletMaps position={[46.52863469527167, 2.43896484375]} />
             )}
+
+            <div className="textFont interligne text-white">
+              Voici certaines des librairies où vous pouvez retrouver nos
+              livres. Si le livre que vous recherchez n’est pas en rayon chez
+              votre libraire habituel, plutôt que de l’acheter sur une grande
+              plateforme d’achat en ligne, vous pouvez demander à votre libraire
+              de vous le commander ou passer par
+              Voici certaines des librairies où vous pouvez retrouver nos
+              livres. Si le livre que vous recherchez n’est pas en rayon chez
+              votre libraire habituel, plutôt que de l’acheter sur une grande
+              plateforme d’achat en ligne, vous pouvez demander à votre libraire
+              de vous le commander ou passer par
+              Voici certaines des librairies où vous pouvez retrouver nos
+              livres. Si le livre que vous recherchez n’est pas en rayon chez
+              votre libraire habituel, plutôt que de l’acheter sur une grande
+              plateforme d’achat en ligne, vous pouvez demander à votre libraire
+              de vous le commander ou passer par
+              {""}{" "}
+            </div>
           </Col>
 
           <Col sm="3">
@@ -34,11 +51,14 @@ const Ounoustrouver = () => {
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
               plateforme d’achat en ligne, vous pouvez demander à votre libraire
-              de vous le commander ou passer par 
+              de vous le commander ou passer par
               {""}{" "}
-              <a href="https://www.leslibraires.fr/"
-              target="_blank" rel="noreferrer"
-              >les libraires.fr
+              <a
+                href="https://www.leslibraires.fr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                les libraires.fr
               </a>
             </div>
           </Col>

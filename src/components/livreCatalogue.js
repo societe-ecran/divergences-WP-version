@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import "../assets/css/main.css";
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
 // import "../fonts/fonts.css";
 // import ReactCardFlipper from "react-card-flipper";
 
@@ -25,7 +25,7 @@ const Livre = ({ article }) => {
           activeStyle={{ textDecoration: "none" }}
           style={{ textDecoration: "none" }}
         >
-          {/* <Img fixed={article.node.images[0].localFile.childImageSharp.fixed} /> */}
+          <Img fluid={article.node.images[0].localFile.childImageSharp.fluid} />
           <img
             src={
               article.node.images[0] !== undefined
@@ -35,7 +35,7 @@ const Livre = ({ article }) => {
             alt=""
             className="ml-3 mr-3 mb-2 mt-2 tailleLivreCatalogue carteLivre"
             height="220"
-            // width="auto"
+
             width="auto"
           />
         </Link>

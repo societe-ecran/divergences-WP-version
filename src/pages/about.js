@@ -74,6 +74,7 @@ const IndexPage = () => (
             ouvrages, de nos événements et de nos activités une fois par mois,
             vous pouvez vous inscrire ici.
           </p>
+         
 
           {/* <div className="">
             <form name="contact" method="post" className="centerNewsletter">
@@ -102,6 +103,43 @@ const IndexPage = () => (
           href="https://5a8a505d.sibforms.com/serve/MUIEAOJL2B0dBAjd8iZLAhtbkCZnhyo7jjxw_ktVSzhmmnd15zD3_XKVm8J94Ls8-wuwY-Wvj6kuJoKER1q9m3yiPthxJWEW1JdOxd69ftoFZDIVmebcGxrLeLg7cEPe1fbdtqpWPCLMV_Jr2f1aHKivEWXN0WwKt4uzsgd1L9nwsZQ0xqJzyh9xMlheUw3b8r333qL8m_VZOyE8">
             {"> "} <span className='under'>s'inscrire</span>
           </a>
+
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
         </Col>
       </Row>
     </Container>

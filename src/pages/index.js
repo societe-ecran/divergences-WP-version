@@ -140,6 +140,7 @@ const IndexPage = () => (
               className="navFont pb-5 mb-5"
               articles={data.allWpPost.edges}
             />
+
           </span>
         </span>
       )}

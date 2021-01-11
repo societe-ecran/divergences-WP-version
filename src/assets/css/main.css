@@ -7,14 +7,14 @@
   display: flex;
   flex-direction: column;
   width:100%;
-  height:490px;
+  height:520px;
   justify-content: space-between;
   padding-left: 0;
 }
 
 .tailleImageTemplate{
   width:auto;
-  height:490px
+  height:520px
 }
 
 
@@ -485,6 +485,10 @@ right: 0; */
 
 
 @media (max-width: 576px) {
+
+  .margeEvenement{
+    margin-left:23px
+  }
   .tailleImageTemplate{
     width:auto;
     height:350px

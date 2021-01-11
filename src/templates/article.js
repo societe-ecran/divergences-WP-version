@@ -6,6 +6,7 @@ import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Seo from "../components/seo";
+import Img from "gatsby-image"
 
 const style = {
   fontWeight: "bold",
@@ -25,6 +26,7 @@ export const query = graphql`
         isbn
         nombre_de_page
       }
+
       name
       price
       wordpress_id
@@ -41,6 +43,15 @@ export const query = graphql`
       images {
         src
       }
+      # images {
+      #     localFile {
+      #       childImageSharp {
+      #         fixed(width: 240) {
+      #           src
+      #         }
+      #       }
+      #     }
+      #   }
     }
   }
 `;
@@ -57,6 +68,14 @@ const Livre = ({ data }) => {
   let dateDeParution = "";
   let nbPages = "";
   let isbn = "";
+
+let affichControls=false
+
+  if(article.images.length<=2){
+    affichControls=false
+  }else{affichControls=true}
+
+console.log( article.images)
 
   if (typeof article.acf.isbn !== "undefined") {
     isbn = article.acf.isbn;
@@ -76,20 +95,23 @@ const Livre = ({ data }) => {
     auteur = "";
   }
 
+
+  let date =""
   if (typeof article.acf.date_de_parution !== "undefined") {
-    dateDeParution = article.acf.date_de_parution;
+    let month = new Date(article.acf.date_de_parution).getMonth();
+  let corectMonth = (month += 1);
+   date = new Date(article.acf.date_de_parution).getDate() +
+    "." +
+    corectMonth +
+    "." +
+    JSON.stringify(new Date(article.acf.date_de_parution).getFullYear()).substr(
+      2
+    );
   } else {
     dateDeParution = "";
   }
 
-  let month = new Date(article.acf.date_de_parution).getMonth();
-  let corectMonth = (month += 1);
-  let date =
-    new Date(article.acf.date_de_parution).getDate() +
-    "." +
-    corectMonth +
-    "." +
-    JSON.stringify(new Date(article.acf.date_de_parution).getFullYear()).substr(2) 
+ 
 
   if (typeof article.description !== "undefined") {
     description = article.description;
@@ -160,84 +182,90 @@ const Livre = ({ data }) => {
         </Row>
 
         <Row>
-          <Col sm="6" className='d-flex px-0 mb-5 pb-5'>
-
-          <Col sm="7" className="ml-0 pl-0 pr-0 text-left ">
-            <Carousel
-              controls={true}
-              justify-self="end"
-              align-self="left"
-              // control-prev-icon-color="invert(100%)"
-              // control-next-icon-color="invert(100%)"
-              indicators={false}
-              touch={true}
-              interval={null}
-              nextLabel="next"
-              className=""
-            >
-              <Carousel.Item>
-                <Container fluid className="imagescarousel text-left pr-0 px-0">
-                  <img
-                    src={affichagePremiereImage}
-                    alt="couverture"
-                    className="tailleImageTemplate"
-                  />
-                </Container>
-              </Carousel.Item>
-
-              {affichageTroisiemeImage && (
+          <Col sm="6" className="d-flex px-0 ">
+            <Col sm="7" className="ml-0 pl-0 pr-0 text-left ">
+              <Carousel
+                controls={affichControls}
+                justify-self="end"
+                align-self="left"
+                // control-prev-icon-color="invert(100%)"
+                // control-next-icon-color="invert(100%)"
+                indicators={false}
+                touch={true}
+                interval={null}
+                nextLabel="next"
+                className=""
+              >
                 <Carousel.Item>
                   <Container
                     fluid
-                    className="imagescarousel text-left pr-0 px-0"
+                    className="text-left pr-0 px-0"
                   >
+                     {/* <Img fixed={article.images[0].localFile.childImageSharp.fixed} /> */}
                     <img
-                      src={article.images[2].src}
+                      src={affichagePremiereImage}
                       alt="couverture"
                       className="tailleImageTemplate"
                     />
                   </Container>
                 </Carousel.Item>
-              )}
-            </Carousel>
+
+                {affichageTroisiemeImage && (
+                  <Carousel.Item>
+                    <Container
+                      fluid
+                      className="imagescarousel text-left pr-0 px-0"
+                    >
+                      <img
+                        src={article.images[2].src}
+                        alt="couverture"
+                        className="tailleImageTemplate"
+                      />
+                    </Container>
+                  </Carousel.Item>
+                )}
+              </Carousel>
+            </Col>
+           
+
+            <Col sm="5" className="d-none d-sm-block ">
+              <div className="containerQuatriem ">
+                <div className="block text-uppercase text-center textFont">
+                  {titre} <br />
+                  {auteur}
+                </div>
+
+                <div className="">
+                  <button
+                    href=""
+                    className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
+                    data-item-id={article.wordpress_id}
+                    data-item-price={price}
+                    data-item-image={article.images[0].src}
+                    data-item-url={"/livre/" + article.slug}
+                    data-item-name={titre}
+                  >
+                    <span className="douze"> {"> "} </span>
+                    <span className="under">Ajouter au panier</span>
+                  </button>
+                  <span className="textFont">
+                    <br />
+                    Paru le {date} <br />
+                    {nbPages} pages
+                    <br />
+                    {price} euros
+                    <br />
+                    ISBN : {isbn}
+                    <br />{" "}
+                  </span>
+                </div>
+              </div>
+            </Col>
           </Col>
 
-          <Col sm="5" className="d-none d-sm-block ">
-            <div className="containerQuatriem ">
-              <div className="block text-uppercase text-center textFont">
-                {titre} <br />
-                {auteur}
-              </div>
-
-              <div className="block">
-                <button
-                  href=""
-                  className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
-                  data-item-id={article.wordpress_id}
-                  data-item-price={price}
-                  data-item-image={article.images[0].src}
-                  data-item-url={"/livre/" + article.slug}
-                  data-item-name={titre}
-                >
-                  <span className="douze"> {"> "} </span>
-                  <span className="under">Ajouter au panier</span>
-                </button>
-                <span className="textFont">
-                  <br />
-                  Paru le {date} <br />
-                  {nbPages} pages
-                  <br />
-                  {price} euros
-                  <br />
-                  ISBN : {isbn}
-                  <br />{" "}
-                </span>
-
-              </div>
-            </div>
-
-            {/* Version smartphone */}
-            <div className="text-right mt-4 mb-3 d-block d-sm-none textFont">
+           {/* Version smartphone */}
+          <Col sm="12"className="d-block d-sm-none"> 
+            <div className="text-right mt-4 mb-3 textFont">
               <div>
                 <button
                   href=""
@@ -263,13 +291,23 @@ const Livre = ({ data }) => {
                 <br />
               </span>
             </div>
-          </Col>
-          </Col>
+            </Col>
+
+
           <Col sm="4" className="textFont mb-5 pb-5 pl-2 pr-0 scrollColonne">
             <div
-              className="textFont"
+              className="textFon"
               dangerouslySetInnerHTML={{ __html: description }}
             />
+            <div
+              className="textFont text-white"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+            <div
+              className="textFont text-white"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+            
           </Col>
 
           <Col sm="2" className="textFont ">
@@ -287,14 +325,6 @@ const Livre = ({ data }) => {
               dangerouslySetInnerHTML={{ __html: shortDescription }}
             />
           </Col>
-
-          {/* <Col sm="1" className="text-right d-none d-sm-block ">
-            <Link
-              className="fas fa-times text-dark  "
-              to="/catalogue/"
-              style={{ textDecoration: "none" }}
-            ></Link>
-          </Col> */}
         </Row>
       </Container>
     </Layout2>

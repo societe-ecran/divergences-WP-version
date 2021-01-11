@@ -17,7 +17,7 @@ const Evenement = ({ evenement }) => {
         className="navHover dix"
         state={{ valeur: evenement.node.slug }}
       >
-        <Row className="d-flex textFont text-dark textFont border-bottom mr-0 interligne container-presentation">
+        <Row className="d-flex textFont text-dark border-bottom mr-0 interligne container-presentation">
           <Col sm="2" ><span className="textFont">{date}</span></Col>
 
           <Col sm="8" className='px-0'>
