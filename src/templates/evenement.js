@@ -163,9 +163,22 @@ const Evenement = ({ data }) => {
               width="80%"
               height="auto"
             />
+             <div
+              className=" textFont text-white"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+             <div
+              className=" textFont text-white"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+             <div
+              className=" textFont text-white"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
           </Col>
           <Col sm="2" className="px-0 mx-0"></Col>
         </Row>
+
       </Container>
 
       {/* Version smartphone */}
