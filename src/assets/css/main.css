@@ -1,10 +1,6 @@
-.scroll{
-  overflow: scroll;
-}
 
-.scrollHorizontal{
-  overflow-y:hidden
-}
+
+
 
  .verso{
   /* position: absolute; */
@@ -54,14 +50,14 @@ opacity: 0;
   display: flex;
   flex-direction: column;
   width:100%;
-  height:520px;
+  height:620px;
   justify-content: space-between;
   padding-left: 0;
 }
 
 .tailleImageTemplate{
   width:auto;
-  height:520px
+  height:620px
 }
 
 
@@ -457,6 +453,28 @@ right: 0; */
   scrollbar-width: none;
 } */
 
+
+
+@media (max-width: 1600px) {
+.containerQuatriem {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:500px;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.tailleImageTemplate{
+  width:auto;
+  height:500px
+}
+}
+
+
+
+
+
 @media (max-width: 1199.98px) {
   .logoDivergences {
     font-family: "Druk";
@@ -521,6 +539,11 @@ right: 0; */
 
 
 @media (max-width: 576px) {
+
+  .navTopSticky{
+  -webkit-sticky:sticky;
+  position:sticky
+    }
 
   .margeEvenement{
     margin-left:23px

@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <>
-      <TopNav className="sticky-top borderGeneral-bottom ">
+      <TopNav className=" borderGeneral-bottom d-none d-md-block">
         <NavItems className="d-flex">
           <Col md="6" s='4' xs="4">
             <Link
@@ -96,6 +96,96 @@ export default () => {
           </Menu>
         </SideMenu>
       </TopNav>
+
+
+
+
+{/* version smartphone */}
+
+      <TopNav className=" borderGeneral-bottom sticky-top d-block d-md-none">
+        <NavItems className="d-flex">
+          <Col md="6" s='4' xs="4">
+            <Link
+              className="text-dark font-weight-bold logoDivergences navfont text-decoration-none "
+              to="/"
+            >
+              {edition.toUpperCase()}
+            </Link>
+          </Col>
+
+          <Col md="5" xs="0" className="pt-2 d-none d-md-block pl-2">
+            <Link
+              className=" text-dark navFont logoDivergences2  text-decoration-none"
+              to="/"
+            >
+              critique sociale et politique
+            </Link>
+          </Col>
+
+          <Col md="1" className="d-flex justify-content-end ">
+            <button className="snipcart-checkout panier ">
+              <Panier />
+            </button>
+          </Col>
+
+          <Col  xs="1" sm='1' md='1' lg='1'className="d-block d-md-none"></Col>
+        </NavItems>
+
+        <SideMenu>
+          <Menu isOpen={menuState.menuOpen} className="borderSlide">
+            <Link
+              className="navFont text-dark navHover text-decoration-none"
+              to="/"
+              onClick={() => closeMenu()}
+            >
+              Home
+            </Link>
+
+            <Link
+              className="navFont text-dark navHover"
+              to="/agenda"
+              onClick={() => closeMenu()}
+            >
+              Actualités
+            </Link>
+
+            <Link
+              className="navFont text-dark navHover"
+              to="/catalogue/"
+              onClick={() => closeMenu()}
+            >
+              Catalogue
+            </Link>
+
+            <Link
+              className=" navFont text-dark navHover"
+              to="/ounoustrouver/"
+              onClick={() => closeMenu()}
+            >
+              Où nous trouver
+            </Link>
+
+            <Link
+              className="navFont text-dark navHover"
+              to="/plusDinfos/"
+              onClick={() => closeMenu()}
+            >
+              Plus d'infos
+            </Link>
+
+            <Link
+              className="navFont text-dark navHover"
+              to="/about/"
+              onClick={() => closeMenu()}
+            >
+              Contact / Newsletter
+            </Link>
+          </Menu>
+        </SideMenu>
+      </TopNav>
+
+
+
     </>
   );
 };
