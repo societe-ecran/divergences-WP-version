@@ -163,18 +163,31 @@ const Evenement = ({ data }) => {
               width="80%"
               height="auto"
             />
-             <div
-              className=" textFont text-white"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
-             <div
-              className=" textFont text-white"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
-             <div
-              className=" textFont text-white"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
+           <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+          <p className="textFont mx-0 px-0 text-white">
+            Lecteurs et lectrices, curieuses et curieux, libraires,
+            journalistes, si vous souhaitez être tenu au courant de nos
+            ouvrages, de nos événements et de nos activités une fois par mois,
+            vous pouvez vous inscrire ici.
+          </p>
+         
           </Col>
           <Col sm="2" className="px-0 mx-0"></Col>
         </Row>
