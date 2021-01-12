@@ -2,7 +2,9 @@
   overflow: scroll;
 }
 
-
+.scrollHorizontal{
+  overflow-y:hidden
+}
 
  .verso{
   /* position: absolute; */
@@ -240,7 +242,7 @@ br {
 .carre {
   height: 80vh;
   width:auto;
-  overflow: scroll;
+  overflow: auto;
   scrollbar-width: none;
 }
 
@@ -268,7 +270,7 @@ br {
   height: 85vh;
   overflow:auto;
   /* overscroll-behavior: contain; */
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 /* Livres */
@@ -365,15 +367,6 @@ h5 {
 
 /* container agenda/parution/a paraitre  */
 
-/* .scroll-bar-firefox {
-  scrollbar-width: thin;
-} */
-
-::-webkit-scrollbar {
-  display: none;
-  width: 0px;
-  background: transparent;
-}
 
 /* .agenda-container-parent {
   height: 510px;
@@ -389,7 +382,7 @@ bottom: 0;
 left: 0;
 right: 0; */
   overflow: auto;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 /* .parution-container-parent {
@@ -405,8 +398,9 @@ right: 0; */
   bottom: 0;
   left: 0;
   right: 0px;
-  overflow: auto;
-  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x:hidden;
+  scrollbar-width: thin;
 }
 
 .borderGeneral-top-speciale {
@@ -572,8 +566,8 @@ right: 0; */
   .carre {
     height: 100vh;
     width:auto;
-    overflow: scroll;
-    scrollbar-width: none;
+    overflow: auto;
+    scrollbar-width:none;
   }
 
   .testScrollBar {
@@ -586,7 +580,7 @@ right: 0; */
     height: 100vh;
     overflow: scroll;
     overscroll-behavior: contain;
-    scrollbar-width: none;
+    scrollbar-width: thin;
   }
 
   .borderGeneral-right {
@@ -606,18 +600,12 @@ right: 0; */
     border-top: none;
   }
 
-  /* .carre {
-    height: auto;
-    width: auto;
-    overflow: none;
-    scrollbar-width: none;
-  } */
 
   .catalogue {
     height: 100vh;
     overflow: scroll;
     overscroll-behavior: none;
-    scrollbar-width: none;
+    scrollbar-width: thin;
   }
 
   .newsMagin {

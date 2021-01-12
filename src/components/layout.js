@@ -51,9 +51,9 @@ const Layout = ({ children }) => {
           }
         `}
         render={(data) => (
-          <div className="container-fluid no-scroll ">
+          <div className="container-fluid no-scroll pr-0 ">
             <Row>
-              <Col md="6" className="borderGeneral-right colonne ">
+              <Col md="6" className="borderGeneral-right colonne  ">
                 <Row className="container-presentation d-none d-sm-block">
                   <h4 className=" pl-3 pb-2 pt-2 ">
                     <div className="quatorze">
@@ -133,7 +133,7 @@ const Layout = ({ children }) => {
 
                 {/*Nav millieu version ordi */}
                 <Row className="d-none d-sm-block">
-                  <Col sm="12" className="borderGeneral-bottom ">
+                  <Col sm="12" className="borderGeneral-bottom">
                     <Navmillieu />
                   </Col>
                 </Row>
@@ -150,7 +150,7 @@ const Layout = ({ children }) => {
               <Col md="4" sm="12" xs="12" className="borderGeneral-right">
                 <div className="parution-container-enfant overscroll-behavior">
                   <Row className="pl-2 bg-white pt-1 pb-0 mb-0 navFont dix"> 
-                  {/* sticky-top  */}
+                
                     <span className="pl-3 bg-white pb-0 mb-0 navFont dix  ">
                       Paru récemment
                     </span>
