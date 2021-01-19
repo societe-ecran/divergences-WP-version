@@ -1,5 +1,15 @@
 
 .leaflet-container {
-    height: 35vw;
+    height: 45vw;
     width: 100%;
+  }
+
+
+  @media (max-width: 576px) {
+    .leaflet-container {
+      height: 450px;
+      width: 100%;
+    }
+  
+
   }

@@ -67,14 +67,29 @@ const Livre = ({ data }) => {
   let dateDeParution = "";
   let nbPages = "";
   let isbn = "";
+  let category =''
+  let texteCategory =''
+
 
 let affichControls=false
-
   if(article.images.length<=2){
     affichControls=false
   }else{affichControls=true}
 
-console.log( article.images)
+
+
+  if (typeof article.categories[0].name !== "undefined") {
+    category = article.categories[0].name;
+  } else {
+    category = "";
+  }
+
+
+  if(category === "a paraitre"){
+    texteCategory="A paraitre le"
+  }else{texteCategory= "Paru le "} 
+
+console.log(article.categories[0].name)
 
   if (typeof article.acf.isbn !== "undefined") {
     isbn = article.acf.isbn;
@@ -155,7 +170,6 @@ console.log( article.images)
   } else {
     affichageTroisiemeImage = false;
   }
-  console.log(affichageTroisiemeImage);
 
   return (
     <Layout2>
@@ -250,7 +264,7 @@ console.log( article.images)
                   </button>
                   <span className="textFont">
                     <br />
-                    Paru le {date} <br />
+                    {texteCategory} {date} <br />
                     {nbPages} pages
                     <br />
                     {price} euros
@@ -282,7 +296,7 @@ console.log( article.images)
               </div>
               <span className=" textfont">
                 <br />
-                Paru le {date} <br />
+                {texteCategory} {date} <br />
                 {nbPages} pages
                 <br />
                 {price} euros
@@ -294,35 +308,20 @@ console.log( article.images)
             </Col>
 
 
-          <Col sm="4" className="textFont mb-5 pb-5 pl-2 pr-0 scrollColonne">
+          <Col sm="4" className="textFont  pl-2 pr-0 scrollColonne">
             <div
               className="textFon"
               dangerouslySetInnerHTML={{ __html: description }}
             />
             <div
-              className="textFont text-white"
+              className="textFont text-white d-none d-sm-block"
               dangerouslySetInnerHTML={{ __html: description }}
             />
-            <div
-              className="textFont text-white"
+            {/* <div
+              className="textFont text-white d-none d-sm-block"
               dangerouslySetInnerHTML={{ __html: description }}
-            />
-            <div
-              className="textFont text-white"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
-            <div
-              className="textFont text-white"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
-             <div
-              className="textFont text-white"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
-            <div
-              className="textFont text-white"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
+            /> */}
+            
             
           </Col>
 
@@ -335,7 +334,7 @@ console.log( article.images)
               ></Link>
             </div>
 
-            <div className="pb-5 mb-5"></div>
+            <div className=""></div>
             <div
               className="textFont"
               dangerouslySetInnerHTML={{ __html: shortDescription }}

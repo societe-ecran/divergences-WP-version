@@ -138,8 +138,8 @@ const Layout = ({ children }) => {
                   </Col>
                 </Row>
 
-                <div className="carre d-none d-sm-block px-0 mx-0 ">
-                  <div className="pt-1 pr-1">{children}</div>
+                <div className="carre d-none d-sm-block  ">
+                  <div className="pt-1 ">{children}</div>
                 </div>
 
                 <div className="d-block d-sm-none">
