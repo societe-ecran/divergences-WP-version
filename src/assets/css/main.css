@@ -231,7 +231,7 @@ br {
 }
 
 .colonne {
-  height: 92vh;
+  height: 98vh;
   scrollbar-width: none;
 }
 
@@ -269,6 +269,21 @@ br {
   scrollbar-width: thin;
 }
 
+::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  background: rgb(228, 228, 228);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b4b4b4;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.24)
+}
+
+::-webkit-scrollbar-corner {
+  /* background: #000; */
+}
 /* Livres */
 
 .carteLivre {
@@ -393,7 +408,7 @@ right: 0; */
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0px;
+  right: 0;
   overflow-y: auto;
   overflow-x:hidden;
   scrollbar-width: thin;
