@@ -13,7 +13,7 @@ const Btcarousel = ({ articles }) => {
     
     {/* <Container fluid> */}
       <Carousel
-        controls={false}
+        controls={true}
         justify-self="end"
         align-self="center"
         control-prev-icon-color="invert(100%)"
@@ -33,7 +33,7 @@ const Btcarousel = ({ articles }) => {
                   <img
                     src={livre.node.images[0].src}
                     alt="couverture"
-                     height="290" 
+                     height="260" 
                      width='auto'
                   
                     className="carteLivre mb-3"
