@@ -64,16 +64,15 @@ const Livre = ({ data }) => {
   let auteur = "";
   let nbPages = "";
   let isbn = "";
-  let category =''
-  let texteCategory =''
+  let category = "";
+  let texteCategory = "";
 
-
-let affichControls=false
-  if(article.images.length<=2){
-    affichControls=false
-  }else{affichControls=true}
-
-
+  let affichControls = false;
+  if (article.images.length <= 2) {
+    affichControls = false;
+  } else {
+    affichControls = true;
+  }
 
   if (typeof article.categories[0].name !== "undefined") {
     category = article.categories[0].name;
@@ -81,12 +80,13 @@ let affichControls=false
     category = "";
   }
 
+  if (category === "a paraitre") {
+    texteCategory = "A paraitre le";
+  } else {
+    texteCategory = "Paru le ";
+  }
 
-  if(category === "a paraitre"){
-    texteCategory="A paraitre le"
-  }else{texteCategory= "Paru le "} 
-
-console.log(article.categories[0].name)
+  console.log(article.categories[0].name);
 
   if (typeof article.acf.isbn !== "undefined") {
     isbn = article.acf.isbn;
@@ -106,23 +106,21 @@ console.log(article.categories[0].name)
     auteur = "";
   }
 
-
-  let date =""
+  let date = "";
   if (typeof article.acf.date_de_parution !== "undefined") {
     let month = new Date(article.acf.date_de_parution).getMonth();
-  let corectMonth = (month += 1);
-   date = new Date(article.acf.date_de_parution).getDate() +
-    "." +
-    corectMonth +
-    "." +
-    JSON.stringify(new Date(article.acf.date_de_parution).getFullYear()).substr(
-      2
-    );
+    let corectMonth = (month += 1);
+    date =
+      new Date(article.acf.date_de_parution).getDate() +
+      "." +
+      corectMonth +
+      "." +
+      JSON.stringify(
+        new Date(article.acf.date_de_parution).getFullYear()
+      ).substr(2);
   } else {
     date = "";
   }
-
- 
 
   if (typeof article.description !== "undefined") {
     description = article.description;
@@ -135,7 +133,6 @@ console.log(article.categories[0].name)
   } else {
     shortDescription = "";
   }
-
 
   if (typeof article.name !== "undefined") {
     titre = article.name;
@@ -202,11 +199,8 @@ console.log(article.categories[0].name)
                 className=""
               >
                 <Carousel.Item>
-                  <Container
-                    fluid
-                    className="text-left pr-0 px-0"
-                  >
-                     {/* <Img fixed={article.images[0].localFile.childImageSharp.fixed} /> */}
+                  <Container fluid className="text-left pr-0 px-0">
+                    {/* <Img fixed={article.images[0].localFile.childImageSharp.fixed} /> */}
                     <img
                       src={affichagePremiereImage}
                       alt="couverture"
@@ -231,7 +225,6 @@ console.log(article.categories[0].name)
                 )}
               </Carousel>
             </Col>
-           
 
             <Col sm="5" className="d-none d-sm-block ">
               <div className="containerQuatriem ">
@@ -240,26 +233,27 @@ console.log(article.categories[0].name)
                   {auteur}
                 </div>
 
- <div>
-{category === 'Rupture de stock'? <div className='textFont font-weight-bold'>Rupture de stock</div>: 
+                <div>
+                  {category === "Rupture de stock" ? (
+                    <div className="textFont font-weight-bold">
+                      Rupture de stock
+                    </div>
+                  ) : (
+                    <button
+                      href=""
+                      className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
+                      data-item-id={article.wordpress_id}
+                      data-item-price={price}
+                      data-item-image={article.images[0].src}
+                      data-item-url={"/livre/" + article.slug}
+                      data-item-name={titre}
+                      data-item-weight="100"
+                    >
+                      <span className="douze"> {"> "} </span>
+                      <span className="under">Ajouter au panier</span>
+                    </button>
+                  )}
 
- <button
-                    href=""
-                    className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
-                    data-item-id={article.wordpress_id}
-                    data-item-price={price}
-                    data-item-image={article.images[0].src}
-                    data-item-url={"/livre/" + article.slug}
-                    data-item-name={titre}
-                    data-item-weight="100"
-                  >
-                    <span className="douze"> {"> "} </span>
-                    <span className="under">Ajouter au panier</span>
-                  </button>
-
-}
-               
-                 
                   <span className="textFont">
                     <br />
                     {texteCategory} {date} <br />
@@ -275,22 +269,29 @@ console.log(article.categories[0].name)
             </Col>
           </Col>
 
-           {/* Version smartphone */}
-          <Col sm="12"className="d-block d-sm-none"> 
+          {/* Version smartphone */}
+          <Col sm="12" className="d-block d-sm-none">
             <div className="text-right mt-4 mb-3 textFont">
               <div>
-                <button
-                  href=""
-                  className="snipcart-add-item  text-dark textFont px-0 bg-white"
-                  data-item-id={article.wordpress_id}
-                  data-item-price={price}
-                  data-item-image={article.images[0].src}
-                  data-item-url="/"
-                  data-item-name={titre}
-                >
-                  {"> "}
-                  <span className="under">Ajouter au panier</span>
-                </button>
+                {category === "Rupture de stock" ? (
+                  <div className="textFont font-weight-bold">
+                    Rupture de stock
+                  </div>
+                ) : (
+                  <button
+                    href=""
+                    className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
+                    data-item-id={article.wordpress_id}
+                    data-item-price={price}
+                    data-item-image={article.images[0].src}
+                    data-item-url={"/livre/" + article.slug}
+                    data-item-name={titre}
+                    data-item-weight="100"
+                  >
+                    <span className="douze"> {"> "} </span>
+                    <span className="under">Ajouter au panier</span>
+                  </button>
+                )}
               </div>
               <span className=" textfont">
                 <br />
@@ -303,8 +304,7 @@ console.log(article.categories[0].name)
                 <br />
               </span>
             </div>
-            </Col>
-
+          </Col>
 
           <Col sm="4" className="textFont  pl-2 pr-0 scrollColonne">
             <div
@@ -319,8 +319,6 @@ console.log(article.categories[0].name)
               className="textFont text-white d-none d-sm-block"
               dangerouslySetInnerHTML={{ __html: description }}
             /> */}
-            
-            
           </Col>
 
           <Col sm="2" className="textFont ">
