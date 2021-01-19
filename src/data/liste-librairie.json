@@ -51,7 +51,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 4,
           "NAME": "Le temps qu'il fait ",
           "DESCRIPTIO": "12 Place de L' Église, 22110 Mellionnec"
         },
@@ -64,7 +64,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 5,
           "NAME": "L'angle rouge",
           "DESCRIPTIO": "9 rue de l’Hôpital, 29100 Douarnenez"
         },
@@ -77,7 +77,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 6,
           "NAME": "HAB Galerie ",
           "DESCRIPTIO": "21 Quai des Antilles, 44200 Nantes"
         },
@@ -90,7 +90,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 7,
           "NAME": "Librairie Blaest / Le Palais du pantalon",
           "DESCRIPTIO": "207 Rue Blaes, 1000 Bruxelles"
         },
@@ -103,7 +103,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 8,
           "NAME": "Le Monte-en-l'air ",
           "DESCRIPTIO": "2 Rue de la Mare, 75020 Paris"
         },
@@ -116,7 +116,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 9,
           "NAME": "L'atelier ",
           "DESCRIPTIO": "2bis Rue du Jourdain, 75020 Paris"
         },
@@ -129,7 +129,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 10,
           "NAME": "Libertalia",
           "DESCRIPTIO": "12 rue Marcelin-Berthelot 93100 Montreuil"
         },
@@ -142,7 +142,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 11,
           "NAME": "Terra Nova ",
           "DESCRIPTIO": "18 Rue Léon Gambetta, 31000 Toulouse"
         },
@@ -155,7 +155,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 12,
           "NAME": "Ombres Blanches ",
           "DESCRIPTIO": "50 Rue Léon Gambetta, 31000 Toulouse"
         },
@@ -168,7 +168,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 13,
           "NAME": "L'hydre aux mille têtes  ",
           "DESCRIPTIO": "96 rue Saint Savournin, 13001 Marseille"
         },
@@ -181,7 +181,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 14,
           "NAME": "Goulard ",
           "DESCRIPTIO": "37 Cours Mirabeau, 13100 Aix-en-Provence"
         },
@@ -194,7 +194,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 15,
           "NAME": "La Régulière ",
           "DESCRIPTIO": "43 Rue Myrha, 75018 Paris"
         },
@@ -207,7 +207,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 16,
           "NAME": "La Friche  ",
           "DESCRIPTIO": "36, rue Léon-Frot 75011"
         },
@@ -219,7 +219,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 17,
           "NAME": "Les Villes Invisibles  ",
           "DESCRIPTIO": "1 Rue Basse des Halles, 44190 Clisson"
         },
@@ -231,7 +231,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 18,
           "NAME": "Alimentation Générale ",
           "DESCRIPTIO": "30 Grande Rue, 26340 Saillans"
         },
@@ -243,7 +243,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 3,
+          "PARK_ID": 19,
           "NAME": "Café Plùm ",
           "DESCRIPTIO": "12 Rue de Lengouzy, 81440 Lautrec"
         },
@@ -251,9 +251,127 @@
           "type": "Point",
           "coordinates": [2.1375744, 43.705742]
         }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 20,
+          "NAME": "Kaxilda",
+          "DESCRIPTIO": "Arroka Kalea, 2, 20006 Donostia-San Sebastian, SS"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.9827375411987305, 43.31447982788086]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 21,
+          "NAME": "Le pied à terre ",
+          "DESCRIPTIO": "9 rue Custine, 75018 Paris "
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3488105, 48.8876334]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 22,
+          "NAME": "Michèle Firk ",
+          "DESCRIPTIO": "9 rue François Debergue, 93100 Montreuil"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.438457727432251, 48.857784271240234]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 23,
+          "NAME": "La Petite Egypte  ",
+          "DESCRIPTIO": "5 Rue des Petits Carreaux, 75002 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3470708, 48.8666088]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 24,
+          "NAME": "Terre des Livres   ",
+          "DESCRIPTIO": "86 Rue de Marseille, 69007 Lyon"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.8380598, 45.7488294]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 25,
+          "NAME": "L'affranchie",
+          "DESCRIPTIO": "6 Place Sébastopol, 59000 Lille"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3.058644, 50.6285833]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 20,
+          "NAME": "Albertine",
+          "DESCRIPTIO": "5 Rue des Écoles, 29900 Concarneau"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.9194427, 47.8722624]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 26,
+          "NAME": "Au brouillon de culture ",
+          "DESCRIPTIO": "29 rue St-Sauveur, 14000 Caen "
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-0.3670593, 49.1833634]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 20,
+          "NAME": "Colibrije",
+          "DESCRIPTIO": "2 Avenue du Président Salvador Allende, 93100 Montreuil "
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.4595086574554443, 48.87223434448242]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 27,
+          "NAME": "Campus",
+          "DESCRIPTIO": "10 Rue du Mirailh, 40100 Dax"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.0531524, 43.7099756]
+        }
       }
-
-
 
 
 
