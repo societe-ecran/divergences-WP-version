@@ -17,7 +17,7 @@ const Layout2 = ({ children }) => {
     <div>
       {/* <Seo /> */}
       <NavBar />
-      <div className="container-fluid no-scroll pr-0">
+      <div className="container-fluid no-scroll">
         <Row>
           <Col md="6" className="borderGeneral-right d-none d-sm-block">
             <Row className="container-presentation">

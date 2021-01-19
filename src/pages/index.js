@@ -48,12 +48,13 @@ const IndexPage = () => (
       render={(data) => (
         <span>
           <span className="d-block d-sm-none pb-5">
+            
             {/* Paru Recemment Smartphone */}
 
             <Row className="borderGeneral-bottom dix">
               <Container
                 fluid
-                className="d-flex flex-row justify-content-between"
+                className="d-flex justify-content-between"
               >
                 <span className="">
                   <a

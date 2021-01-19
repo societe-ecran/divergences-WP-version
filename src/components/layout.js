@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
           }
         `}
         render={(data) => (
-          <div className="container-fluid no-scroll pr-0 ">
+          <div className="container-fluid">
             <Row>
               <Col md="6" className="borderGeneral-right colonne  ">
                 <Row className="container-presentation d-none d-sm-block">
