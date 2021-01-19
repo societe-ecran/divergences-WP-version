@@ -36,7 +36,7 @@ const Btcarousel = ({ articles }) => {
                      height="290" 
                      width='auto'
                   
-                    className="carteLivre"
+                    className="carteLivre mb-3"
                   />
                 </Link>
               </Container>

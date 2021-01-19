@@ -112,7 +112,7 @@ const IndexPage = () => (
                 </div>
               {/* </Col> */}
               <Col xs="10" className="px-0 pb-1">
-                <div className=" d-block d-sm-none  ">
+                <div className=" d-block d-sm-none ">
                   <ParuRecementSmart />
                 </div>
               </Col>

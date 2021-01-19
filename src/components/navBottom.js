@@ -14,32 +14,25 @@ const activeStyle = {
 };
 
 const NavBottom = () => (
-  <ul className="nav bg-white fixed-bottom borderGeneral-top justify-content-between  pb-1 pt-1 pl-3 pr-3">
-    <li className="">
-      <Link
-        className=" navFont navHover dix"
-        to="/catalogue/"
-        style={style}
-        activeStyle={activeStyle}
-      >
-        Catalogue
-      </Link>
-    </li>
+  <ul className="nav bg-white fixed-bottom borderGeneral-top justify-content-between  pt-1 pl-3 pr-3">
+    <Link
+      className=" navFont navHover dix"
+      to="/catalogue/"
+      style={style}
+      activeStyle={activeStyle}
+    >
+      <li>Catalogue </li>
+    </Link>
 
-    
-
-    <li className="">
-      <Link
-        className=" navFont navHover dix"
-        to="/ounoustrouver/"
-        style={style}
-        activeStyle={activeStyle}
-      >
-        Où nous trouver
-      </Link>
-      
-    </li>
-   
+    <Link
+      className=" navFont navHover dix"
+      to="/ounoustrouver/"
+      style={style}
+      activeStyle={activeStyle}
+    >
+      {" "}
+      <li>Où nous trouver </li>
+    </Link>
   </ul>
 );
 

@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import NavBar from "../components/navTop";
-// import Seo from "./seo";
 import NavBottom from "../components/navBottom";
 import Navmillieu from "./navmillieu";
 import "../fonts/fonts.css";
 import { Row, Col } from "reactstrap";
 import AParaitre from "./a paraitre";
 import ParuRecement from "./paru recement";
+import { Link } from "gatsby";
 
 const Layout2 = ({ children }) => {
   const aparaitre = "à";
@@ -15,7 +15,6 @@ const Layout2 = ({ children }) => {
   const eMaj = e.toUpperCase();
   return (
     <div>
-      {/* <Seo /> */}
       <NavBar />
       <div className="container-fluid no-scroll">
         <Row>
@@ -110,7 +109,12 @@ const Layout2 = ({ children }) => {
               <Row className="pl-3 bg-white pt-1 pb-0 mb-0  navFont dix">
               {/* sticky-top */}
                 <span className="pl-2 bg-white pb-0 mb-0 navFont dix">
+                <Link
+                    className="text-dark text-decoration-none "
+                    to="/"
+                  >
                   Paru récemment
+                  </Link>
                 </span>
               </Row>
 
@@ -125,7 +129,12 @@ const Layout2 = ({ children }) => {
               <Row className=" dix pl-2 bg-white  pb-0 mb-0">
                 <span className=" dix pl-3 bg-white  pb-0 mb-0  navFont pt-1">
                 {/* sticky-top */}
+                  <Link
+                    className="text-dark text-decoration-none "
+                    to="/"
+                  >
                   {aparaitre.toUpperCase()} paraître
+                  </Link>
                 </span>
               </Row>
 

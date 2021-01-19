@@ -6,7 +6,6 @@ import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Seo from "../components/seo";
-import Img from "gatsby-image"
 
 const style = {
   fontWeight: "bold",
@@ -60,11 +59,9 @@ const Livre = ({ data }) => {
 
   let description = "";
   let shortDescription = "";
-  let couv = "";
   let titre = "";
   let price = "";
   let auteur = "";
-  let dateDeParution = "";
   let nbPages = "";
   let isbn = "";
   let category =''
@@ -122,7 +119,7 @@ console.log(article.categories[0].name)
       2
     );
   } else {
-    dateDeParution = "";
+    date = "";
   }
 
  
@@ -139,11 +136,6 @@ console.log(article.categories[0].name)
     shortDescription = "";
   }
 
-  if (typeof article.images[0] !== "undefined") {
-    couv = article.images;
-  } else {
-    couv = "";
-  }
 
   if (typeof article.name !== "undefined") {
     titre = article.name;
@@ -248,8 +240,10 @@ console.log(article.categories[0].name)
                   {auteur}
                 </div>
 
-                <div className="">
-                  <button
+ <div>
+{category === 'Rupture de stock'? <div className='textFont font-weight-bold'>Rupture de stock</div>: 
+
+ <button
                     href=""
                     className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
                     data-item-id={article.wordpress_id}
@@ -262,6 +256,10 @@ console.log(article.categories[0].name)
                     <span className="douze"> {"> "} </span>
                     <span className="under">Ajouter au panier</span>
                   </button>
+
+}
+               
+                 
                   <span className="textFont">
                     <br />
                     {texteCategory} {date} <br />
