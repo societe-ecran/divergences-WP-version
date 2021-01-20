@@ -19,7 +19,7 @@ const Livre = ({ article }) => {
             }
             alt=""
             className="ml-3 mr-3 mb-2 mt-2 carteLivre"
-            height="280"
+            height="300"
             width="auto"
           />
         </Link>
