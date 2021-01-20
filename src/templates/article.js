@@ -6,6 +6,7 @@ import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Seo from "../components/seo";
+import moment from 'moment'
 
 const style = {
   fontWeight: "bold",
@@ -57,6 +58,13 @@ export const query = graphql`
 const Livre = ({ data }) => {
   const article = data.wcProducts;
 
+
+ 
+
+
+
+
+
   var description = "";
   var shortDescription = "";
   var titre = "";
@@ -106,17 +114,22 @@ const Livre = ({ data }) => {
     auteur = "";
   }
 
+
   var date = "";
   if (typeof article.acf.date_de_parution !== "undefined") {
-    var month = new Date(article.acf.date_de_parution).getMonth();
+
+    var dateFormat = moment(article.acf.date_de_parution).format() 
+    var month = new Date(dateFormat).getMonth()
+
+    // var month = new Date(article.acf.date_de_parution).getMonth();
     var corectMonth = (month += 1);
     date =
-      new Date(article.acf.date_de_parution).getDate() +
+      new Date(dateFormat).getDate() +
       "." +
       corectMonth +
       "." +
       JSON.stringify(
-        new Date(article.acf.date_de_parution).getFullYear()
+        new Date(dateFormat).getFullYear()
       ).substr(2);
   } else {
     date = "";

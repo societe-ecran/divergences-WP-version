@@ -14,8 +14,8 @@ console.log(dateFormat)
 var month = new Date(dateFormat).getMonth()
 // console.log(month)
   // var month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
-  var corectMonth=month+=1
-var date = new Date(dateFormat).getDate() + '.' + corectMonth +'.'+ new Date(dateFormat).getFullYear()
+var corectMonth=month+=1
+var date = new Date(dateFormat).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(dateFormat).getFullYear()).substr(2) 
   // var date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(evenement.node.dateevenement.dateEvenement).getFullYear()).substr(2) 
 
   return (
