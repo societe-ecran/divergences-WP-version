@@ -1,34 +1,28 @@
-
-
-
-
- .verso{
+.verso {
   /* position: absolute; */
-  opacity:1;
-  width:340px;
-  height:240px;
-  position:absolute
- }
-.verso:hover{
-  opacity:1
+  opacity: 1;
+  width: 340px;
+  height: 240px;
+  position: absolute;
+}
+.verso:hover {
+  opacity: 1;
 }
 
+.transparent:hover {
+  opacity: 0;
+}
 
-  .transparent:hover{
-opacity: 0;
-  }
-
-
-  .class_test {
+.class_test {
   text-align: center;
   display: inline-block;
   position: relative;
 }
- .class_test:hover p.text {
-      opacity: 1;
-  }
+.class_test:hover p.text {
+  opacity: 1;
+}
 .class_test p.text {
-  color: #FFF;
+  color: #fff;
   width: 200px;
   height: 200px;
   background: rgba(0, 0, 0, 0.5);
@@ -43,60 +37,50 @@ opacity: 0;
   -ms-transition: opacity .5s ease-in-out; */
 }
 
-
-
-
 .containerQuatriem {
   display: flex;
   flex-direction: column;
-  width:100%;
-  height:620px;
+  width: 100%;
+  height: 620px;
   justify-content: space-between;
   padding-left: 0;
 }
 
-.tailleImageTemplate{
-  width:auto;
-  height:620px
+.tailleImageTemplate {
+  width: auto;
+  height: 620px;
 }
 
-
-.sticky{
- /* z-index: 1;  */
-  position:fixed;
+.sticky {
+  /* z-index: 1;  */
+  position: fixed;
   width: 100%;
 }
 
-.conteneur-flexible{
+.conteneur-flexible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   align-content: space-around;
 }
-.ligne{
+.ligne {
   flex-direction: row;
 }
 
-
-
-
-
-.centrageCatalogue{
-  justify-content:center
+.centrageCatalogue {
+  justify-content: center;
 }
 
 body {
   overflow: hidden;
 }
 
-
 button {
   border: none;
   background-color: transperant;
   outline: none;
 }
-
 
 /* .carousel-control {
   height:50%;
@@ -105,8 +89,6 @@ button {
 
 .carousel-control-next {
   filter: invert(100%);
- 
-
 }
 .carousel-control-prev {
   filter: invert(100%);
@@ -114,12 +96,12 @@ button {
 .carousel-control-prev-icon {
   width: 32px;
   height: 32px;
-  opacity:0
+  opacity: 0;
 }
 .carousel-control-next-icon {
   width: 32px;
   height: 32px;
-  opacity:10
+  opacity: 10;
 }
 
 /* taille de la police */
@@ -149,9 +131,9 @@ br {
   max-height: 540;
 } */
 
-.smooth {
+/* .smooth {
   scroll-behavior: smooth;
-}
+} */
 
 .index {
   z-index: 1;
@@ -178,8 +160,6 @@ br {
   max-width: 250px;
   height: auto;
 }
-
-
 
 .tailleLivreTemplate {
   max-width: 70%;
@@ -237,7 +217,7 @@ br {
 
 .carre {
   height: 80vh;
-  width:auto;
+  width: auto;
   overflow: auto;
   scrollbar-width: none;
 }
@@ -264,7 +244,7 @@ br {
 
 .catalogue {
   height: 85vh;
-  overflow:auto;
+  overflow: auto;
   /* overscroll-behavior: contain; */
   scrollbar-width: thin;
 }
@@ -278,7 +258,7 @@ br {
 ::-webkit-scrollbar-thumb {
   background: #b4b4b4;
   -webkit-border-radius: 1ex;
-  -webkit-box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.24)
+  -webkit-box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.24);
 }
 
 ::-webkit-scrollbar-corner {
@@ -378,7 +358,6 @@ h5 {
 
 /* container agenda/parution/a paraitre  */
 
-
 /* .agenda-container-parent {
   height: 510px;
   width: 100%;
@@ -410,7 +389,7 @@ right: 0; */
   left: 0;
   right: 0;
   overflow-y: auto;
-  overflow-x:hidden;
+  overflow-x: hidden;
   scrollbar-width: thin;
 }
 
@@ -468,33 +447,26 @@ right: 0; */
   scrollbar-width: none;
 } */
 
-
-
 @media (max-width: 1600px) {
-.containerQuatriem {
-  display: flex;
-  flex-direction: column;
-  width:100%;
-  height:500px;
-  justify-content: space-between;
-  padding-left: 0;
+  .containerQuatriem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  .tailleImageTemplate {
+    width: auto;
+    height: 500px;
+  }
 }
-
-.tailleImageTemplate{
-  width:auto;
-  height:500px
-}
-}
-
-
-
-
 
 @media (max-width: 1199.98px) {
   .logoDivergences {
     font-family: "Druk";
     font-size: 24px;
-   
   }
 
   .logoDivergences2 {
@@ -502,70 +474,62 @@ right: 0; */
     font-size: 19px;
   }
 
-  .tailleImageTemplate{
-    width:auto;
-    height:370px
+  .tailleImageTemplate {
+    width: auto;
+    height: 370px;
   }
 
   .containerQuatriem {
     display: flex;
     flex-direction: column;
-    width:100%;
-    height:370px;
+    width: 100%;
+    height: 370px;
     justify-content: space-between;
   }
-
-
 }
 
-
 @media (max-width: 991.98px) {
-  .tailleImageTemplate{
-    width:auto;
-    height:370px
+  .tailleImageTemplate {
+    width: auto;
+    height: 370px;
   }
 
   .containerQuatriem {
     display: flex;
     flex-direction: column;
-    width:100%;
-    height:370px;
+    width: 100%;
+    height: 370px;
     justify-content: space-between;
   }
+}
 
- }
-
-
- @media (max-width: 767.98px) { 
-  .tailleImageTemplate{
-    width:auto;
-    height:250px
+@media (max-width: 767.98px) {
+  .tailleImageTemplate {
+    width: auto;
+    height: 250px;
   }
 
   .containerQuatriem {
     display: flex;
     flex-direction: column;
-    width:100%;
-    height:250px;
+    width: 100%;
+    height: 250px;
     justify-content: space-between;
   }
-
-  }
-
+}
 
 @media (max-width: 576px) {
-
-  .navTopSticky{
-  -webkit-sticky:sticky;
-  position:sticky
-    }
-
-  .margeEvenement{
-    margin-left:23px
+  .navTopSticky {
+    -webkit-sticky: sticky;
+    position: sticky;
   }
-  .tailleImageTemplate{
-    width:auto;
-    height:350px
+
+  .margeEvenement {
+    margin-left: 23px;
+  }
+  .tailleImageTemplate {
+    width: auto;
+    height: 350px;
   }
 
   body {
@@ -603,9 +567,9 @@ right: 0; */
 
   .carre {
     height: 80vh;
-    width:auto;
+    width: auto;
     overflow: auto;
-    scrollbar-width:none;
+    scrollbar-width: none;
   }
 
   .testScrollBar {
@@ -638,7 +602,6 @@ right: 0; */
     border-top: none;
   }
 
-
   .catalogue {
     height: 100vh;
     overflow: scroll;
@@ -653,15 +616,16 @@ right: 0; */
   .borderGeneral-bottom {
     border-bottom: 1px solid black;
   }
-  
+
   .borderGeneral-top {
     border-top: 1px solid black;
   }
 
-.centrageCatalogue{
-  justify-content:center}
+  .centrageCatalogue {
+    justify-content: center;
+  }
 
-/* 
+  /* 
 
 .ecritureVericale {
   writing-mode: vertical-rl;
@@ -669,18 +633,8 @@ right: 0; */
   transform: rotate(180deg);
 } */
 
-.tailleImageEvenement{
-  height:300px;
-  width:"auto"
+  .tailleImageEvenement {
+    height: 300px;
+    width: 190px;
+  }
 }
-}
-
-
-
-
-
-
-
-
-
-
