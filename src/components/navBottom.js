@@ -14,7 +14,7 @@ const activeStyle = {
 };
 
 const NavBottom = () => (
-  <ul className="nav bg-white fixed-bottom borderGeneral-top justify-content-between  pt-1 pl-3 pr-3">
+  <ul className="nav bg-white fixed-bottom borderGeneral-top justify-content-between  mt-1 ml-3 mr-3 mb-1 ">
     <Link
       className=" navFont navHover dix"
       to="/catalogue/"

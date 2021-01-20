@@ -295,7 +295,8 @@ const Livre = ({ data }) => {
               </div>
               <span className=" textfont">
                 <br />
-                {texteCategory} {date} <br />
+                {texteCategory} {date}
+                <br />
                 {nbPages} pages
                 <br />
                 {price} euros
