@@ -28,6 +28,7 @@
     "gatsby-source-wordpress-experimental": "^5.0.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "leaflet": "^1.7.1",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-accessible-accordion": "^3.3.3",

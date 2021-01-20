@@ -3,11 +3,19 @@ import { Link } from "gatsby";
 import "moment/locale/fr";
 import "../fonts/fonts.css";
 import { Row, Col } from "reactstrap";
+import moment from 'moment'
 
 const Evenement = ({ evenement }) => {
-  var month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
+  // console.log(evenement.node.dateevenement.dateEvenement)
+  var dateFormat = moment(evenement.node.dateevenement.dateEvenement).format() 
+console.log(dateFormat)
+
+var month = new Date(dateFormat).getMonth()
+console.log(month)
+  // var month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
   var corectMonth=month+=1
-  var date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(evenement.node.dateevenement.dateEvenement).getFullYear()).substr(2) 
+var date = new Date(dateFormat).getDate() + '.' + corectMonth +'.'+ new Date(dateFormat).getFullYear()
+  // var date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(evenement.node.dateevenement.dateEvenement).getFullYear()).substr(2) 
 
   return (
     <div>
