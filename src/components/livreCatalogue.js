@@ -25,6 +25,9 @@ const Livre = ({ article }) => {
         </Link>
       </div>
 
+
+
+
       <div className="d-none d-sm-block">
         <Link
           to={`/livre/${article.node.slug}`}

@@ -161,9 +161,9 @@ const Evenement = ({ data }) => {
               src={illustration}
               alt="illustration"
               width="80%"
-              height="auto"
+              // height="auto"
             />
-           <p className="textFont mx-0 px-0 text-white">
+           <p className="textFont text-white">
             Lecteurs et lectrices, curieuses et curieux, libraires,
             journalistes, si vous souhaitez être tenu au courant de nos
             ouvrages, de nos événements et de nos activités une fois par mois,
@@ -220,13 +220,13 @@ const Evenement = ({ data }) => {
           </Col>
         </Row>
 
-        <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
+        <Row >
           <Col sm="12" className="d-flex justify-content-center">
             <img
               src={illustration}
               alt="illustration"
-              width="50%"
-              height="auto"
+              width="200"
+              // height="auto"
             />
           </Col>
         </Row>
