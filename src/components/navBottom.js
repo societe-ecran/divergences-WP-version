@@ -14,14 +14,14 @@ const activeStyle = {
 };
 
 const NavBottom = () => (
-  <ul className="nav bg-white fixed-bottom borderGeneral-top justify-content-between  pt-1 pl-3 pr-3 pb-1">
+  <ul className="nav bg-white fixed-bottom borderGeneral-top justify-content-between  pl-3 pr-3">
     <Link
       className=" navFont navHover dix"
       to="/catalogue/"
       style={style}
       activeStyle={activeStyle}
     >
-      <li>Catalogue </li>
+      <li className='pt-1 pb-1'>Catalogue </li>
     </Link>
 
     <Link
@@ -31,7 +31,7 @@ const NavBottom = () => (
       activeStyle={activeStyle}
     >
       {" "}
-      <li>Où nous trouver </li>
+      <li className='pt-1 pb-1'>Où nous trouver </li>
     </Link>
   </ul>
 );

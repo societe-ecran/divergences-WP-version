@@ -11,11 +11,12 @@ import Seo from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-    <Seo siteTitle="Editions Divergences"
-          title="Editions Divergences"
-          description="Bienvenue sur le site des éditions Divergences."
-          keywords={[`Editions divergences`, `home`, `index`]}
-        />
+    <Seo
+      siteTitle="Editions Divergences"
+      title="Editions Divergences"
+      description="Bienvenue sur le site des éditions Divergences."
+      keywords={[`Editions divergences`, `home`, `index`]}
+    />
     <StaticQuery
       query={graphql`
         query {
@@ -48,14 +49,10 @@ const IndexPage = () => (
       render={(data) => (
         <span>
           <span className="d-block d-sm-none pb-5">
-            
             {/* Paru Recemment Smartphone */}
 
             <Row className="borderGeneral-bottom dix">
-              <Container
-                fluid
-                className="d-flex justify-content-between"
-              >
+              <Container fluid className="d-flex justify-content-between">
                 <span className="">
                   <a
                     className="text-dark navFont"
@@ -102,38 +99,32 @@ const IndexPage = () => (
               </Container>
             </Row>
 
-                      <Container fluid className="px-0 d-block d-sm-none pb-5" >
-
-                      
-            <Row className="borderGeneral-bottom ">
-              {/* <Col xs="1" className="d-block d-sm-none px-2"> */}
+            <Container fluid className="px-0 d-block d-sm-none pb-5">
+              <Row className="borderGeneral-bottom ">
+              
                 <div className="text-center mt-1 pl-3 d-block d-sm-none dix px-0 mx-0">
                   Paru recemment
                 </div>
-              {/* </Col> */}
-              <Col xs="10" className="px-0 pb-1">
-                <div className=" d-block d-sm-none ">
-                  <ParuRecementSmart />
-                </div>
-              </Col>
-            </Row>
-
-            {/* A paraitre Smartphone */}
-            <Row className=" ">
-              {/* <Col xs="1" className="d-block d-sm-none px-2"> */}
              
-              {/* </Col> */}
-              <Col xs="10" className="px-0"> 
-                <div className=" pl-3  mt-1 dix">
-                  A paraître{" "}
-                </div>
-                <div className=" d-block d-sm-none px-0">
-                  <AParaitreSmart />
-                </div>
-              </Col>
-            </Row>
-            </Container>
+                <Col xs="10" className="px-0 pb-1">
+                  <div className=" d-block d-sm-none ">
+                    <ParuRecementSmart />
+                  </div>
+                </Col>
+              </Row>
 
+              {/* A paraitre Smartphone */}
+              <Row className='mb-5 pb-5'>
+
+                <Col xs="10" className="px-0">
+                  <div className=" pl-3  mt-1 dix">A paraître </div>
+                  <div className="d-block d-sm-none px-0">
+                    <AParaitreSmart />
+                  </div>
+                 
+                </Col>
+              </Row>
+            </Container>
           </span>
 
           <span className="d-none d-sm-block">
@@ -141,7 +132,6 @@ const IndexPage = () => (
               className="navFont pb-5 mb-5"
               articles={data.allWpPost.edges}
             />
-
           </span>
         </span>
       )}

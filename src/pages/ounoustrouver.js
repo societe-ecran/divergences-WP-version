@@ -24,12 +24,10 @@ const Ounoustrouver = () => {
             {typeof window !== "undefined" && (
               <LeafletMaps position={[46.52863469527167, 2.43896484375]} />
             )}
-
-            
           </Col>
 
           <Col sm="3">
-            <div className="textFont interligne">
+            <div className="textFont interligne smartMarge ">
               Voici certaines des librairies où vous pouvez retrouver nos
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
@@ -43,30 +41,6 @@ const Ounoustrouver = () => {
               >
                 les libraires.fr
               </a>
-            </div>
-
-
-
-            <div className="text-white" >
-            Voici certaines des librairies où vous pouvez retrouver nos
-              livres. Si le livre que vous recherchez n’est pas en rayon chez
-              votre libraire habituel, plutôt que de l’acheter sur une grande
-              plateforme d’achat en ligne, vous pouvez demander à votre libraire
-              de vous le commander ou passer par
-            </div>
-            <div className="text-white" >
-            Voici certaines des librairies où vous pouvez retrouver nos
-              livres. Si le livre que vous recherchez n’est pas en rayon chez
-              votre libraire habituel, plutôt que de l’acheter sur une grande
-              plateforme d’achat en ligne, vous pouvez demander à votre libraire
-              de vous le commander ou passer par
-            </div>
-            <div className="text-white" >
-            Voici certaines des librairies où vous pouvez retrouver nos
-              livres. Si le livre que vous recherchez n’est pas en rayon chez
-              votre libraire habituel, plutôt que de l’acheter sur une grande
-              plateforme d’achat en ligne, vous pouvez demander à votre libraire
-              de vous le commander ou passer par
             </div>
           </Col>
         </Row>

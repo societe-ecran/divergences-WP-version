@@ -36,7 +36,7 @@ const Evenement = ({ evenement }) => {
           </Col>
 
           <Col sm="8" className="px-0">
-            <div className="textFont">{evenement.node.title}</div>
+            <div className="textFont smartPadding">{evenement.node.title}</div>
           </Col>
           <Col sm="2" className="px-0 mx-0">
             <div className="text-right textFont ">

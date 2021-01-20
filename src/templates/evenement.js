@@ -222,6 +222,14 @@ const Evenement = ({ data }) => {
                className='tailleImageEvenement'
               />
             </div>
+            <div className="text-white" >
+            Voici certaines des librairies où vous pouvez retrouver nos
+              livres. Si le livre que vous recherchez n’est pas en rayon chez
+              votre libraire habituel, plutôt que de l’acheter sur une grande
+              plateforme d’achat en ligne, vous pouvez demander à votre libraire
+              de vous le commander ou passer par
+            </div>
+            
           </Col>
         </Row>
 
