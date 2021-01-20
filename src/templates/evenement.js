@@ -163,18 +163,15 @@ const Evenement = ({ data }) => {
               width="80%"
               // height="auto"
             />
-           <p className="textFont text-white">
-            Lecteurs et lectrices, curieuses et curieux, libraires,
-            journalistes, si vous souhaitez être tenu au courant de nos
-            ouvrages, de nos événements et de nos activités une fois par mois,
-            vous pouvez vous inscrire ici.
-          </p>
-         
-         
+            <p className="textFont text-white">
+              Lecteurs et lectrices, curieuses et curieux, libraires,
+              journalistes, si vous souhaitez être tenu au courant de nos
+              ouvrages, de nos événements et de nos activités une fois par mois,
+              vous pouvez vous inscrire ici.
+            </p>
           </Col>
           <Col sm="2" className="px-0 mx-0"></Col>
         </Row>
-
       </Container>
 
       {/* Version smartphone */}
@@ -183,8 +180,8 @@ const Evenement = ({ data }) => {
         fluid
         className=" pb-5 mb-5 interligne textFont d-block d-sm-none"
       >
-        <Row >
-          <Col sm="12" className=''>
+        <Row>
+          <Col sm="12" className="">
             <div className="text-right">
               <Link
                 className="fas fa-times text-dark h4 "
@@ -217,19 +214,27 @@ const Evenement = ({ data }) => {
               className=" textFont"
               dangerouslySetInnerHTML={{ __html: content }}
             />
+
+            <div className="d-flex justify-content-center">
+              <img
+                src={illustration}
+                alt="illustration"
+               className='tailleImageEvenement'
+              />
+            </div>
           </Col>
         </Row>
 
-        <Row >
+        {/* <Row>
           <Col sm="12" className="d-flex justify-content-center">
             <img
               src={illustration}
               alt="illustration"
-              width="300"
-              // height="auto"
+              height="290"
+              width="auto"
             />
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </Layout>
   );
