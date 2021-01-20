@@ -39,14 +39,14 @@ export const query = graphql`
 const Evenement = ({ data }) => {
   const article = data.wpPost;
 
-  let adresse = "";
-  let complementAdresse = "";
-  let content = "";
-  let dateEvenement = "";
-  let horaire = "";
-  let title = "";
-  let ville = "";
-  let illustration = "";
+  var adresse = "";
+  var complementAdresse = "";
+  var content = "";
+  var dateEvenement = "";
+  var horaire = "";
+  var title = "";
+  var ville = "";
+  var illustration = "";
 
   if (typeof article.adresse2.prix !== undefined) {
     complementAdresse = article.adresse2.prix;
@@ -96,9 +96,9 @@ const Evenement = ({ data }) => {
     ville = "";
   }
 
-  let month = new Date(dateEvenement).getMonth();
-  let corectMonth = (month += 1);
-  let date =
+  var month = new Date(dateEvenement).getMonth();
+  var corectMonth = (month += 1);
+  var date =
     new Date(dateEvenement).getDate() +
     "." +
     corectMonth +

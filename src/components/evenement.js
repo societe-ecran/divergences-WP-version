@@ -5,9 +5,9 @@ import "../fonts/fonts.css";
 import { Row, Col } from "reactstrap";
 
 const Evenement = ({ evenement }) => {
-  let month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
-  let corectMonth=month+=1
-  let date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(evenement.node.dateevenement.dateEvenement).getFullYear()).substr(2) 
+  var month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
+  var corectMonth=month+=1
+  var date = new Date(evenement.node.dateevenement.dateEvenement).getDate() + '.' + corectMonth +'.'+ JSON.stringify(new Date(evenement.node.dateevenement.dateEvenement).getFullYear()).substr(2) 
 
   return (
     <div>

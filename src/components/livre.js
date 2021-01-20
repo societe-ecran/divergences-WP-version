@@ -5,7 +5,7 @@ import "../fonts/fonts.css";
 import { Container } from "reactstrap";
 
 const Livre = ({ article }) => {
-  let categorieChoisie = "";
+  var categorieChoisie = "";
 
   if (
     article.node.categories[0].name === undefined ||

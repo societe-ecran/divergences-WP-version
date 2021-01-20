@@ -57,17 +57,17 @@ export const query = graphql`
 const Livre = ({ data }) => {
   const article = data.wcProducts;
 
-  let description = "";
-  let shortDescription = "";
-  let titre = "";
-  let price = "";
-  let auteur = "";
-  let nbPages = "";
-  let isbn = "";
-  let category = "";
-  let texteCategory = "";
+  var description = "";
+  var shortDescription = "";
+  var titre = "";
+  var price = "";
+  var auteur = "";
+  var nbPages = "";
+  var isbn = "";
+  var category = "";
+  var texteCategory = "";
 
-  let affichControls = false;
+  var affichControls = false;
   if (article.images.length <= 2) {
     affichControls = false;
   } else {
@@ -106,10 +106,10 @@ const Livre = ({ data }) => {
     auteur = "";
   }
 
-  let date = "";
+  var date = "";
   if (typeof article.acf.date_de_parution !== "undefined") {
-    let month = new Date(article.acf.date_de_parution).getMonth();
-    let corectMonth = (month += 1);
+    var month = new Date(article.acf.date_de_parution).getMonth();
+    var corectMonth = (month += 1);
     date =
       new Date(article.acf.date_de_parution).getDate() +
       "." +
@@ -146,14 +146,14 @@ const Livre = ({ data }) => {
     price = "";
   }
 
-  let affichagePremiereImage = "";
+  var affichagePremiereImage = "";
   if (typeof article.images[1] !== "undefined") {
     affichagePremiereImage = article.images[1].src;
   } else {
     affichagePremiereImage = article.images[0].src;
   }
 
-  let affichageTroisiemeImage = "";
+  var affichageTroisiemeImage = "";
   if (typeof article.images[2] !== "undefined") {
     affichageTroisiemeImage = true;
   } else {

@@ -7,7 +7,7 @@ import "../images/panier.png";
 import Panier from "./panier";
 
 export default () => {
-  let edition = "éditions divergences";
+  var edition = "éditions divergences";
   const [menuState, setMenuOpen] = useState(false);
   const closeMenu = () => {
     setMenuOpen(false);
