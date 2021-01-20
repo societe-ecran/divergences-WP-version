@@ -10,8 +10,9 @@ const Evenement = ({ evenement }) => {
   var dateFormat = moment(evenement.node.dateevenement.dateEvenement).format() 
 console.log(dateFormat)
 
+// var month = new Date(dateFormat).getMonth()
 var month = new Date(dateFormat).getMonth()
-console.log(month)
+// console.log(month)
   // var month =new Date(evenement.node.dateevenement.dateEvenement).getMonth()
   var corectMonth=month+=1
 var date = new Date(dateFormat).getDate() + '.' + corectMonth +'.'+ new Date(dateFormat).getFullYear()

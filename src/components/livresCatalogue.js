@@ -10,7 +10,6 @@ const Livres = ({ articles }) => {
 
 
   const livresTrie = article.sort(function (a, b) {
-    console.log(a.node.acf.date_de_parution)
     return (
       new Date(b.node.acf.date_de_parution) -
       new Date(a.node.acf.date_de_parution)
