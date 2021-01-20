@@ -1,19 +1,16 @@
 import React from "react";
 import Livre from "./livreCatalogue";
 import { Container, Row } from "reactstrap";
-import moment from 'moment'
+import moment from "moment";
 
 const Livres = ({ articles }) => {
-
-  
   const article = articles;
 
-
   const livresTrie = article.sort(function (a, b) {
-    return (
-      new Date(b.node.acf.date_de_parution) -
-      new Date(a.node.acf.date_de_parution)
-    );
+    var AdateFormat = moment(a.node.acf.date_de_parution).format();
+    var BdateFormat = moment(b.node.acf.date_de_parution).format();
+
+    return new Date(BdateFormat) - new Date(AdateFormat);
   });
 
   return (
