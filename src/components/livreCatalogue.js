@@ -4,7 +4,7 @@ import "../assets/css/main.css";
 
 const Livre = ({ article }) => {
   return (
-    <div className="">
+    <div >
       <div className="d-block d-sm-none mx-0 text-center">
         <Link
           to={`/livre/${article.node.slug}`}
@@ -19,14 +19,11 @@ const Livre = ({ article }) => {
             }
             alt=""
             className="ml-3 mr-3 mb-2 mt-2 carteLivre"
-            height="300"
+            height="330"
             width="auto"
           />
         </Link>
       </div>
-
-
-
 
       <div className="d-none d-sm-block">
         <Link

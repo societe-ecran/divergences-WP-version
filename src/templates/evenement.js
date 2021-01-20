@@ -225,7 +225,7 @@ const Evenement = ({ data }) => {
             <img
               src={illustration}
               alt="illustration"
-              width="200"
+              width="300"
               // height="auto"
             />
           </Col>
