@@ -4,8 +4,8 @@ import "../assets/css/main.css";
 
 const Livre = ({ article }) => {
   return (
-    <div className="smooth">
-      <div className="d-block d-sm-none mx-0 ">
+    <div className="">
+      <div className="d-block d-sm-none mx-0 text-center">
         <Link
           to={`/livre/${article.node.slug}`}
           activeStyle={{ textDecoration: "none" }}
@@ -19,7 +19,7 @@ const Livre = ({ article }) => {
             }
             alt=""
             className="ml-3 mr-3 mb-2 mt-2 carteLivre"
-            height="220"
+            height="280"
             width="auto"
           />
         </Link>
