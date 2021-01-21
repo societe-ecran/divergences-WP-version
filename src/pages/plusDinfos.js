@@ -14,7 +14,7 @@ const plusDinfo = () => (
           publier des ouvrages de critique sociale et politique. Quel que soit
           l’angle par lequel ils abordent le réel nos livres cherchent à
           comprendre et à rendre intelligible le monde dans lequel nous
-          vivons, à le combattre et en imaginer de nouveaux, plus beaux, plus
+          vivons, à y résister et en imaginer de nouveaux, plus beaux, plus
           justes et plus désirables."
       keywords={[`editeur`, `graphisme`, `developpement web`, `diffusion`]}
     />
@@ -40,7 +40,7 @@ const plusDinfo = () => (
             publier des ouvrages de critique sociale et politique. Quel que soit
             l’angle par lequel ils abordent le réel nos livres cherchent à
             comprendre et à rendre intelligible le monde dans lequel nous
-            vivons, à le combattre et en imaginer de nouveaux, plus beaux, plus
+            vivons, à y résister et en imaginer de nouveaux, plus beaux, plus
             justes et plus désirables.
           </p>
         </div>

@@ -14,7 +14,7 @@ const IndexPage = () => (
     <Seo
       siteTitle="Editions Divergences"
       title="Editions Divergences"
-      description="Bienvenue sur le site des éditions Divergences."
+      description="Editions Divergences. Critique sociale et politique. Bienvenue sur notre site."
       keywords={[`Editions divergences`, `home`, `index`]}
     />
     <StaticQuery
