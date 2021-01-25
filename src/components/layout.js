@@ -148,7 +148,7 @@ const Layout = ({ children }) => {
               </Col>
 
               <Col md="4" sm="12" xs="12" className="borderGeneral-right">
-                <div className="parution-container-enfant overscroll-behavior">
+                <div className="parution-container-enfant overscroll-behavior mb-5">
                   <Row className="pl-2 bg-white pt-1 pb-0 mb-0 navFont dix"> 
                 
                     <span className="pl-3 bg-white pb-0 mb-0 navFont dix  ">
@@ -163,7 +163,7 @@ const Layout = ({ children }) => {
               </Col>
 
               <Col md="2" className="">
-                <div className="parution-container-enfant overscroll-behavior">
+                <div className="parution-container-enfant overscroll-behavior mb-5">
                   <Row className=" dix pl-2 bg-white  pb-0 mb-0 ">
                   {/* sticky-top */}
                     <span className=" dix pl-3 bg-white pt-1  pb-0 mb-0  navFont">
