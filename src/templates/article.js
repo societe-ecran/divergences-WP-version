@@ -234,9 +234,9 @@ const Livre = ({ data }) => {
                 </div>
 
                 <div>
-                  {category === "Rupture de stock" ? (
+                  {category === "Rupture de stock" || category === "a paraitre" ? (
                     <div className="textFont font-weight-bold">
-                      Rupture de stock
+                      Ce livre n'est pas disponible à la vente
                     </div>
                   ) : (
                     <button
@@ -273,9 +273,9 @@ const Livre = ({ data }) => {
           <Col sm="12" className="d-block d-sm-none">
             <div className="text-right mt-4 mb-3 textFont">
               <div>
-                {category === "Rupture de stock" ? (
+                {category === "Rupture de stock" || category === "a paraitre"? (
                   <div className="textFont font-weight-bold">
-                    Rupture de stock
+                    Ce livre n'est pas disponible à la vente
                   </div>
                 ) : (
                   <button
