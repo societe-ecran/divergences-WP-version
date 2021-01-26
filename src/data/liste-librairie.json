@@ -351,7 +351,7 @@
       {
         "type": "Feature",
         "properties": {
-          "PARK_ID": 20,
+          "PARK_ID": 28,
           "NAME": "Colibrije",
           "DESCRIPTIO": "2 Avenue du Président Salvador Allende, 93100 Montreuil "
         },
@@ -369,9 +369,395 @@
         },
         "geometry": {
           "type": "Point",
+          "coordinates": [2.3663328, 48.8650907]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 29,
+          "NAME": "Publico",
+          "DESCRIPTIO": "145 Rue Amelot, 75011 Paris"
+        },
+        "geometry": {
+          "type": "Point",
           "coordinates": [-1.0531524, 43.7099756]
         }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 30,
+          "NAME": "L'armitière ",
+          "DESCRIPTIO": "66 Rue Jeanne d'Arc, 76000 Rouen"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [1.091577, 49.443133]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 31,
+          "NAME": "L'armitière ",
+          "DESCRIPTIO": "10 Rue du Mirailh, 40100 Dax"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.0531524, 43.7099756]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 32,
+          "NAME": "Attitude (@ttitude)",
+          "DESCRIPTIO": "51 Grand Rue, 81500 Lavaur"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [1.8165054, 43.6986086]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 33,
+          "NAME": "Cas'a bulles / Kazabul ",
+          "DESCRIPTIO": "135 Rue Lamartine, Fort-de-France 97200, Martinique"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [14.6061446, -61.0725802]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 34,
+          "NAME": "Charlemagne",
+          "DESCRIPTIO": "50 Boulevard de Strasbourg, 83000 Toulon"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.9357576, 43.1242662]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 35,
+          "NAME": "Cultura Roncq",
+          "DESCRIPTIO": "Promenade of Flanders, Route de Roncq, Route du Petit Menin ZAC, 59960 Neuville-en-Ferrain"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3.1464455127716064, 50.74148178100586]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 36,
+          "NAME": "Dialogues",
+          "DESCRIPTIO": "Parvis Marie-Paul Kermarec, Rue de Siam, 29200 Brest"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-4.4833, 48.4]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 37,
+          "NAME": "",
+          "DESCRIPTIO": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3, 50]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 38,
+          "NAME": "Durance",
+          "DESCRIPTIO": "4 Allée d'Orléans, 44000 Nantes"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.5566015, 47.2153599]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 39,
+          "NAME": "Les 2 GeorgeS",
+          "DESCRIPTIO": "5 Rue des Frères Darty, 93140 Bondy"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.4812426, 48.9036425]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 40,
+          "NAME": "47 degrés nord",
+          "DESCRIPTIO": "8 Rue du Moulin, 68100 Mulhouse"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [7.3398263, 47.7488682]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 41,
+          "NAME": "Alpha",
+          "DESCRIPTIO": "Rue de Termonde 140, 1083 Ganshoren"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.3053483963012695, 50.869205474853516]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 42,
+          "NAME": "Alterlivres",
+          "DESCRIPTIO": "22 Rue des Boisseliers, 30610 Sauve"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3.947906017303467, 43.94369125366211]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 43,
+          "NAME": "Librairie du Parc - Actes Sud",
+          "DESCRIPTIO": "211 Avenue Jean Jaurès, 75019 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.392518997192383, 48.88886642456055]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 44,
+          "NAME": "AMALIVRE",
+          "DESCRIPTIO": "62 Avenue de Suffren, 75015 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.2983662, 48.8528028]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 45,
+          "NAME": "L'Amandier",
+          "DESCRIPTIO": "45 Boulevard Richard Wallace, 92800 Puteaux"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.2386858463287354, 48.88042068481445]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 46,
+          "NAME": "L'Appel du livre",
+          "DESCRIPTIO": "99 Rue de Charonne, 75011 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.383752, 48.8544245]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 47,
+          "NAME": "L'Arbre du voyageur",
+          "DESCRIPTIO": "55 Rue Mouffetard, 75005 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3496118, 48.8432593]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 48,
+          "NAME": "Ars Una",
+          "DESCRIPTIO": "126 Boulevard Malesherbes, 75017 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.308266, 48.8846392]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 49,
+          "NAME": "Arthaud",
+          "DESCRIPTIO": "23 Grande Rue, 38000 Grenoble"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.7282049, 45.191401]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 50,
+          "NAME": "L'Astragale",
+          "DESCRIPTIO": "108 Rue de Sèze, 69006 Lyon"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.8546423, 45.7688232]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 51,
+          "NAME": "L'Atelier 9 ",
+          "DESCRIPTIO": "59 Rue des Martyrs, 75009 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.340308666229248, 48.88066101074219]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 52,
+          "NAME": "Atout Livre",
+          "DESCRIPTIO": "203 bis Avenue Daumesnil, 75012 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.397883, 48.8389972]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 53,
+          "NAME": "L'Attrape coeurs",
+          "DESCRIPTIO": "42 avenue Junot, 75018 Paris"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3377003, 48.8893438]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 54,
+          "NAME": "Autour du monde",
+          "DESCRIPTIO": "44 Rue de la Chèvre, 57000 Metz"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [6.177757740020752, 49.116455078125]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 55,
+          "NAME": "L'Autre librairie",
+          "DESCRIPTIO": "18 Rue de Beaulieu, 16000 Angoulême"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [0.15334579348564148, 45.64947509765625]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 56,
+          "NAME": "L'autre rive Nancy",
+          "DESCRIPTIO": "19 Rue du Pont Mouja, 54000 Nancy"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [6.1843197, 48.6906624]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 57,
+          "NAME": "L'autre rive Toulouse",
+          "DESCRIPTIO": "24 Avenue Etienne Billières, 31300 Toulouse"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [1.4263052940368652, 43.597103118896484]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 58,
+          "NAME": "Bal des ardents",
+          "DESCRIPTIO": "17 Rue Neuve, 69001 Lyon"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4.8355442, 45.7653069]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 59,
+          "NAME": "La balançoire",
+          "DESCRIPTIO": "6 Rue Général Berlier, 26400 Crest"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.0207905769348145, 44.72821807861328]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "PARK_ID": 59,
+          "NAME": "Zeugma",
+          "DESCRIPTIO": "5 bis Avenue Walwein, 93100 Montreuil"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.444982, 48.8621129]
+        }
       }
+
+
 
 
 
