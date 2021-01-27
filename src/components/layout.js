@@ -64,7 +64,8 @@ const Layout = ({ children }) => {
                       75011 Paris
                       <br />
                       <br />
-                      contact@editionsdivergences.com
+                      {/* contact@editionsdivergences.com */}
+                      editionsdivergences@gmail.com
                       <br />
                     </div>
 
