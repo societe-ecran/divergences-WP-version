@@ -32,6 +32,7 @@ const plusDinfo = () => (
           <br />
           <br />
           contact@editionsdivergences.com
+          <br />
         </div>
 
         <div>
@@ -70,7 +71,7 @@ const plusDinfo = () => (
             Développement Web :
             <br />
             <p>
-              Société écrans
+              Société Ecrans
               <br />
             </p>
           </div>
@@ -437,7 +438,7 @@ const plusDinfo = () => (
 
       <Container fluid className=" interligne borderGeneral-top textFont">
         <Row>
-          <Col className='pt-2 pl-0'>
+          <Col className="pt-2 pl-0">
             <p className="text-center">Mentions légales</p>
 
             <p>Droits d’auteur et propriété intellectuelle</p>
@@ -484,29 +485,38 @@ const plusDinfo = () => (
               statistiques de ce site Internet (volume de fréquentation, pages
               visitées, origine géographique de l’internaute…).
             </p>
-            <p>Conception du site Internet</p>
-            <p>Télécrans contact : antoninreigneaud@gmail.com</p>
-            <p>Hébergement</p>
-            <p>Site hébergé en France par O2SWITCH – 63000 Clermont-Ferrand</p>
+            <p>
+              Conception du site Internet :<br />
+              Société Ecrans
+            </p>
+            <p>
+              {/* {" "} */}
+              Contact : <br />
+              antoninreigneaud@gmail.com
+            </p>
+            <p>
+              Hébergement :<br />
+              Site hébergé en France par O2SWITCH – 63000 Clermont-Ferrand
+            </p>
 
             <p className="textFont  text-white">
-            Lecteurs et lectrices, curieuses et curieux, libraires,
-            journalistes, si vous souhaitez être tenu au courant de nos
-            ouvrages, de nos événements et de nos activités une fois par mois,
-            vous pouvez vous inscrire ici.
-          </p>
-          <p className="textFont text-white">
-            Lecteurs et lectrices, curieuses et curieux, libraires,
-            journalistes, si vous souhaitez être tenu au courant de nos
-            ouvrages, de nos événements et de nos activités une fois par mois,
-            vous pouvez vous inscrire ici.
-          </p>
-          <p className="textFont text-white">
-            Lecteurs et lectrices, curieuses et curieux, libraires,
-            journalistes, si vous souhaitez être tenu au courant de nos
-            ouvrages, de nos événements et de nos activités une fois par mois,
-            vous pouvez vous inscrire ici.
-          </p>
+              Lecteurs et lectrices, curieuses et curieux, libraires,
+              journalistes, si vous souhaitez être tenu au courant de nos
+              ouvrages, de nos événements et de nos activités une fois par mois,
+              vous pouvez vous inscrire ici.
+            </p>
+            <p className="textFont text-white">
+              Lecteurs et lectrices, curieuses et curieux, libraires,
+              journalistes, si vous souhaitez être tenu au courant de nos
+              ouvrages, de nos événements et de nos activités une fois par mois,
+              vous pouvez vous inscrire ici.
+            </p>
+            <p className="textFont text-white">
+              Lecteurs et lectrices, curieuses et curieux, libraires,
+              journalistes, si vous souhaitez être tenu au courant de nos
+              ouvrages, de nos événements et de nos activités une fois par mois,
+              vous pouvez vous inscrire ici.
+            </p>
           </Col>
         </Row>
       </Container>

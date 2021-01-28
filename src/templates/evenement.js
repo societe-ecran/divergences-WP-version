@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { Container, Row, Col } from "reactstrap";
 import Seo from "../components/seo";
+import Img from "gatsby-image";
 
 export const query = graphql`
   query EvenementsQuery($slug: String!) {
@@ -27,6 +28,18 @@ export const query = graphql`
           }
         }
       }
+      # illustration {
+      #   illustration {
+      #     localFile {
+      #       childImageSharp {
+      #         fluid(maxWidth: 300, quality: 100) {
+      #           ...GatsbyImageSharpFluid
+      #           ...GatsbyImageSharpFluidLimitPresentationSize
+      #         }
+      #       }
+      #     }
+      #   }
+      # }
       title
       slug
       ville {
@@ -54,8 +67,14 @@ const Evenement = ({ data }) => {
     complementAdresse = "";
   }
 
-  if (typeof article.illustration.illustration.localFile.url !== undefined) {
-    illustration = article.illustration.illustration.localFile.url;
+  // if (typeof article.illustration.illustration.localFile.url !== undefined) {
+  //   illustration = article.illustration.illustration.localFile.url;
+  // } else {
+  //   illustration = "";
+  // }
+
+  if (typeof article.illustration.illustration.localFile.childImageSharp.fluid.src !== undefined) {
+    illustration = article.illustration.illustration.localFile.childImageSharp.fluid;
   } else {
     illustration = "";
   }
@@ -154,15 +173,26 @@ const Evenement = ({ data }) => {
           </Col>
         </Row>
 
-        <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
+        <Row className=" d-flex textFont text-dark mr-0 interligne container-presentation">
           <Col sm="2"></Col>
           <Col sm="8" className="px-0">
-            <img
+            {/* <img
               src={illustration}
               alt="illustration"
               width="80%"
               // height="auto"
-            />
+            /> */}
+
+              <Img
+                fluid={
+                  illustration
+                }
+                key={
+                 illustration.src
+                }
+              />
+            
+
             <p className="textFont text-white">
               Lecteurs et lectrices, curieuses et curieux, libraires,
               journalistes, si vous souhaitez être tenu au courant de nos
@@ -215,21 +245,30 @@ const Evenement = ({ data }) => {
               dangerouslySetInnerHTML={{ __html: content }}
             />
 
-            <div className="d-flex justify-content-center">
+            <div className="">
               <img
                 src={illustration}
                 alt="illustration"
-               className='tailleImageEvenement'
+                className="tailleImageEvenement"
               />
+              {/* <Img
+                fluid={
+                  article.illustration.illustration.localFile.childImageSharp
+                    .fluid
+                }
+                key={
+                  article.illustration.illustration.localFile.childImageSharp
+                    .fluid.src
+                }
+              /> */}
             </div>
-            <div className="text-white" >
-            Voici certaines des librairies où vous pouvez retrouver nos
+            <div className="text-white">
+              Voici certaines des librairies où vous pouvez retrouver nos
               livres. Si le livre que vous recherchez n’est pas en rayon chez
               votre libraire habituel, plutôt que de l’acheter sur une grande
               plateforme d’achat en ligne, vous pouvez demander à votre libraire
               de vous le commander ou passer par
             </div>
-            
           </Col>
         </Row>
 

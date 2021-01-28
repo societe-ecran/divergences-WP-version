@@ -29,15 +29,16 @@ const AParaitre = () => {
                     name
                     options
                   }
-        #           images {
-        #   localFile {
+        #            images {
+        #    localFile {
         #     childImageSharp {
-        #       fluid(maxWidth: 240) {
-        #         src
-        #       }
-        #     }
-        #   }
-        # }
+        #        fluid(maxWidth: 240) {
+        #          ...GatsbyImageSharpFluid
+        #         ...GatsbyImageSharpFluidLimitPresentationSize
+        #        }
+        #      }
+        #    }
+        #  }
 
                   images {
                     src
