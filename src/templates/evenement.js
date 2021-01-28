@@ -67,17 +67,17 @@ const Evenement = ({ data }) => {
     complementAdresse = "";
   }
 
-  // if (typeof article.illustration.illustration.localFile.url !== undefined) {
-  //   illustration = article.illustration.illustration.localFile.url;
-  // } else {
-  //   illustration = "";
-  // }
-
-  if (typeof article.illustration.illustration.localFile.childImageSharp.fluid.src !== undefined) {
-    illustration = article.illustration.illustration.localFile.childImageSharp.fluid;
+  if (typeof article.illustration.illustration.localFile.url !== undefined) {
+    illustration = article.illustration.illustration.localFile.url;
   } else {
     illustration = "";
   }
+
+  // if (typeof article.illustration.illustration.localFile.childImageSharp.fluid.src !== undefined) {
+  //   illustration = article.illustration.illustration.localFile.childImageSharp.fluid;
+  // } else {
+  //   illustration = "";
+  // }
 
   if (typeof article.content !== undefined) {
     content = article.content;
@@ -176,21 +176,21 @@ const Evenement = ({ data }) => {
         <Row className=" d-flex textFont text-dark mr-0 interligne container-presentation">
           <Col sm="2"></Col>
           <Col sm="8" className="px-0">
-            {/* <img
+            <img
               src={illustration}
               alt="illustration"
               width="80%"
               // height="auto"
-            /> */}
+            />
 
-              <Img
+              {/* <Img
                 fluid={
                   illustration
                 }
                 key={
                  illustration.src
                 }
-              />
+              /> */}
             
 
             <p className="textFont text-white">
