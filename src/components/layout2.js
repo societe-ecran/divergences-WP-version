@@ -31,8 +31,8 @@ const Layout2 = ({ children }) => {
                   75011 Paris
                   <br />
                   <br />
-                  {/* contact@editionsdivergences.com */}
-                  editionsdivergences@gmail.com
+                  contact@editionsdivergences.com
+                  {/* editionsdivergences@gmail.com */}
                   <br />
                 </div>
                 <div className="d-none d-sm-block quatorze">
