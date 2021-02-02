@@ -44,15 +44,15 @@ export const query = graphql`
       images {
         src
       }
-      # images {
-      #     localFile {
-      #       childImageSharp {
-      #         fixed(width: 240) {
-      #           src
-      #         }
-      #       }
-      #     }
-      #   }
+      images {
+          localFile {
+            childImageSharp {
+              fixed(width: 240) {
+                src
+              }
+            }
+          }
+        }
     }
   }
 `;

@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import "../assets/css/main.css";
+import Img from "gatsby-image";
 
 const Livre = ({ article }) => {
+ 
   return (
-    <div >
+    <div>
       <div className="d-block d-sm-none mx-0 text-center">
         <Link
           to={`/livre/${article.node.slug}`}
@@ -22,6 +24,11 @@ const Livre = ({ article }) => {
             height="330"
             width="auto"
           />
+
+          {/* <Img
+            fluid={article.node.images.localFile.childImageSharp.fluid}
+            key={article.node.images.localFile.childImageSharp.fluid.src}
+          /> */}
         </Link>
       </div>
 

@@ -168,8 +168,8 @@ const Evenement = ({ data }) => {
                 {adresse} <br />
               </div>
               {complementAdresse}
-              <br />
-              {ville}
+              {/* <br />
+              {ville} */}
             </div>
           </Col>
         </Row>

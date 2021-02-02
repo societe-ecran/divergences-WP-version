@@ -26,16 +26,16 @@ const Catalogue = () => {
                   name
                   options
                 }
-                # images {
-                #   localFile {
-                #     childImageSharp {
-                #       fluid(maxWidth: 240) {
-                #         src
-                #       }
-                #     }
-                #   }
-                # }
-
+              #   images {
+              #     localFile {
+              #       childImageSharp {
+              #         fluid(maxWidth: 240, quality:100) {
+              #          ...GatsbyImageSharpFluid
+              #  ...GatsbyImageSharpFluidLimitPresentationSize
+              #         }
+              #       }
+              #     }
+              #   }
                 images {
                   src
                 }
