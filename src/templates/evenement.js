@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { Container, Row, Col } from "reactstrap";
 import Seo from "../components/seo";
-// import Img from "gatsby-image";
+import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -23,25 +23,25 @@ export const query = graphql`
       horaire {
         horaire
       }
-      illustration {
-        illustration {
-          localFile {
-            url
-          }
-        }
-      }
       # illustration {
       #   illustration {
       #     localFile {
-      #       childImageSharp {
-      #         fluid(maxWidth: 300, quality: 100) {
-      #           ...GatsbyImageSharpFluid
-      #           ...GatsbyImageSharpFluidLimitPresentationSize
-      #         }
-      #       }
+      #       url
       #     }
       #   }
       # }
+      illustration {
+        illustration {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 300, quality: 100) {
+                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluidLimitPresentationSize
+              }
+            }
+          }
+        }
+      }
       title
       slug
       ville {
@@ -69,17 +69,17 @@ const Evenement = ({ data }) => {
     complementAdresse = "";
   }
 
-  if (typeof article.illustration.illustration.localFile.url !== undefined) {
-    illustration = article.illustration.illustration.localFile.url;
-  } else {
-    illustration = "";
-  }
-
-  // if (typeof article.illustration.illustration.localFile.childImageSharp.fluid.src !== undefined) {
-  //   illustration = article.illustration.illustration.localFile.childImageSharp.fluid;
+  // if (typeof article.illustration.illustration.localFile.url !== undefined) {
+  //   illustration = article.illustration.illustration.localFile.url;
   // } else {
   //   illustration = "";
   // }
+
+  if (typeof article.illustration.illustration.localFile.childImageSharp.fluid.src !== undefined) {
+    illustration = article.illustration.illustration.localFile.childImageSharp.fluid;
+  } else {
+    illustration = "";
+  }
 
   if (typeof article.content !== undefined) {
     content = article.content;
@@ -149,12 +149,6 @@ const Evenement = ({ data }) => {
         <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
           <Col sm="2">
             <div className="text-left">
-             
-              {/* <Link
-                className="fas fa-times text-dark text-left "
-                to="/agenda/"
-                style={{ textDecoration: "none" }}
-              ></Link> */}
                <Link to="/agenda/" style={{ color: "black" }}>
                 <FontAwesomeIcon icon={faTimes} className='text-left' />
               </Link>
@@ -183,21 +177,21 @@ const Evenement = ({ data }) => {
         <Row className=" d-flex textFont text-dark mr-0 interligne container-presentation">
           <Col sm="2"></Col>
           <Col sm="8" className="px-0">
-            <img
+            {/* <img
               src={illustration}
               alt="illustration"
               width="80%"
               // height="auto"
-            />
+            /> */}
 
-              {/* <Img
+              <Img
                 fluid={
                   illustration
                 }
                 key={
                  illustration.src
                 }
-              /> */}
+              />
             
 
             <p className="textFont text-white">
@@ -219,10 +213,10 @@ const Evenement = ({ data }) => {
       >
         <Row>
           <Col sm="12" className="">
-            <div className="text-right">
+            <div className="text-right mt-2">
              
             <Link to="/agenda/" style={{ color: "black" }}>
-                <FontAwesomeIcon icon={faTimes} className='h4' />
+                <FontAwesomeIcon icon={faTimes} className='h3' />
               </Link>
 
               {/* <Link
@@ -263,7 +257,7 @@ const Evenement = ({ data }) => {
                 alt="illustration"
                 className="tailleImageEvenement"
               />
-              {/* <Img
+              <Img
                 fluid={
                   article.illustration.illustration.localFile.childImageSharp
                     .fluid
@@ -272,7 +266,7 @@ const Evenement = ({ data }) => {
                   article.illustration.illustration.localFile.childImageSharp
                     .fluid.src
                 }
-              /> */}
+              />
             </div>
             <div className="text-white">
               Voici certaines des librairies où vous pouvez retrouver nos

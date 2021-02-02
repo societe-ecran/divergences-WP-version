@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
@@ -45,12 +38,6 @@ function SEO({ description, lang, meta, title }) {
           href: "https://fonts.googleapis.com/css?family=Staatliches",
         },
         
-        // {
-        //     rel:"stylesheet",
-        //     type:"text/css",
-        //     href:"/assets/css/fontawesome-free-5.13.1-web/css/all.css",
-        // },
-
         {
           rel: "stylesheet", 
           type:"text/css",
@@ -62,6 +49,7 @@ function SEO({ description, lang, meta, title }) {
       ]}
 
 
+      
       script={[
         
       {
@@ -70,12 +58,6 @@ function SEO({ description, lang, meta, title }) {
    integrity: "sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==",
    crossorigin: "",
       },
-
-      {
-        src: "https://use.fontawesome.com/f2b58a07f6.js"
-      },
-
-      
 
       ]}
 

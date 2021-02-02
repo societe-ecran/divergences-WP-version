@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { stack as Menu } from "react-burger-menu";
 import styled from "@emotion/styled";
 import { Col } from "reactstrap";
-import "../images/panier.png";
 import Panier from "./panier";
 
 export default () => {

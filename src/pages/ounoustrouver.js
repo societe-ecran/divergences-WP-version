@@ -5,7 +5,6 @@ import "../components/leafletmap.css";
 import LeafletMaps from "../components/leafletmaps";
 import "../fonts/fonts.css";
 import { Container, Row, Col } from "reactstrap";
-// import { Map, TileLayer , Marker, Popup } from 'react-leaflet'
 import Seo from "../components/seo";
 
 const Ounoustrouver = () => {
