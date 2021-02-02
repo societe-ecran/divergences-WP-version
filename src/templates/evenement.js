@@ -218,12 +218,6 @@ const Evenement = ({ data }) => {
             <Link to="/agenda/" style={{ color: "black" }}>
                 <FontAwesomeIcon icon={faTimes} className='h3' />
               </Link>
-
-              {/* <Link
-                className="fas fa-times text-dark h4 "
-                to="/agenda/"
-                style={{ textDecoration: "none" }}
-              ></Link> */}
             </div>
           </Col>
         </Row>
@@ -251,12 +245,12 @@ const Evenement = ({ data }) => {
               dangerouslySetInnerHTML={{ __html: content }}
             />
 
-            <div className="">
-              <img
+            <div>
+              {/* <img
                 src={illustration}
                 alt="illustration"
                 className="tailleImageEvenement"
-              />
+              /> */}
               <Img
                 fluid={
                   article.illustration.illustration.localFile.childImageSharp
