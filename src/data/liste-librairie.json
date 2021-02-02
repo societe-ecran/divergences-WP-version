@@ -92,7 +92,7 @@
         "properties": {
           "PARK_ID": 7,
           "NAME": "Librairie Blaest / Le Palais du pantalon",
-          "DESCRIPTIO": "207 Rue Blaes, 1000 Bruxelles"
+          "DESCRIPTIO": "207 Rue Blaes 1000 Bruxelles"
         },
         "geometry": {
           "type": "Point",
