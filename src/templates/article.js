@@ -1,21 +1,23 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import "moment/locale/fr";
-import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
+// import "../assets/css/fontawesome-free-5.13.1-web/css/all.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Layout2 from "../components/layout2";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Seo from "../components/seo";
 import moment from "moment";
 
-const style = {
-  fontWeight: "bold",
-  textDecoration: "none",
-};
+// const style = {
+//   fontWeight: "bold",
+//   textDecoration: "none",
+// };
 
-const activestyle = {
-  backgroundColor: "white",
-};
+// const activestyle = {
+//   backgroundColor: "white",
+// };
 
 export const query = graphql`
   query LivreQuery($slug: String!) {
@@ -169,7 +171,11 @@ const Livre = ({ data }) => {
       />
       <Container fluid className="mt-2 pb-5 mb-5 interligne">
         <Row sm="1" className="text-right d-block d-sm-none">
-          <Link
+        <Link to="/catalogue/" style={{ color: "black" }}>
+                <FontAwesomeIcon icon={faTimes} className="h4" />
+              </Link>
+        
+          {/* <Link
             className=""
             to="/catalogue/"
             style={style}
@@ -180,7 +186,7 @@ const Livre = ({ data }) => {
               style={style}
               activestyle={activestyle}
             ></div>
-          </Link>
+          </Link> */}
         </Row>
 
         <Row>
@@ -234,7 +240,8 @@ const Livre = ({ data }) => {
                 </div>
 
                 <div>
-                  {category === "Rupture de stock" || category === "a paraitre" ? (
+                  {category === "Rupture de stock" ||
+                  category === "a paraitre" ? (
                     <div className="textFont font-weight-bold">
                       Ce livre n'est pas disponible à la vente
                     </div>
@@ -273,7 +280,8 @@ const Livre = ({ data }) => {
           <Col sm="12" className="d-block d-sm-none">
             <div className="text-right mt-4 mb-3 textFont">
               <div>
-                {category === "Rupture de stock" || category === "a paraitre"? (
+                {category === "Rupture de stock" ||
+                category === "a paraitre" ? (
                   <div className="textFont font-weight-bold">
                     Ce livre n'est pas disponible à la vente
                   </div>
@@ -324,11 +332,15 @@ const Livre = ({ data }) => {
 
           <Col sm="2" className="textFont ">
             <div className="text-right py-0 my-0 d-none d-sm-block ">
-              <Link
+              <Link to="/catalogue/" style={{ color: "black" }}>
+                <FontAwesomeIcon icon={faTimes} />
+              </Link>
+
+              {/* <Link
                 className="fas fa-times text-dark  "
                 to="/catalogue/"
                 style={{ textDecoration: "none" }}
-              ></Link>
+              ></Link> */}
             </div>
 
             <div className=""></div>

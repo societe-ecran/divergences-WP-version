@@ -3,7 +3,9 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { Container, Row, Col } from "reactstrap";
 import Seo from "../components/seo";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export const query = graphql`
   query EvenementsQuery($slug: String!) {
@@ -147,11 +149,16 @@ const Evenement = ({ data }) => {
         <Row className="d-flex textFont text-dark mr-0 interligne container-presentation">
           <Col sm="2">
             <div className="text-left">
-              <Link
+             
+              {/* <Link
                 className="fas fa-times text-dark text-left "
                 to="/agenda/"
                 style={{ textDecoration: "none" }}
-              ></Link>
+              ></Link> */}
+               <Link to="/agenda/" style={{ color: "black" }}>
+                <FontAwesomeIcon icon={faTimes} className='text-left' />
+              </Link>
+
             </div>
           </Col>
           <Col sm="8" className="px-0">
@@ -213,11 +220,16 @@ const Evenement = ({ data }) => {
         <Row>
           <Col sm="12" className="">
             <div className="text-right">
-              <Link
+             
+            <Link to="/agenda/" style={{ color: "black" }}>
+                <FontAwesomeIcon icon={faTimes} className='h4' />
+              </Link>
+
+              {/* <Link
                 className="fas fa-times text-dark h4 "
                 to="/agenda/"
                 style={{ textDecoration: "none" }}
-              ></Link>
+              ></Link> */}
             </div>
           </Col>
         </Row>
