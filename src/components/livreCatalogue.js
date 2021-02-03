@@ -23,6 +23,7 @@ const Livre = ({ article }) => {
             className="ml-3 mr-3 mb-2 mt-2 carteLivre"
             height="330"
             width="auto"
+            loading="lazy"
           />
 
           {/* <Img
@@ -48,6 +49,7 @@ const Livre = ({ article }) => {
             className="pl-4 pr-4 pt-2 pb-3"
             height="auto"
             width="240"
+            loading="lazy"
           />
         </Link>
       </div>

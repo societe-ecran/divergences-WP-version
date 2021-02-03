@@ -23,6 +23,7 @@ const Livre = ({ article }) => {
           className="borderGeneral-bottom livreCentre mx-0 px-0 pb-0 mb-0" >
           <img
             src={article.node.images[0].src}
+            loading="lazy"
             alt={"couverture manquante"}
             className="tailleLivreRcementParu"
           />
@@ -34,6 +35,7 @@ const Livre = ({ article }) => {
           <img
             // src={article.node.images[0].src}
             src={article.node.images[0].src}
+            loading="lazy"
             alt={"couverture manquante"}
             className="tailleLivreAparaitre"
           />
