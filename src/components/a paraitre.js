@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import "../fonts/fonts.css";
-import LivresComponent from "./livres";
+import Livres from "./livres";
 import Btcarousel from "../components/carousel";
 
 const AParaitre = () => {
@@ -20,6 +20,9 @@ const AParaitre = () => {
                   categories {
                     name
                   }
+                  acf {
+                  date_de_parution
+                }
                   description
                   name
                   price
@@ -51,7 +54,7 @@ const AParaitre = () => {
         render={(data) => (
           <div >
             <div className="d-none d-sm-block" >
-              <LivresComponent articles={data.allWcProducts.edges} />
+              <Livres articles={data.allWcProducts.edges} />
             </div>
 
               <div className="d-block d-sm-none">
