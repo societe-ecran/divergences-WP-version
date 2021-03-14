@@ -69,6 +69,7 @@ const Livre = ({ data }) => {
   var isbn = "";
   var category = "";
   var texteCategory = "";
+  var précommande=false
 
   var affichControls = false;
   if (article.images.length <= 2) {
@@ -78,10 +79,18 @@ const Livre = ({ data }) => {
   }
 
   if (typeof article.categories[0].name !== "undefined") {
+    for (let i=0;i<article.categories.length; i++ ){
+      if(article.categories[i].name === 'précommande'){
+        précommande=true
+      }
+    }
+
+
     category = article.categories[0].name;
   } else {
     category = "";
   }
+
 
   if (category === "a paraitre") {
     texteCategory = "A paraitre le";
@@ -162,6 +171,52 @@ const Livre = ({ data }) => {
     affichageTroisiemeImage = false;
   }
 
+  const choixCategorie=()=>{
+     if(précommande){
+       return ( 
+         <div>
+       <div className="textFont font-weight-bold mb-2">
+       Ce livre est disponible en précommande.
+     </div>
+     <button
+     href=""
+     className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
+     data-item-id={article.wordpress_id}
+     data-item-price={price}
+     data-item-image={article.images[0].src}
+     data-item-url={"/livre/" + article.slug}
+     data-item-name={titre}
+     data-item-weight="100"
+   >
+     <span className="douze"> {"> "} </span>
+     <span className="under">Précommander</span>
+   </button>  
+   </div>
+     )
+     }else if(category === "Rupture de stock" || category === "a paraitre"){
+       return (
+       <div className="textFont font-weight-bold">
+       Ce livre n'est pas disponible à la vente
+     </div>)
+     }else{return( <button
+      href=""
+      className="snipcart-add-item text-dark textFont douze px-0 bg-white douze mb-3"
+      data-item-id={article.wordpress_id}
+      data-item-price={price}
+      data-item-image={article.images[0].src}
+      data-item-url={"/livre/" + article.slug}
+      data-item-name={titre}
+      data-item-weight="100"
+    >
+      <span className="douze"> {"> "} </span>
+      <span className="under">Ajouter au panier</span>
+    </button>)}
+  }
+ 
+
+
+
+
   return (
     <Layout2>
       <Seo
@@ -240,7 +295,8 @@ const Livre = ({ data }) => {
                 </div>
 
                 <div>
-                  {category === "Rupture de stock" ||
+
+                  {/* {category === "Rupture de stock" ||
                   category === "a paraitre" ? (
                     <div className="textFont font-weight-bold">
                       Ce livre n'est pas disponible à la vente
@@ -259,7 +315,9 @@ const Livre = ({ data }) => {
                       <span className="douze"> {"> "} </span>
                       <span className="under">Ajouter au panier</span>
                     </button>
-                  )}
+                  )} */}
+
+                    {choixCategorie()}
 
                   <span className="textFont">
                     <br />
@@ -280,7 +338,7 @@ const Livre = ({ data }) => {
           <Col sm="12" className="d-block d-sm-none">
             <div className="text-right mt-4 mb-3 textFont">
               <div>
-                {category === "Rupture de stock" ||
+                {/* {category === "Rupture de stock" ||
                 category === "a paraitre" ? (
                   <div className="textFont font-weight-bold">
                     Ce livre n'est pas disponible à la vente
@@ -299,7 +357,8 @@ const Livre = ({ data }) => {
                     <span className="douze"> {"> "} </span>
                     <span className="under">Ajouter au panier</span>
                   </button>
-                )}
+                )} */}
+                {choixCategorie()}
               </div>
               <span className=" textfont">
                 <br />
