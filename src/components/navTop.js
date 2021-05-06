@@ -37,7 +37,7 @@ export default () => {
           <Col md="1" className="d-flex justify-content-end ">
             <button className="snipcart-checkout panier ">
               <Panier />
-            </button>
+            </button> 
           </Col>
 
           <Col  xs="1" sm='1' md='1' lg='1'className="d-block d-md-none"></Col>

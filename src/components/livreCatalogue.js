@@ -46,7 +46,7 @@ const Livre = ({ article }) => {
                 : ""
             }
             alt=""
-            className="pl-4 pr-4 pt-2 pb-3"
+            className="pl-4 pr-4 pt-0 pb-4"
             height="auto"
             width="240"
             loading="lazy"
