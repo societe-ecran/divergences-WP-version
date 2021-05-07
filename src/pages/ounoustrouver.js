@@ -11,7 +11,7 @@ const Ounoustrouver = () => {
   return (
     <Layout2>
       <Seo
-        siteTitle="Où nous trouver"
+        // siteTitle="Où nous trouver"
         title="Librairies"
         description="Voici certaines des librairies où vous pouvez retrouver nos
           livres."

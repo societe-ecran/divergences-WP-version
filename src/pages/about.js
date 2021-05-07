@@ -7,7 +7,8 @@ import { Container, Row, Col } from "reactstrap";
 
 const IndexPage = () => (
   <Layout>
-    <Seo siteTitle="Contact"
+    <Seo 
+    // siteTitle="Contact"
           title="Contact Newsletter"
           description="Lecteurs et lectrices, curieuses et curieux, libraires,
           journalistes, si vous souhaitez être tenu au courant de nos

@@ -11,7 +11,8 @@ const Agenda = () => {
   return(
   
   <Layout>
-   <Seo siteTitle="Actualités"
+   <Seo 
+  //  siteTitle="Actualités"
           title="Actualités"
           description="Evènements à venir partout en France."
           keywords={[`évènements`, `actualités`, `agenda`]}

@@ -8,7 +8,7 @@ import Seo from "../components/seo";
 const plusDinfo = () => (
   <Layout>
     <Seo
-      siteTitle="Infos"
+      // siteTitle="Infos"
       title="Infos"
       description="Fondées en septembre 2016, les éditions divergences s’attachent à
           publier des ouvrages de critique sociale et politique. Quel que soit

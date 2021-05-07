@@ -9,7 +9,7 @@ module.exports = {
     title: `Editions Divergences`,
     description: `Site des éditions Divergences. 3 Rue de l’Asile Popincourt 75011 Paris contact@editionsdivergences.com`,
     author: `Société écrans`,
-    siteUrl: `https://adoring-volhard-0f7152.netlify.app/`,
+    siteUrl: `https://www.editionsdivergences.com/`,
     social: {
       twitter: `@EDivergences`,
     },
