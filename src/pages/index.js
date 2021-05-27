@@ -12,7 +12,7 @@ import Seo from "../components/seo";
 const IndexPage = () => (
   <Layout>
     <Seo
-      siteTitle="Editions Divergences"
+      // siteTitle="Editions Divergences"
       title="Editions Divergences"
       description="Editions Divergences. Critique sociale et politique. Bienvenue sur notre site."
       keywords={[`Editions divergences`, `home`, `index`]}

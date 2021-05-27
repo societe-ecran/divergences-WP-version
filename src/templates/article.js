@@ -220,10 +220,11 @@ const Livre = ({ data }) => {
   return (
     <Layout2>
       <Seo
-        siteTitle="Editions Divergences"
+        // siteTitle="Editions Divergences"
         title={titre}
         description={description}
       />
+      
       <Container fluid className="mt-2 pb-5 mb-5 interligne">
         <Row sm="1" className="text-right d-block d-sm-none">
         <Link to="/catalogue/" style={{ color: "black" }}>

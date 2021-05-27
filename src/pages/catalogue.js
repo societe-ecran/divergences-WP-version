@@ -8,7 +8,8 @@ import Seo from "../components/seo";
 
 const IndexPage = () => (
   <Layout2>
-    <Seo siteTitle="Editions Divergences"
+    <Seo 
+    // siteTitle="Editions Divergences"
           title="Catalogue"
           description="Catalogue des éditions Divergences"
           keywords={[`Catalogue`, `livres`]}
