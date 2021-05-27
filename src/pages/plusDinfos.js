@@ -71,7 +71,8 @@ const plusDinfo = () => (
             Développement Web :
             <br />
             <p>
-              Société Ecrans
+              Société Ecrans <br />
+              societe-ecrans(at)riseup.net
               <br />
             </p>
           </div>
@@ -115,7 +116,7 @@ const plusDinfo = () => (
             <br />
             Fax : 01 40 33 91 30
             <br />
-            contact@makassar-diffusion.com
+            contact(at)makassar-diffusion.com
             <br />
           </p>
           <p className="text-center font-italic">
@@ -130,7 +131,7 @@ const plusDinfo = () => (
             <br />
             Tél. : + 41 22 301 17 74
             <br />
-            pberger@servidis.ch
+            pberger(at)servidis.ch
             <br />
           </p>
           <p>
@@ -140,7 +141,7 @@ const plusDinfo = () => (
             <br />
             Ch. Des Chalets 7<br />
             1279 Chavennes-de-Bogis | Tél. : + 41 22 960 95 10 |<br />
-            commande@servidis.ch <br />
+            commande(at)servidis.ch <br />
           </p>
           <p className="text-center font-italic">
             Pour le Québec <br />
